@@ -1,0 +1,54 @@
+
+/* Hide "more colours" in product thumbnails */
+.shop-item .pop-product-more-colors {
+    visibility: hidden;
+}
+
+/* Hide newsletter option in checkout */
+.follow-up label[for=confirmation-newsletter-input] {
+    visibility: hidden;
+}
+
+/* Hide newsletter option in sign up */
+.signup-box-newsletter {
+    display: none;
+}
+
+/* Hide newsletter option in personal details */
+.personal-details-newsletter {
+    display: none;
+}
+
+.wishlist {
+    position: fixed;
+    z-index: 100;
+}
+
+/* Hide not yet implemented tabs in my account */
+.my-account-sidebar .my-account-sidebar-items:nth-child(4),
+.my-account-sidebar .my-account-sidebar-items:nth-child(6),
+.my-account-sidebar .my-account-sidebar-items:nth-child(7) {
+    display: none;
+}
+
+.dropdown-megamenu .navbar-nav {
+    margin: 0;
+    background: #006341;
+}
+
+.header {
+    height: 50px;
+    background: #006341;   
+    z-index: 9999;
+    position: relative;
+}
+
+.nav-list .list-item-bag .link-your-bag.not-empty {
+    color: #333;
+    background: #f3f3f2;
+}
+
+.nav-list .list-item-bag .link-your-bag.not-empty {
+    color: #333;
+    background: #f3f3f2;
+}
