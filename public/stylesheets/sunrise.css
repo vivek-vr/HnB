@@ -52,3 +52,20 @@
     color: #333;
     background: #f3f3f2;
 }
+
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid #D6D6D6;
+    background: #f3f3f2;
+}
+
+.search-box .search-field {
+    height: 40px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(170,174,178,0.5);
+    border-radius: 2px;
+    margin: 0;
+    padding: 0 1em;
+    font-size: 16px;
+}
