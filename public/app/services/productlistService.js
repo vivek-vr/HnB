@@ -16,7 +16,7 @@ hbiApp.factory('productlistService', function($http, headerService) {
 	getCategories: function () {
 				  return $http({
 						method: 'GET',
-						url: "https://api.sphere.io/hnb-59/categories",
+						url: "https://api.sphere.io/hnb-59/categories?expand=true&limit=200",
 						headers: {
 							"Authorization": headerService.sessionGet("configData").header
 						},
