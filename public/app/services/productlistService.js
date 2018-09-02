@@ -13,6 +13,18 @@ hbiApp.factory('productlistService', function($http, headerService) {
 						}
 					})
     },
+	getSortedProducts: function (categoryId, sortType) { 
+		return $http({
+			  method: 'GET',
+			  url: "https://api.sphere.io/hnb-59/product-projections/search?filter=categories.id: subtree(\""+categoryId+"\")&sort="+sortType,
+			  headers: {
+				  "Authorization": headerService.sessionGet("configData").header
+			  },
+			  complete: function() {
+				  console.log('done');
+			  }
+		  })
+},
 	getCategories: function () {
 				  return $http({
 						method: 'GET',
