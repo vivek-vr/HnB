@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="generator" content="commercetools" />
+<title>Holland and Beckett Hackathon</title>
+
+   
+<link rel="icon" href="{{@root.meta.assetsPath}}app/assets/img/favicon.ico">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+<!-- <link href="{{@root.meta.assetsPath}}app/assets/css/selectboxit.min-db6170754f9da8de6c95b8093801eb76.css" rel="stylesheet"> -->
+<!-- <link href="{{@root.meta.assetsPath}}app/assets/css/main.min-d24f68954c56a21c1171d727193a023e.css" rel="stylesheet"> -->
+<link href="{{@root.meta.assetsPath}}app/assets/css/global.css" rel="stylesheet">
+
+<link href="{{@root.meta.assetsPath}}app/assets/css/healthbox.css" rel="stylesheet">
+<link href="{{@root.meta.assetsPath}}app/assets/css/accountPopup.css" rel="stylesheet">
+<link href="{{@root.meta.assetsPath}}app/assets/css/offers.css" rel="stylesheet">
+<link href="{{@root.meta.assetsPath}}app/assets/css/screen.css" rel="stylesheet">
+<link href="{{@root.meta.assetsPath}}app/assets/css/responsive.css" rel="stylesheet">
+<link href="{{@root.meta.assetsPath}}app/assets/css/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{@root.meta.assetsPath}}app/assets/css/sunrise.css"/>
+
+
+<script>
+if ( navigator.userAgent.match(/iPad/i) ) {
+			var viewportAttr = document.getElementById('viewport').getAttribute("content");
+			
+			if (viewportAttr.match(/initial-scale=1/i)) {
+				document.getElementById('viewport').setAttribute("content", "width=1000");
+			}
+		}
+</script>
+<style>
+
+.simple-nav-item.last-nav-item>a::before {
+
+content: 'new';
+position: absolute;
+display: inline-block;
+top: 0px;
+right: 0px;
+color: #fff;
+background: #009ada;
+background-color: #009ada;
+padding: 1px 2px;
+z-index: 5;
+font-size: 12px;
+line-height: 1;
+
+}
+
+</style>
+
+<style>
+
+.ir-verisign-container .ir.verisign {
+	max-width: 200px;
+}
+
+</style>
+<style>
+
+@media screen and (min-width: 767px) {
+
+	.homepage-single-slot-content-ul li {
+		max-width: 1220px;
+		min-width: 1000px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+}
+@media screen and (min-width: 767px) {
+
+.main-nav [role=menubar] {
+
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+
+}
+
+.main-nav [role=menubar]:before {
+
+display: none;
+
+}
+
+.simple-nav-item.last-nav-item {
+
+position: static !important;
+
+}
+
+#fly666 .flyout-container {
+  display: none; 
+  padding: 24px;
+}
+
+#fly666 .flyout-container .f-row .flyout-nav-column h3, #fly666 .flyout-container .f-row .flyout-nav-column p {
+  text-align: center;
+}
+
+#fly666 .flyout-container .f-row .flyout-nav-column p {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#fly666 .flyout-container .f-row .flyout-nav-column  img {
+  margin: 0 auto;
+}
+    
+.last-nav-item:hover > #fly666 .flyout-container {
+    display: block;
+}
+
+.last-nav-item:hover > a,  
+.ss-new-badge:hover ~ a, #fly666:hover  + .ss-flyout-bg + a   {
+
+background: #fff;
+color: #006341;
+
+}
+
+.last-nav-item:hover .ss-flyout-bg,  
+.ss-new-badge:hover + #fly666 + .ss-flyout-bg, #fly666:hover  + .ss-flyout-bg  {
+
+opacity: 0.6;
+height: 3000px;
+
+}
+
+.last-nav-item .ss-flyout-bg:hover {
+
+display: none;
+
+}
+
+.ss-flyout-bg {
+
+opacity: 0;
+position: fixed;
+width: 100%;
+height: 0px;
+background-color: #333;
+z-index: -1;
+left: 0;
+transition: opacity 0.5s;
+-webkit-transition: opacity 0.5s;
+-moz-transition: opacity 0.5s;
+-o-transition: opacity 0.5s;
+
+}
+
+.ss-buttons {
+
+justify-content: center;
+
+}
+
+.ss-buttons .healthbox-intro-buttons-container a:last-child {
+  background-color: #006341;
+  background: #006341;
+  border: 1px solid #006341;
+}
+.ss-buttons .healthbox-intro-buttons-container a:last-child:hover {
+  background-color: #004a30;
+  background: #004a30;
+  border: 1px solid #004a30;
+}
+
+.ss-buttons .healthbox-intro-buttons-container {
+  width: auto;
+}
+
+}
+
+@media screen and (max-width: 1075px) and (min-width: 768px) {
+
+.main-nav.replete-nav .main-nav-item>a {
+
+font-size: 1.2rem;
+
+}
+
+
+}
+
+
+
+</style>
+<style>
+.voice-search-activate-btn{
+display:none;
+}
+</style>
+
+
+</head>
+
+<body ng-app="HBIapp">
+<div ng-include="'views/includes/header.html'"></div>
+<div ui-view></div>
+<div ng-include="'views/includes/footer.html'"></div>
+<script src="{{@root.meta.assetsPath}}app/lib/anglar1.7.js"></script>
+<script src="{{@root.meta.assetsPath}}app/lib/ui-router.js"></script>
+<script src="{{@root.meta.assetsPath}}app/lib/angular-sanitize.js"></script>
+<script src="{{@root.meta.assetsPath}}app/app.js"></script>
+<script src="{{@root.meta.assetsPath}}app/services/productlistService.js"></script>
+<script src="{{@root.meta.assetsPath}}app/services/headerService.js"></script>				 
+<script src="{{@root.meta.assetsPath}}app/controllers/homeController.js"></script>
+<script src="{{@root.meta.assetsPath}}app/controllers/headerController.js"></script>
+<script src="{{@root.meta.assetsPath}}app/controllers/productListController.js"></script>
+<script src="{{@root.meta.assetsPath}}app/controllers/productDetailController.js"></script>
+<script src="{{@root.meta.assetsPath}}app/controllers/checkoutController.js"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ <script src="{{@root.meta.assetsPath}}app/assets/js/modernizr-custom.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/jquery.plugins.combined.js" defer></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/jquery.pubsub.js" defer></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/slick.min.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/lazysizes.min.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/plugins.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/utils.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/utils.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/hab.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/init.js" defer></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/voiceSearch.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/legacy.js" defer></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/p13n.js"></script>
+<script src="{{@root.meta.assetsPath}}app/assets/js/richRelevance.js"></script>
+<!-- <script src="{{@root.meta.assetsPath}}app/assets/js/load.js"></script> -->
+
+
+ 
+  <script>
+        window.localization = {
+            inlineValidation: {
+                DATETIME: 'Input must be in valid datetime format',
+                DATETIMELOCAL: 'Input must be in valid local time format',
+                DATE: 'Input must be in YYYY-MM-DD format',
+                MONTH: 'Input must be in YYYY-MM format',
+                TIME: 'Input must be in HH:MM:SS or HH:MM:SS.nn format',
+                WEEK: 'Input must be in YYYY-WW format',
+                NUMBER: 'Input must be a valid number',
+                RANGE: 'Input must be a valid number',
+                EMAIL: 'This should be a valid email address (eg. john.smith@domain.com)',
+                URL: 'Input must be a valid URL',
+                TEL: 'Phone numbers may only contain numbers',
+                REQUIRED_FIELD: 'This field is required',
+                INVALID_INPUT: 'Invalid input',
+                RANGE_BETWEEN: 'Must be between %min and %max',
+                RANGE_MIN: 'Must be greater than %min',
+                RANGE_MAX: 'Must be less than %max',
+                ORDER_NUMBER: 'Please enter a valid order number (contain 10 digits).'
+            },
+            inlineValidationCheckout: {
+                required: 'This field is required',
+                qasRequired: 'This field is required',
+                email: 'This should be a valid email address (eg. john.smith@domain.com)',
+                phone: 'Please enter a valid phone number',
+                // All messages below are not localized because they are not used on the site at the moment.
+                remote: 'remote: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp',
+                // TODO investigate whether it is possible to use parametrized messages without explicitly calling $.validator.format
+                minlength: 'minlength: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp', // ($.validator ? $.validator.format("Some message") : ''),
+                maxlength: 'maxlength: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp', // ($.validator ? $.validator.format("Some message") : ''),
+                rangelength: 'rangelength: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp', // ($.validator ? $.validator.format("Some message") : ''),
+                min: 'min: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp', // ($.validator ? $.validator.format("Some message") : ''),
+                max: 'max: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp', // ($.validator ? $.validator.format("Some message") : ''),
+                range: 'range: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp', // ($.validator ? $.validator.format("Some message") : ''),
+                step: 'step: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp',
+                url: 'url: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp',
+                date: 'date: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp',
+                dateISO: 'dateISO: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp',
+                number: 'number: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp',
+                digits: 'digits: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp',
+                equalTo: 'equalTo: This message isn\'t localized. Please create siteTextContent inside \'inline-validation\' folder and add appropriate fmt:message into javascriptLocalization.jsp'
+            },
+            passwordStrengthMeter: {
+                strengthVeryWeak: 'Very weak',
+                strengthWeak: 'Weak',
+                strengthMedium: 'Medium',
+                strengthStrong: 'Strong',
+                maskShow: 'Show',
+                maskHide: 'Hide'
+            },
+            findLocations: {
+                geoLocationError: 'Sorry, we cannot locate you, please type an address in the search box and search again',
+                placesError: 'Sorry, we cannot locate you, please enter another location and search again'
+            },
+            checkout: {
+                sessionExpirationAjaxError: '<div class=\"checkout-fieldset-area section error-section checkout-main-error\"> <p class=\"bold heading-3 error-section-heading\">Please correct the following:</p> <ul class=\"list-dashed heading-3\"> Your session has expired. Please reload this page. </ul> </div>',
+                orderGrooveInvalidStateAjaxError: '<div class=\"checkout-fieldset-area section error-section checkout-main-error\"> <p class=\"bold heading-3 error-section-heading\">Please correct the following:</p> <ul class=\"list-dashed heading-3\"> It looks like subscribtion to some item was added. Please, refresh the page. </ul> </div>'
+            },
+            url: {
+                shop: "shop",
+                brand: "brands",
+                offer: "offers"
+            },
+            basket: {
+                sessionExpirationAjaxError: '<section class=\"form-errors\"> <h2> Please correct the following </h2> <ul> <li> <ul> <li> <em>Your session has expired. Please reload this page.</em> </li> </ul> </li> </ul> </section>'
+            },
+            authorization: {
+                wooHoo: 'Woo hoo!'
+            },
+            og: {
+                frequency_2_2: 'Every 14 days',
+                frequency_3_2: 'Every 3 weeks',
+                frequency_4_2: 'Every 28 days',
+                frequency_5_2: 'Every 5 weeks',
+                frequency_6_2: 'Every 6 weeks',
+                frequency_2_3: 'Every 2 months',
+                frequency_3_3: 'Every 3 months',
+                frequency_4_3: 'Every 4 months',
+                frequency_5_3: 'Every 5 months',
+                frequency_6_3: 'Every 6 months'
+            },
+            voiceSearch: {
+                errorMessage: 'Couldn\'t understand, please try again',
+                listeningMessage: 'Listening...'
+            },
+            account: {
+                sessionExpirationAjaxError: '<div class=\"modal-form__err-section\"> <a href=\"#\" class=\"modal-form__err-close\"></a> <div class=\"modal-form__err-container\"> <p>Your session has expired. Please reload this page.</p> </div> </div>'
+            }
+        };
+    </script>
+    <script>
+        window.contextPath = "";
+        window.globalConfig = {
+            address: {
+                optionalPostCodeCountryList: '[IRL, GRC, LVA, BGR]',
+                countryPostalCodeAList: '[BLR, CZE, GRC, HUN, ISL, LVA, LTU, MLT, MDA, MCO, NOR, POL, ROU, SVK, ESP, UKR, AUT, CYP, DNK, EST, FIN, FRA, DEU, ITA, LIE, LUX, PRT, RUS, SVN, SWE, CHE]',
+                countryPostalCodeCoreList: '[GBR, IRL, NLD, BEL]',
+                initialCountryCode: 'GBR'
+            },
+            isMobileApp: Boolean(false)
+        };
+    </script>
+  
+    <script>
+        // Fallback to loading jQuery from a local path if the CDN is unavailable
+        (window.jQuery || document.write('<script src="/ui/js/libs/jquery-1.8.2.min.js?t=1534762332"><\/script>'));
+    </script>
+	 
+    <script>
+        // Fallback to loading jQuery UI from a local path if the CDN is unavailable
+        (jQuery.ui || document.write('<script src="/ui/js/libs/jquery-ui-1.11.4.custom.min.js?t=1534762332"><\/script>'));
+    </script>
+   
+    <script>
+        var RR_CONFIG = {};
+        RR_CONFIG.baseUrl = '//recs.richrelevance.com/rrserver/';
+        RR_CONFIG.clickthruServer = '//' + window.location.host;
+        RR_CONFIG.apiKey = '3254ec731ecd5afc';
+        RR_CONFIG.devMode = Boolean(false);
+    </script>
+    <script>
+        RR_CONFIG.userId = '';
+        RR_CONFIG.sessionId = '842172e053bf4966954cc749aa3421693df7981732e349ffff46e683125cd819';
+    </script>
+    <script src="{{@root.meta.assetsPath}}app/assets/js/jsviews.js"></script>
+    <script id="rrProductCarouselHeader" type="text/x-jsrender">
+        <h2 class="teaser-block-title">{{:strategy_message}}</h2>
+    </script>
+    <script id="rrProductCarousel" type="text/x-jsrender">
+        <div class="newProducts">
+            <section class="teaser-banner prod-teaser-block new-prod-teaser-block is-grid clearfix">
+                <div class="prod-teaser-items">
+                    <div class="l-wrap product-carousel js-rr-product-carousel">
+                        {{for items}}
+                        <div class="l-col">
+                            <article class="prod-teaser-item clearfix teaser-with-image">
+                                <a href="{{> productUrl}}" data-rr-click-tracking-url="{{> clicktrackingurl}}" class="block js-product-link">
+                                    <div class="l-prod-col prod-img-wrapper">
+                                        <div class="prod-img prod-list-item img-panel">
+
+                                            <picture>
+                                                <source media="(min-width: 768px)" data-srcset="{{> image_url}}?i10c=img.resize(width:360,height:360) 2x, {{> image_url}}?i10c=img.resize(width:180,height:180)" />
+                                                <source data-srcset="{{> image_url}}?i10c=img.resize(width:360,height:360) 2x, {{> image_url}}?i10c=img.resize(width:180,height:180)" /> <img class="lazyload" data-src="{{> image_url}}?i10c=img.resize(width:180,height:180)" data-srcset="{{> image_url}}?i10c=img.resize(width:360,height:360) 2x, {{> image_url}}?i10c=img.resize(width:180,height:180)" alt="{{: name}}" /> </picture>
+                                        </div>
+                                    </div>
+
+                                    <div class="l-prod-col">
+                                        <div class="prod-info">
+                                            <h3 class="prod-title">{{: name}}</h3>
+                                            <div class="prod-price">
+                                                {{if sale_price != ""}} {{if sale_price_max != "" && sale_price
+                                                < sale_price_max}} <em>From&nbsp;</em>
+                                                    {{/if}} £{{: ~priceRound(sale_price, 1)}} {{else}} {{if list_price_max != "" && price
+                                                    < list_price_max}} <em>From&nbsp;</em>
+                                                        {{/if}} £{{: ~priceRound(price, 1)}} {{/if}}
+                                            </div>
+                                            <div class="prod-offers">
+                                                <ul>
+                                                    <li>{{> promotion}}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="prod-rating">
+                                                <span class="prod-rating-max">
+                            <span class="prod-rating-actual prod-rating--{{:rating.replace('.', '_')}}">{{> rating}}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        {{/for}}
+                    </div>
+                    <div>
+            </section>
+            </div>
+    </script>
+    <script id="rrProductCarouselHeaderOrderConfirm" type="text/x-jsrender">
+        <h2 class="checkout-order-confirmation-recently-vieved-title">{{:strategy_message}}</h2>
+    </script>
+    <script id="rrProductCarouselOrderConfirm" type="text/x-jsrender">
+
+        <section class="checkout-order-confirmation-recently-vieved-container">
+            <div class="checkout-order-confirmation-recently-vieved-container-row">
+                {{for items}}
+                <article class="checkout-order-confirmation-recently-vieved-item">
+                    <a href="{{> productUrl}}" data-rr-click-tracking-url="{{> clicktrackingurl}}" class="checkout-order-confirmation-recently-vieved-item-container">
+                        <div class="prod-img prod-list-item img-panel checkout-order-confirmation-recently-vieved-item-image">
+                            <picture>
+                                <source media="(min-width: 768px)" data-srcset="{{> image_url}}?i10c=img.resize(width:360,height:360) 2x, {{> image_url}}?i10c=img.resize(width:180,height:180)" />
+                                <source data-srcset="{{> image_url}}?i10c=img.resize(width:360,height:360) 2x, {{> image_url}}?i10c=img.resize(width:180,height:180)" /> <img class="lazyload" data-src="{{> image_url}}?i10c=img.resize(width:180,height:180)" data-srcset="{{> image_url}}?i10c=img.resize(width:360,height:360) 2x, {{> image_url}}?i10c=img.resize(width:180,height:180)" alt="{{: name}}" /> </picture>
+                        </div>
+                        <div class="checkout-order-confirmation-recently-vieved-item-info">
+                            <h3 class="checkout-order-confirmation-recently-vieved-item-title">{{: name}}</h3>
+                            <div class="checkout-order-confirmation-recently-vieved-item-price">
+                                <span class="checkout-order-confirmation-recently-vieved-item-price-current">
+                  <b>
+                  {{if sale_price != ""}}
+                    {{if sale_price_max != "" && sale_price < sale_price_max}}
+                      <em>From&nbsp;</em> 
+ {{/if}} £{{: ~priceRound(sale_price, 1)}}
+                  {{else}}
+                    {{if list_price_max != "" && price < list_price_max}}
+                      <em>From&nbsp;</em> 
+ {{/if}} £{{: ~priceRound(price, 1)}} {{/if}} </b> </span>
+                            </div>
+                            {{if promotion != ""}}
+                            <ul class="checkout-order-confirmation-recently-vieved-item-offers">
+                                <li>{{> promotion}}</li>
+                            </ul>
+                            {{/if}}
+                            <div class="prod-rating checkout-order-confirmation-recently-vieved-item-rating">
+                                <span class="prod-rating-max">
+                  <span class="prod-rating-actual prod-rating--{{:rating.replace('.', '_')}}">{{> rating}}</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                {{/for}}
+            </div>
+        </section>
+
+    </script>
+    <script id="rrShowBanner" type="text/x-jsrender">
+        <a href="{{> productUrl}}" data-rr-click-tracking-url="{{> clicktrackingurl}}" class="js-product-link">
+      <img data-src="{{> image_url}}" class="lazyload mobile-hidden" alt="{{> alt_txt}}">
+      <img data-src="{{> mobile_image_url}}" class="lazyload desktop-hidden" alt="{{> alt_txt}}">
+    </a>
+    </script>
+    <script id="rrHomePlacementHeader" type="text/x-jsrender">
+        <div class="page-title-block carousel-title">
+            <span class="page-title-line">
+            <h1 class="page-title">
+              <span>{{:strategy_message}}</span>
+            </h1>
+            </span>
+        </div>
+    </script>
+    <script id="rrHomePlacement" type="text/x-jsrender">
+        {{include tmpl="#rrHomePlacementHeader" /}} {{include tmpl="#rrProductCarousel" /}}
+    </script>
+    <script>
+        (function() { // wrap all interactions into anonymous function to not to rewrite core RR functions (like r3_common, r3_item etc)
+            var home_ctx = r3_context();
+
+            $("[data-rr-template]").each(function(attr, value) {
+                var hideOnMobile = $(this).parent().data("rr-is-mobile");
+                if (!hideOnMobile || (hideOnMobile && ($(window).width() > 768))) {
+                    home_ctx.addPlacementType($(this).data("rr-template"), placementRenderer);
+                }
+            });
+
+            home_ctx.r3_home();
+            home_ctx.r3();
+            $.views.helpers({
+                priceRound: function(price, rate) {
+                    return Number(price * rate).toFixed(2);
+                }
+            });
+        })();
+    </script>
+    <script src="//tags.tiqcdn.com/utag/nbty/main/prod/utag.js" defer></script>
+
+    <script>
+        if (window.$ && window.SS && SS.Cookie && SS.EventTrack) {
+            var cookieSuffix;
+            var custIds = {};
+            var date = new Date();
+            var expirationDate;
+            var idRewards;
+            var idUser;
+            var monthInSecs = 2592000000; // = 30 * 24 * 60 * 60 * 1000
+            /* Set Date */
+            date.setTime(date.getTime() + monthInSecs);
+            expirationDate = ";expires=" + date.toUTCString();
+            cookieSuffix = expirationDate + ";path=/;domain=www.hollandandbarrett.com";
+            /* Store IDs in Cookies */
+            function stopSetClock() {
+                clearInterval(fnSetCookie);
+            }
+            var fnSetCookie = setInterval(function() {
+                if (window.universal_variable && window.universal_variable.user) {
+                    if (window.universal_variable.user.rewards_card) {
+                        SS.Cookie.set("ssRewardsId", window.universal_variable.user.rewards_card, cookieSuffix);
+                    } else {
+                        SS.Cookie.set("ssRewardsId", "null", cookieSuffix);
+                    }
+                    if (window.universal_variable.user.user_id) {
+                        SS.Cookie.set("ssUserId", window.universal_variable.user.user_id, cookieSuffix);
+                    } else {
+                        SS.Cookie.set("ssUserId", "null", cookieSuffix);
+                    }
+                    if (window.universal_variable.user.och_id && window.universal_variable.user.och_id.length && window.universal_variable.user.och_id !== null) {
+                        SS.Cookie.set("ssOchId", window.universal_variable.user.och_id, cookieSuffix);
+                    } else {
+                        SS.Cookie.set("ssOchId", "null", cookieSuffix);
+                    }
+                    stopSetClock();
+                }
+            }, 250);
+            /* Get Stored IDs */
+            function stopGetClock() {
+                clearInterval(fnGetCookie);
+            }
+            var fnGetCookie = setInterval(function() {
+                if (SS.Cookie.get("ssRewardsId")) {
+                    custIds.Rewards = SS.Cookie.get("ssRewardsId");
+                }
+                if (SS.Cookie.get("ssUserId")) {
+                    custIds.User = SS.Cookie.get("ssUserId");
+                }
+                if (SS.Cookie.get("ssOchId")) {
+                    custIds.ssOchId = SS.Cookie.get("ssOchId");
+                }
+                if ((SS.Cookie.get("ssRewardsId") || SS.Cookie.get("ssUserId")) || SS.Cookie.get("ssOchId")) {
+                    stopGetClock();
+                    SS.EventTrack.rp("customerInfo", custIds);
+                }
+            }, 275);
+        }
+    </script>
+    <style>
+        .main-nav [role=menubar] {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        
+        .main-nav.replete-nav .main-nav-item>a {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        (function() {
+
+            $(document).ready(function() {
+
+                $('.main-nav-item:contains("Weight Management")').after('<li class="main-nav-item" role="menuitem" data-all-text="All" style="float: right;"><a href="/shop/offers/summer/">Summer Shop</a></li>');
+
+            });
+
+        })();
+    </script>
+    <script>
+        (function() {
+            var el = $('.ico-search');
+            if (el && window.SS) {
+                el.on('click', function() {
+                    SS.EventTrack.rp('search-icon-click');
+                });
+            }
+        })();
+    </script>
+    <script>
+        (function() {
+            var el = $('.js-quick-order-submit');
+            if (el && window.SS && localStorage.getItem('SS_Search_Type') == 'voice') {
+                el.on('click', function() {
+                    SS.EventTrack.rp('voice-search-atb');
+                    console.log('We added to basket after voice searching!');
+                });
+            }
+        })();
+    </script>
+    <script>
+        (function(window, document) {
+
+            // == Event Tracking
+            // =============================================================== ** //
+
+            // 1. Track your order
+            $(document).on('click', 'a[href="/track-my-order.jsp"]', function() {
+
+                if (window.SS) {
+                    window.SS.EventTrack.rp('track-your-order-click');
+                }
+
+            });
+
+            // 2. Delivery and Returns
+            $(document).on('click', 'a[href="/info/shipping-returns"]', function() {
+
+                if (window.SS) {
+                    window.SS.EventTrack.rp('delivery-and-returns-click');
+                }
+
+            });
+
+            // 3. FAQs
+            $(document).on('click', 'a[href="/info/faqs"]', function() {
+
+                if (window.SS) {
+                    window.SS.EventTrack.rp('faqs-click');
+                }
+
+            });
+
+            // 3. Contact Us
+            $(document).on('click', 'a[href="/info/contact-us"]', function() {
+
+                if (window.SS) {
+                    window.SS.EventTrack.rp('contact-us-click');
+                }
+
+            });
+
+        })(window, document);
+    </script>
+</body>
+
+</html>
+<script>
+    window.universal_variable = {
+        "listing": {
+            "items": [],
+            "layout": null,
+            "query": null,
+            "result_count": 0,
+            "sort_by": null
+        },
+        "page": {
+            "environment": "production",
+            "name": "Home  |  Holland &amp; Barrett - the UK&#039;s Leading Health Retailer",
+            "type": "homepage"
+        },
+        "user": {
+            "csrAgentID": null,
+            "email": null,
+            "last_order_date": null,
+            "loginstatus": "guest",
+            "name": null,
+            "och_id": null,
+            "rewards_card": null,
+            "unlimited": null,
+            "user_id": "859479696"
+        }
+    }
+</script>
+  
+  
+</body>
+</html>

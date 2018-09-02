@@ -1,0 +1,253 @@
+.common-popup {
+	font-size: 16px;
+	position: relative
+}
+.common-popup a:not('.button') {
+	color: #3d7a6a
+}
+.popup-block {
+	display: none
+}
+.popup-block.active {
+	display: block
+}
+.common-popup .popup-header {
+	margin-bottom: 20px
+}
+.common-popup .popup-header.attention {
+	min-height: 32px;
+	background: url('../../ui/css/img/icons/icon-warning.png') no-repeat 0 0;
+	background-size: 32px 27px;
+	padding-left: 46px
+}
+.common-popup .modal-close-btn {
+	top: 16px;
+	right: 16px;
+	opacity: .5
+}
+.common-popup .popup-title {
+	margin: 0;
+	font-size: 21px
+}
+.common-popup .popup-description {
+	margin-bottom: 18px;
+	line-height: 18px
+}
+.common-popup .account-popup-toggle-reset-password-form-button {
+	color: #c7353b;
+	font-size: 15px
+}
+.common-popup .account-popup-toggle-reset-password-form-button:hover {
+	text-decoration: none
+}
+.common-popup .form-item {
+	margin-bottom: 13px;
+	text-align: left
+}
+.common-popup .form-item.separate {
+	margin-bottom: 30px
+}
+.common-popup .form-item.vertically-aligned input,
+.common-popup .form-item.vertically-aligned label {
+	vertical-align: middle
+}
+.common-popup .form-item-input.error {
+	border: 1px solid #d61616;
+	-webkit-box-shadow: 0 0 0 1px #d61616;
+	box-shadow: 0 0 0 1px #d61616
+}
+.common-popup .form-item-label {
+	display: block;
+	margin-bottom: 4px
+}
+.common-popup .form-item-input {
+	display: block;
+	width: 350px
+}
+.common-popup .account-popup-cancel-button,
+.hb-popup-cancel {
+	color: #006341;
+	font-size: 15px
+}
+.common-popup .account-popup-toggle-login-form-button:hover {
+	text-decoration: none
+}
+.common-popup .account-popup-link,
+input.account-popup-resend-code-link {
+	font-weight: bold;
+	color: #006341
+}
+input.account-popup-resend-code-link {
+	display: inline;
+	background: 0;
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: normal;
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+input.account-popup-resend-code-link:hover,
+input.account-popup-resend-code-link:active,
+input.account-popup-resend-code-link:focus,
+input.account-popup-resend-code-link:disabled {
+	background: 0;
+	text-decoration: underline !important;
+	bottom: 0;
+	right: 0;
+	color: #006341;
+	opacity: 1
+}
+.common-popup .js-error {
+	border-left: 17px solid #d61616;
+	padding: 22px 20px 22px 15px;
+	margin: 0 25px 25px 0;
+	background-color: #fae8e5
+}
+.common-popup .js-error>li,
+.common-popup .js-error>ul>li {
+	list-style: none
+}
+.common-popup .popup-recomendation-tips {
+	left: 0;
+	top: 80px
+}
+.common-popup .js-error ul li em {
+	color: #d61616;
+	font-style: normal
+}
+.common-popup .js-error ul {
+	color: #d61616;
+	list-style: disc outside;
+	margin: 0 0 .5em 1.5em;
+	padding: 0
+}
+.common-popup .js-error>ul {
+	margin: 0;
+	padding: 0
+}
+.common-popup .masked-holder {
+	width: 350px
+}
+.popup-strength-password-block .u-position-relative {
+	position: relative
+}
+.popup-recomendation-tips-block {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 80px;
+	z-index: 150;
+	display: none;
+	background-color: #fff;
+	font-size: 14px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 10px
+}
+.js-modal-content-margin-bottom {
+	margin-bottom: 150px
+}
+.popup-recomendation-tips-block::before,
+.popup-recomendation-tips-block::after {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -5px;
+	z-index: 2;
+	border-bottom: 10px solid #000;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent
+}
+.popup-recomendation-tips-block::after {
+	border-bottom: 10px solid #fff;
+	z-index: 3;
+	top: -9px
+}
+.popup-recomendation-tips-block div {
+	margin: 0 0 5px
+}
+.popup-recomendation-tips-block ul {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+.popup-recomendation-tips-block li {
+	padding: 0;
+	margin: 0 0 5px
+}
+.popup-recomendation-tips-block li span {
+	font-size: 16px;
+	font-weight: bold
+}
+.popup-strength-line-holder {
+	width: 300px;
+	margin: 0
+}
+.popup-strength-progress-bar {
+	height: 0;
+	width: 0;
+	border-radius: 2px;
+	background-color: #1c8e27
+}
+.popup-strength-progress-bar.red {
+	background-color: #ff3232
+}
+.popup-strength-progress-bar.orange {
+	background-color: #f2b44f
+}
+.popup-strength-progress-bar.green {
+	background-color: #1c8e27
+}
+.popup-strength-password-text {
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	right: 0
+}
+.popup-strength-password-text.red,
+.popup-strength-progress-bar.red {
+	border: 0
+}
+.popup-strength-password-text.orange {
+	color: #f2b44f
+}
+.popup-strength-password-text.green {
+	color: #1c8e27
+}
+.error-message-red {
+	color: #b00
+}
+.error-message-header-dark-red,
+.dark-red-link {
+	color: #a00
+}
+.dark-red-link {
+	text-decoration: none
+}
+.dark-red-link:hover {
+	color: red
+}
+@media screen and (min-width: 768px) {
+	.popup-recomendation-tips-block {
+		width: 300px
+	}
+	.popup-strength-password-text {
+		right: auto;
+		top: 38px;
+		left: 370px
+	}
+	.account-popup-redesign .popup-strength-password-text {
+		top: 0;
+		right: 0;
+		left: auto
+	}
+	.common-popup .form-item {
+		width: auto
+	}
+}

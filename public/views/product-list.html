@@ -1,0 +1,1567 @@
+<div ng-controller="productListController" ng-init="init()">
+	<div class="row addpadding">
+		<div class="col-md-3">
+			<nav class="prod-filter-nav local-nav mobile-hidden">
+				<div class="prod-filters prod-filters-accordion-active"
+					data-init-module="desktopFiltersModule"
+					data-init-params="{&quot;breakpoint220&quot;:{&quot;initFilters&quot;:false},&quot;breakpoint768&quot;:{&quot;initFilters&quot;:true}}">
+
+
+
+					<a href="#" class="teaser-block-title desktop-hidden"> Select
+						Category </a>
+					<ul class="prod-filter-nav local-nav">
+						<div class="facets-holder" data-conceal="15"
+							data-reveal="reveal-nav-facet-0" data-child="li.facets-item">
+							<h2 class="teaser-block-title mobile-hidden">Select Category</h2>
+
+							<div class="facets-inner">
+
+
+								<ul class="facets-elements">
+
+
+
+									<li class="facets-item"><a
+										href="/shop/food-drink/snacks/chocolate-cakes-biscuits/biscuits-cookies/"
+										title="Biscuits &amp; Cookies"> Biscuits &amp; Cookies </a> <a
+										style="display: none;" href=""></a></li>
+
+
+
+									<li class="facets-item"><a
+										href="/shop/food-drink/snacks/chocolate-cakes-biscuits/cakes/"
+										title="Cakes"> Cakes </a> <a style="display: none;" href=""></a>
+									</li>
+
+
+
+									<li class="facets-item"><a
+										href="/shop/food-drink/snacks/chocolate-cakes-biscuits/chocolate/"
+										title="Chocolate"> Chocolate </a> <a style="display: none;"
+										href=""></a></li>
+
+
+
+
+
+									<a href="javascript:void(0)" class="reveal-link"
+										id="reveal-nav-facet-0" data-reveal-text="Show more..."
+										data-conceal-text="Show less..." style="display: none;">Show
+										more...</a>
+
+								</ul>
+							</div>
+							<div class="placeholder-item" style="display: none">Search</div>
+						</div>
+					</ul>
+
+
+
+
+					<h2 class="prod-filter-title active-filters hidden">Active
+						Filters</h2>
+
+					<div class="active-prod-filters clearfix hidden">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<a class="filter-clear-all" href="javascript:void(0);"
+							title="Clear all filters">Clear all</a>
+					</div>
+
+					<h2 class="prod-filter-title">Filter by:</h2>
+
+
+
+
+
+
+					<li class="filter-list-item expanded"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden"> Free
+							From <i class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_AdvisoryMessage" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									Free From <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="5"
+									data-reveal="reveal-filter-facet-0"
+									data-child="label:not(.ref-crumb)">
+									<h3 class="filter-group-title mobile-hidden">
+										Free From<span class="tooltip"
+											data-tooltip="Use these filters to find products that are free from and free from traces of the named allergens."><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+
+
+										<label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_gluten-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Gluten Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Gluten Free&nbsp;(83)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_vegan/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Vegan"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Vegan&nbsp;(55)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_organic/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Organic"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Organic&nbsp;(13)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_peanut-nut-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Peanut &amp; Nut Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Peanut &amp; Nut Free&nbsp;(18)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_milk-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Milk Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Milk Free&nbsp;(48)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_celery-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Celery Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Celery Free&nbsp;(88)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_cereal-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Cereal Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Cereal Free&nbsp;(58)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_crustaceans-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Crustaceans Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Crustaceans Free&nbsp;(89)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_egg-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Egg Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Egg Free&nbsp;(73)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_fish-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Fish Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Fish Free&nbsp;(89)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_kiwi-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Kiwi Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Kiwi Free&nbsp;(85)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_lupin-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Lupin Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Lupin Free&nbsp;(88)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_mollusc-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Mollusc Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Mollusc Free&nbsp;(89)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_mustard-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Mustard Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Mustard Free&nbsp;(88)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_nut-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Nut Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Nut Free&nbsp;(28)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_peanut-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Peanut Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Peanut Free&nbsp;(65)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_sesame-seed-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Sesame Seed Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Sesame Seed Free&nbsp;(82)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_soya-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Soya Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Soya Free&nbsp;(37)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_sulphites-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Sulphites Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Sulphites Free&nbsp;(88)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_wheat-free/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="Wheat Free"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> Wheat Free&nbsp;(83)
+
+
+										</label> <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-0" data-reveal-text="Show More..."
+											data-conceal-text="Show Less...">Show More...</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
+
+
+
+
+
+
+
+					<li class="filter-list-item expanded"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden"> Brand <i
+							class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_Brand" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									Brand <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="5"
+									data-reveal="reveal-filter-facet-1"
+									data-child="label:not(.ref-crumb)">
+									<h3 class="filter-group-title mobile-hidden">
+										Brand<span class="tooltip" data-tooltip=""><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+
+
+										<label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_plamil/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Plamil" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/plamil/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Plamil&nbsp;(13)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_angelic/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Angelic" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/angelic/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Angelic&nbsp;(11)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_cocoa-libre/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Cocoa Libre" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/cocoa-libre/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Cocoa Libre&nbsp;(9)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_moo-free/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Moo Free" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/moo-free/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Moo Free&nbsp;(8)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_diablo/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Diablo" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/diablo/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Diablo&nbsp;(7)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_mrs-crimbles/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Mrs Crimbles" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/mrs-crimbles/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Mrs Crimbles&nbsp;(7)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_lazy-day-foods/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Lazy Day Foods" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/lazy-day-foods/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Lazy Day Foods&nbsp;(6)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_nairns/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Nairns" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/nairns/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Nairns&nbsp;(6)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_free-ist/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Free'ist" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/free-ist/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Free'ist&nbsp;(5)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_nut-free-chocolate-people/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Nut Free Chocolate People"
+											data-dimension-name="Brand"> <i
+											class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/nut-free-chocolate-people/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Nut Free Chocolate People&nbsp;(5)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_the-foods-of-athenry/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="The Foods of Athenry"
+											data-dimension-name="Brand"> <i
+											class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/the-foods-of-athenry/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											The Foods of Athenry&nbsp;(5)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_choc-chick/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Choc Chick" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/choc-chick/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Choc Chick&nbsp;(4)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_loving-earth/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Loving Earth" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/loving-earth/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Loving Earth&nbsp;(4)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_balance/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Balance" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/balance/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Balance&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_dean-s/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Dean's" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/dean-s/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Dean's&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_garbanzo/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Garbanzo" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/garbanzo/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Garbanzo&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_orgran/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Orgran" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/orgran/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Orgran&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_vegan-bakery/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Vegan Bakery" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/vegan-bakery/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Vegan Bakery&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_doisy-dam/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Doisy &amp; Dam"
+											data-dimension-name="Brand"> <i
+											class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/doisy-dam/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Doisy &amp; Dam&nbsp;(2)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_iq-chocolate/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="iQ Chocolate" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/iq-chocolate/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											iQ Chocolate&nbsp;(2)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_squirrel-sisters/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Squirrel Sisters"
+											data-dimension-name="Brand"> <i
+											class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/squirrel-sisters/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Squirrel Sisters&nbsp;(2)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_sweet-freedom/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Sweet Freedom" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/sweet-freedom/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Sweet Freedom&nbsp;(2)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_biona/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Biona" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/biona/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Biona&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_booja-booja/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Booja Booja" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/booja-booja/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Booja Booja&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_denises-delicious-gluten-free-bakery/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Denises Delicious Gluten Free Bakery"
+											data-dimension-name="Brand"> <i
+											class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/denises-delicious-gluten-free-bakery/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Denises Delicious Gluten Free Bakery&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_dr-schar/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Dr Schar" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/dr-schar/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Dr Schar&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_fabulous-freefrom-factory/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Fabulous Freefrom Factory"
+											data-dimension-name="Brand"> <i
+											class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/fabulous-freefrom-factory/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Fabulous Freefrom Factory&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_jim-jams/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="jim jams" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/jim-jams/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											jim jams&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_neals-yard-wholefoods/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Neals Yard Wholefoods"
+											data-dimension-name="Brand"> <i
+											class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/neals-yard-wholefoods/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Neals Yard Wholefoods&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_raw-health/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Raw Health" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/raw-health/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Raw Health&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=brand_vego-good-food/"
+											class="js-facet" data-facet-title="Brand"
+											data-facet-value="Vego Good Food" data-dimension-name="Brand">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/brands/vego-good-food/food-drink/snacks/chocolate-cakes-biscuits/"></a>
+
+
+
+											Vego Good Food&nbsp;(1)
+
+
+										</label> <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-1" data-reveal-text="Show More..."
+											data-conceal-text="Show Less...">Show More...</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
+
+
+
+
+
+
+
+					<li class="filter-list-item expanded"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden"> Rating <i
+							class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_Rating" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									Rating <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="3"
+									data-reveal="reveal-filter-facet-2"
+									data-child="label:not(.ref-crumb)">
+									<h3 class="filter-group-title mobile-hidden">
+										Rating<span class="tooltip" data-tooltip=""><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+
+
+										<label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=rating_5/"
+											class="js-facet" data-facet-title="Rating"
+											data-facet-value="5" data-dimension-name="Rating"> <i
+											class="ref-crumb-label"></i> <span class="prod-rating">
+												<span class="prod-rating-max"> <span
+													class="prod-rating-actual five-stars"></span>
+
+											</span> <span class="visuallyhidden">out of 5 stars </span>
+										</span> &nbsp;(32)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=rating_4/"
+											class="js-facet" data-facet-title="Rating"
+											data-facet-value="4" data-dimension-name="Rating"> <i
+											class="ref-crumb-label"></i> <span class="prod-rating">
+												<span class="prod-rating-max"> <span
+													class="prod-rating-actual four-stars"></span>
+
+											</span> <span class="visuallyhidden">out of 5 stars </span>
+										</span> &nbsp;(56)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=rating_3/"
+											class="js-facet" data-facet-title="Rating"
+											data-facet-value="3" data-dimension-name="Rating"> <i
+											class="ref-crumb-label"></i> <span class="prod-rating">
+												<span class="prod-rating-max"> <span
+													class="prod-rating-actual three-stars"></span>
+
+											</span> <span class="visuallyhidden">out of 5 stars </span>
+										</span> &nbsp;(24)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=rating_2/"
+											class="js-facet" data-facet-title="Rating"
+											data-facet-value="2" data-dimension-name="Rating"> <i
+											class="ref-crumb-label"></i> <span class="prod-rating">
+												<span class="prod-rating-max"> <span
+													class="prod-rating-actual two-stars"></span>
+
+											</span> <span class="visuallyhidden">out of 5 stars </span>
+										</span> &nbsp;(2)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=rating_1/"
+											class="js-facet" data-facet-title="Rating"
+											data-facet-value="1" data-dimension-name="Rating"> <i
+											class="ref-crumb-label"></i> <span class="prod-rating">
+												<span class="prod-rating-max"> <span
+													class="prod-rating-actual one-star"></span>
+
+											</span> <span class="visuallyhidden">out of 5 stars </span>
+										</span> &nbsp;(1)
+
+
+										</label> <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-2" data-reveal-text="Show More..."
+											data-conceal-text="Show Less...">Show More...</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
+
+
+
+
+
+
+
+					<li class="filter-list-item collapsed"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden"> Price <i
+							class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_Price" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									Price <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="5"
+									data-reveal="reveal-filter-facet-3"
+									data-child="label:not(.ref-crumb)">
+									<h3 class="filter-group-title mobile-hidden">
+										Price<span class="tooltip" data-tooltip=""><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+
+
+										<label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=price_less-than-5/"
+											class="js-facet" data-facet-title="Price"
+											data-facet-value="Less than £5" data-dimension-name="Price">
+											<i class="ref-crumb-label"></i> Less than £5&nbsp;(116)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=price_5-to-10/"
+											class="js-facet" data-facet-title="Price"
+											data-facet-value="£5 to £10" data-dimension-name="Price">
+											<i class="ref-crumb-label"></i> £5 to £10&nbsp;(6)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=price_10-to-15/"
+											class="js-facet" data-facet-title="Price"
+											data-facet-value="£10 to £15" data-dimension-name="Price">
+											<i class="ref-crumb-label"></i> £10 to £15&nbsp;(1)
+
+
+										</label> <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-3" data-reveal-text="Show More..."
+											data-conceal-text="Show Less..." style="display: none;">Show
+											More...</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
+
+
+
+
+
+
+
+					<li class="filter-list-item expanded"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden"> Flavour
+							<i class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_Flavour" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									Flavour <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="5"
+									data-reveal="reveal-filter-facet-4"
+									data-child="label:not(.ref-crumb)">
+									<h3 class="filter-group-title mobile-hidden">
+										Flavour<span class="tooltip" data-tooltip=""><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+
+
+										<label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_milk-chocolate/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Milk Chocolate"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Milk Chocolate&nbsp;(10)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_dark-chocolate/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Dark Chocolate"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Dark Chocolate&nbsp;(7)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_chocolate/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Chocolate" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Chocolate&nbsp;(4)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_mint/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Mint" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Mint&nbsp;(4)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_ginger/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Ginger" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Ginger&nbsp;(4)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_orange/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Orange" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Orange&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_chocolate-chip/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Chocolate Chip"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Chocolate Chip&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_cranberry/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Cranberry" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Cranberry&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_milk-chocolate-alternative/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Milk Chocolate Alternative"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Milk Chocolate
+											Alternative&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_chocolate-orange/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Chocolate Orange"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Chocolate Orange&nbsp;(3)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_double-chocolate/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Double Chocolate"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Double Chocolate&nbsp;(2)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_honey-oat/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Honey &amp; Oat"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Honey &amp; Oat&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_cranberry-sunflower-seeds/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Cranberry &amp; Sunflower Seeds"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Cranberry &amp; Sunflower
+											Seeds&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_banana/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Banana" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Banana&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_coconut/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Coconut" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Coconut&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_hazelnut/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Hazelnut" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Hazelnut&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_chocolate-cookie/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Chocolate Cookie"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Chocolate Cookie&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_berry/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Berry" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Berry&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_chocolate-peanut/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Chocolate &amp; Peanut"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Chocolate &amp; Peanut&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_chocolate-coconut/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Chocolate &amp; Coconut"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Chocolate &amp; Coconut&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_fruit/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Fruit" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Fruit&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_dark-mint-chocolate/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Dark Mint Chocolate"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Dark Mint Chocolate&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_honeycomb/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Honeycomb" data-dimension-name="Flavour">
+											<i class="ref-crumb-label"></i> Honeycomb&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_salted-caramel/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="Salted Caramel"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> Salted Caramel&nbsp;(1)
+
+
+										</label> <label style="display: none;"> <input type="checkbox"
+											name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=flavour_white-chocolate-strawberry/"
+											class="js-facet" data-facet-title="Flavour"
+											data-facet-value="White Chocolate &amp; Strawberry"
+											data-dimension-name="Flavour"> <i
+											class="ref-crumb-label"></i> White Chocolate &amp;
+											Strawberry&nbsp;(1)
+
+
+										</label> <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-4" data-reveal-text="Show More..."
+											data-conceal-text="Show Less...">Show More...</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
+
+
+
+
+
+
+
+					<li class="filter-list-item collapsed"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden"> Format <i
+							class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_Format" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									Format <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="5"
+									data-reveal="reveal-filter-facet-5"
+									data-child="label:not(.ref-crumb)">
+									<h3 class="filter-group-title mobile-hidden">
+										Format<span class="tooltip" data-tooltip=""><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+
+
+										<label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=format_bar/"
+											class="js-facet" data-facet-title="Format"
+											data-facet-value="Bar" data-dimension-name="Format">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/food-drink/snacks/chocolate-cakes-biscuits/bar/"></a>
+
+											Bar&nbsp;(4)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=format_bags/"
+											class="js-facet" data-facet-title="Format"
+											data-facet-value="Bags" data-dimension-name="Format">
+											<i class="ref-crumb-label"></i> <a style="display: none;"
+											href="/shop/food-drink/snacks/chocolate-cakes-biscuits/bags/"></a>
+
+											Bags&nbsp;(1)
+
+
+										</label> <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-5" data-reveal-text="Show More..."
+											data-conceal-text="Show Less..." style="display: none;">Show
+											More...</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
+
+
+
+
+
+
+
+					<li class="filter-list-item collapsed"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden"> Size <i
+							class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_Size" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									Size <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="5"
+									data-reveal="reveal-filter-facet-6"
+									data-child="label:not(.ref-crumb)">
+									<h3 class="filter-group-title mobile-hidden">
+										Size<span class="tooltip" data-tooltip=""><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+
+
+										<label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=size_less-than-50-g/"
+											class="js-facet" data-facet-title="Size"
+											data-facet-value="Less than 50 g" data-dimension-name="Size">
+											<i class="ref-crumb-label"></i> Less than 50 g&nbsp;(30)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=size_50-g-100-g/"
+											class="js-facet" data-facet-title="Size"
+											data-facet-value="50 g - 100 g" data-dimension-name="Size">
+											<i class="ref-crumb-label"></i> 50 g - 100 g&nbsp;(43)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=size_100-g-250-g/"
+											class="js-facet" data-facet-title="Size"
+											data-facet-value="100 g - 250 g" data-dimension-name="Size">
+											<i class="ref-crumb-label"></i> 100 g - 250 g&nbsp;(43)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=size_more-than-250-g/"
+											class="js-facet" data-facet-title="Size"
+											data-facet-value="More than 250 g" data-dimension-name="Size">
+											<i class="ref-crumb-label"></i> More than 250 g&nbsp;(5)
+
+
+										</label> <label> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=size_other-sizes/"
+											class="js-facet" data-facet-title="Size"
+											data-facet-value="Other sizes" data-dimension-name="Size">
+											<i class="ref-crumb-label"></i> Other sizes&nbsp;(2)
+
+
+										</label> <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-6" data-reveal-text="Show More..."
+											data-conceal-text="Show Less..." style="display: none;">Show
+											More...</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
+
+
+
+
+				</div>
+			</nav>
+		</div>
+
+		<div class="col-md-9">
+
+			<section class="teaser-block prod-teaser-block clearfix is-grid">
+				<header class="prod-teaser-header">
+					<form class="page-display clearfix" action="#">
+
+						<fieldset class="form-item-group page-sort">
+							<div class="form-item inline-form-item">
+								<label>
+									<div class="rpp-element-holder">
+										<span class="cell mobile-hidden"> Sort by </span> <a
+											href="javascript:void(0);" id="filters-open"
+											class="desktop-hidden button grayButton"
+											title="Clear all filters"><i class="ico-s ico-sliders"></i>Filters<i
+											class="ico-s ico-check"></i></a>
+									</div> <select name="page-sort" id="sortProducts"
+									style="width: auto; padding: 0 15px 0 0;" tabindex="-1">
+
+										<option
+											value="/food-drink/snacks/chocolate-cakes-biscuits/N=sort_topseller/">
+											Popularity</option>
+
+										<option
+											value="/food-drink/snacks/chocolate-cakes-biscuits/N=sort_new-in/">
+											New In</option>
+
+										<option
+											value="/food-drink/snacks/chocolate-cakes-biscuits/N=sort_low-high/">
+											Price Low-High</option>
+
+										<option
+											value="/food-drink/snacks/chocolate-cakes-biscuits/N=sort_high-low/">
+											Price High-Low</option>
+
+										<option
+											value="/food-drink/snacks/chocolate-cakes-biscuits/N=sort_a-to-z/">
+											Title A-Z</option>
+
+										<option
+											value="/food-drink/snacks/chocolate-cakes-biscuits/N=sort_z-to-a/">
+											Title Z-A</option>
+
+										<option
+											value="/food-drink/snacks/chocolate-cakes-biscuits/N=sort_ratings/">
+											Ratings High to Low</option>
+
+								</select>
+								</label> <input type="submit" value="Submit" class="bt"
+									style="display: none;">
+							</div>
+						</fieldset>
+
+
+
+
+						<div
+							class="form-item inline-form-item l-switcher form-item-group rpp-holder mobile-hidden">
+							<div class="rpp-element-holder">
+								<span class="cell"> Showing </span>
+							</div>
+							<select id="searchLimit"
+								style="width: auto; padding: 0 15px 0 0;">
+
+
+								<option value="20">20</option>
+
+								<option value="40">40</option>
+
+								<option value="80">80</option>
+
+								<option value="showAll" class="showAll">All</option>
+							</select>
+							<div class="rpp-element-holder">
+								<span class="cell"> of 123 </span>
+							</div>
+						</div>
+
+
+
+						<ul class="list-pagination clearfix">
+
+
+
+
+
+							<li class="current"><strong title="Page 1 (current)">1</strong>
+
+
+							</li>
+
+
+
+							<li><a href="javascript:void(0);" value="2"> 2 </a></li>
+
+
+
+							<li><a href="javascript:void(0);" value="3"> 3 </a></li>
+
+
+
+							<li><a href="javascript:void(0);" value="4"> 4 </a></li>
+
+
+							<li>...</li>
+
+
+
+							<li><a href="javascript:void(0);" value="7"> 7 </a></li>
+
+
+
+							<li class="next"><a href="javascript:void(0);" value="2">
+									› </a></li>
+
+						</ul>
+
+
+					</form>
+
+				</header>
+
+
+				<div class="prod-teaser-items lazy-loaded-items clearfix">
+
+					<ul class="l-wrap product-list-flex">
+
+
+						<li class="l-col l-one-quarter product-list-item"
+							ng-repeat="product in products">
+							<!-- heloooooo   {{products}} -->
+							<article
+								class="prod-teaser-item clearfix teaser-with-image prod-teaser-item-quick-search ss-roundel-sixteen">
+								<form
+									action="/cartridges/subcategorypage/?_DARGS=/cartridges/subcategorypage/subcategorypage.jsp.1#"
+									class="quick-order-form" data-rr-item-id="60005446"
+									method="post" data-rr-sku-id="005446"
+									data-refresh-url="/modules/ajax/basket-masthead.jsp"
+									data-ajax-url="/modules/ajax/addItemToOrder.jsp"
+									data-quantity="1">
+									<input name="_dyncharset" value="UTF-8" type="hidden"><input
+										name="_dynSessConf" value="-8944992118871989109" type="hidden">
+
+									<div class="product-container">
+										<a ui-sref="productdetail({productId:'{{product.id}}'})" ng-click="setProduct(product.id)"
+											class="block js-product-link" data-product-anchor="60005446">
+
+											<div class="l-prod-col prod-img-wrapper">
+												<div class="prod-img prod-list-item img-panel">
+
+
+
+													<img class="js-prod-img"
+														src="{{product.masterVariant.images[0].url}}"
+														alt="{{product.name.en}}">
+
+
+													<div
+														style="background: #D5E15B; color: #006344; font-size: 12px; text-transform: none !important;"
+														class="promo-strip mobile-hidden">Buy One Get One
+														Half Price</div>
+
+
+												</div>
+											</div>
+
+
+											<div class="l-prod-col">
+												<div class="prod-info">
+
+													<h3 class="prod-title"></h3>
+
+
+
+
+
+													<div class="prod-price">
+
+														£{{product.masterVariant.prices[0].value.centAmount/100}}
+
+													</div>
+
+
+
+													<div class="prod-offers">
+														<ul>
+															<li></li>
+														</ul>
+													</div>
+
+
+
+
+													<div class="prod-rating clearfix">
+														<span class="prod-rating-max"> <span
+															class="prod-rating-actual prod-rating--4_8">4.7931</span>
+														</span> <span class="prod-rating-amount js-reviews-count"
+															href="/shop/product/vego-organic-hazelnut-chocolate-bar-60005446?skuid=005446#reviews">
+															29 Reviews </span>
+
+													</div>
+
+
+												</div>
+											</div>
+
+
+
+											<div class="l-prod-col l-double-col"></div>
+
+										</a>
+
+										<div class="quick-order-button-container">
+
+											<input type="hidden" name="productId" value="60005446">
+											<input type="hidden" name="skuId" value="005446"> <input
+												type="hidden" name="quantity" value="1"
+												class="js-quick-order-quantity">
+
+											<button class="js-quick-order-submit ">
+												<img
+													src="//images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/icons/basket.svg">
+												<span class="quick-order-submit-label"> <span
+													class="quick-order-submit-label-mobile"> Add </span> <span
+													class="quick-order-submit-label-desktop"> Quick add
+												</span>
+												</span> <span class="quick-order-submit-label-added">Added</span>
+											</button>
+											<div class="message-success js-toggled">
+												<div class="green-tick-icon"></div>
+											</div>
+
+										</div>
+										<div class="plp-error-notification-container">
+											<p class="plp-error-notification js-plp-error-notification"></p>
+										</div>
+
+									</div>
+
+
+									<div
+										style="background: #D5E15B; color: #006344; font-size: 12px; text-transform: none !important;"
+										class="promo-strip desktop-hidden">Buy One Get One Half
+										Price</div>
+
+
+
+								</form>
+							</article>
+
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</section>
+		</div>
+	</div>
+</div>

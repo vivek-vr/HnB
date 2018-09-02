@@ -1,0 +1,71 @@
+
+/* Hide "more colours" in product thumbnails */
+.shop-item .pop-product-more-colors {
+    visibility: hidden;
+}
+
+/* Hide newsletter option in checkout */
+.follow-up label[for=confirmation-newsletter-input] {
+    visibility: hidden;
+}
+
+/* Hide newsletter option in sign up */
+.signup-box-newsletter {
+    display: none;
+}
+
+/* Hide newsletter option in personal details */
+.personal-details-newsletter {
+    display: none;
+}
+
+.wishlist {
+    position: fixed;
+    z-index: 100;
+}
+
+/* Hide not yet implemented tabs in my account */
+.my-account-sidebar .my-account-sidebar-items:nth-child(4),
+.my-account-sidebar .my-account-sidebar-items:nth-child(6),
+.my-account-sidebar .my-account-sidebar-items:nth-child(7) {
+    display: none;
+}
+
+.dropdown-megamenu .navbar-nav {
+    margin: 0;
+    background: #006341;
+}
+
+.header {
+    height: 50px;
+    background: #006341;   
+    z-index: 9999;
+    position: relative;
+}
+
+.nav-list .list-item-bag .link-your-bag.not-empty {
+    color: #333;
+    background: #f3f3f2;
+}
+
+.nav-list .list-item-bag .link-your-bag.not-empty {
+    color: #333;
+    background: #f3f3f2;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid #D6D6D6;
+    background: #f3f3f2;
+}
+
+.search-box .search-field {
+    height: 40px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(170,174,178,0.5);
+    border-radius: 2px;
+    margin: 0;
+    padding: 0 1em;
+    font-size: 16px;
+}
