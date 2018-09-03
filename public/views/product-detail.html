@@ -150,7 +150,7 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
   
 </div>
 <article class="prod-item clearfix" style="padding-top: 60px">
-   <form action="addToBag()" class="prod-form clearfix" method="post" data-refresh-url="/modules/ajax/basket-masthead.jsp" data-ajax-url="/modules/ajax/addedToBasket.jsp" novalidate="novalidate">
+   <form class="prod-form clearfix" method="post" novalidate="novalidate">
       <input name="_dyncharset" value="UTF-8" type="hidden"><input name="_dynSessConf" value="4239078918695115129" type="hidden"> 
       <header class="prod-header">
          <h1 class="page-title"> <span class="prod-title"> {{masterDataObj.name.en}} {{size}} </span> <span class="prod-title-info">  <span class="sku-price"> £{{masterDataObj.masterVariant.prices[0].value.centAmount/100}} </span>  </span> </h1>
@@ -230,7 +230,13 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
                </div>
             </div>
             <div class="f-col f-col-3">
-               <div class="prod-submit-opts js-product-container clearfix" style="padding: 24px; background-color: #f7f7f7;">
+				<div class="form-group">
+				  <label for="sel1">Flavour:</label>
+				  <select class="form-control width50per" id="sel1" >
+					<option ng-repeat="item in flavours" value="{{item.value}}" >{{item.name}}</option>
+				  </select>
+				</div>
+               <div class="prod-submit-opts js-product-container clearfix" style=" background-color: #f7f7f7;">
                   <div class="prod-cust-opts">
                      <fieldset class="prod-size-opts">
                         <div class="form-item-container">
@@ -427,8 +433,8 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
                         </div>
                      </div>
                      <fieldset class="prod-submit prod-submit-basket og-pdp-add-to-basket" style="">
-                        <div class="f-row">
-                           <div class="f-col f-col-6"> <input name="/atg/commerce/order/purchase/CartModifierFormHandler.catalogRefIds" value="005446" class="prodSubmitSkuId" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.catalogRefIds" value=" " type="hidden"><input name="/atg/commerce/order/purchase/CartModifierFormHandler.productId" value="60005446" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.productId" value=" " type="hidden"><input name="/atg/commerce/order/purchase/CartModifierFormHandler.siteId" value="10" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.siteId" value=" " type="hidden"> <input type="submit" class="prod-submit-bt orangeSubmit js-rr-add-to-cart js-og-update-cart" value="Add to Basket" ng-click="addToBag()" title="Add to Basket" data-rr-item-id="60005446" data-rr-sku-id="005446" data-input-state="" data-quantity="1" data-og-product="005446" data-og-module="pdp"> </div>
+                        <div class="f-row"> 
+                           <div class="f-col f-col-6"> <input name="/atg/commerce/order/purchase/CartModifierFormHandler.catalogRefIds" value="005446" class="prodSubmitSkuId" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.catalogRefIds" value=" " type="hidden"><input name="/atg/commerce/order/purchase/CartModifierFormHandler.productId" value="60005446" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.productId" value=" " type="hidden"><input name="/atg/commerce/order/purchase/CartModifierFormHandler.siteId" value="10" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.siteId" value=" " type="hidden"> <input type="submit" class="prod-submit-bt orangeSubmit js-rr-add-to-cart js-og-update-cart" value="Add to Basket" ng-click="addToBag('addLineItem',productId)" title="Add to Basket" data-rr-item-id="60005446" data-rr-sku-id="005446" data-input-state="" data-quantity="1" data-og-product="005446" data-og-module="pdp"> </div>
                         </div>
                      </fieldset>
                      <div class="og-pdp" data-og-eligible="eligible">  </div>

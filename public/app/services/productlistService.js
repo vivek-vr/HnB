@@ -37,11 +37,14 @@ hbiApp.factory('productlistService', function($http, headerService) {
 						}
 					})
     },
-	createCart: function () {
+	createCart: function (data) { 
 				  return $http({
-						method: 'GET',
+						method: 'POST',
 						url: "https://api.sphere.io/hnb-59/carts",
+						//params: '{"currency":"'+currency+'","customerId":"'+customerId+'}',
+						data: data,
 						headers: {
+							"Content-Type": "application/json",
 							"Authorization": headerService.sessionGet("configData").header
 						},
 						complete: function() {
@@ -51,9 +54,9 @@ hbiApp.factory('productlistService', function($http, headerService) {
     },
 	cartActions: function (cart, input) {
 				  return $http({
-						method: 'GET',
+						method: 'POST',
 						url: "https://api.sphere.io/hnb-59/carts/" + cart.id,
-						params: input,
+						data: input,
 						headers: {
 							"Authorization": headerService.sessionGet("configData").header
 						},

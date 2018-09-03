@@ -1393,11 +1393,8 @@
 							<article
 								class="prod-teaser-item clearfix teaser-with-image prod-teaser-item-quick-search ss-roundel-sixteen">
 								<form
-									action="/cartridges/subcategorypage/?_DARGS=/cartridges/subcategorypage/subcategorypage.jsp.1#"
 									class="quick-order-form" data-rr-item-id="60005446"
 									method="post" data-rr-sku-id="005446"
-									data-refresh-url="/modules/ajax/basket-masthead.jsp"
-									data-ajax-url="/modules/ajax/addItemToOrder.jsp"
 									data-quantity="1">
 									<input name="_dyncharset" value="UTF-8" type="hidden"><input
 										name="_dynSessConf" value="-8944992118871989109" type="hidden">
@@ -1480,7 +1477,7 @@
 												<img
 													src="//images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/icons/basket.svg">
 												<span class="quick-order-submit-label"> <span
-													class="quick-order-submit-label-mobile"> Add </span> <span
+													class="quick-order-submit-label-mobile"> Add </span> <span ng-click="quickAdd('addLineItem',product.id,1,1 )"
 													class="quick-order-submit-label-desktop"> Quick add
 												</span>
 												</span> <span class="quick-order-submit-label-added">Added</span>
