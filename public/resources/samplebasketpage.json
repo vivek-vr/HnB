@@ -1,0 +1,349 @@
+{
+"type": "Cart",
+"id": "2ead088f-2f7b-4493-bbdd-968e0a6724eb",
+"version": 57,
+"customerId": "3fd76661-6529-48bf-879e-5f5e126f0d98",
+"customerEmail": "risky.is.here@gmail.com",
+"customerGroup": {
+"typeId": "customer-group",
+"id": "19fb62cd-ad49-422e-b759-11f9267f419c"
+},
+"createdAt": "2018-08-30T08:32:53.893Z",
+"lastModifiedAt": "2018-08-31T08:16:12.372Z",
+"lineItems": [
+  {
+"id": "29dfb2ec-76d3-4c8d-a2d4-bd25eae4fd56",
+"productId": "547e45b7-e931-4e75-b629-a52a6bb94fa4",
+"name": {
+"en": "Spatone Original Natural Iron Supplement 28 x 20ml Sachets",
+"sv": "Spatone Original Natural Iron Supplement 28 x 20ml Sachets"
+},
+"productType": {
+"typeId": "product-type",
+"id": "bb58a095-103d-4b06-b296-cf946ab16e9a",
+"version": 8
+},
+"productSlug": {
+"sv": "spatone-original-natural",
+"en": "spatone-original-natural"
+},
+"variant": {
+"id": 1,
+"sku": "Spatone Original Natural Iron Supplement 28 x 20ml Sachets",
+"key": "PS122",
+"prices": [
+  {
+"value": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 1149,
+"fractionDigits": 2
+},
+"id": "8cd10c5e-6603-46a3-9da8-d93e1a598ccf"
+}
+],
+"images": [
+  {
+"url": "https://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/080131_A-FV2RfaSq.png",
+"dimensions": {
+"w": 724,
+"h": 724
+}
+}
+],
+"attributes": [
+  {
+"name": "Brand",
+"value": "Spatone"
+},
+  {
+"name": "Count",
+"value": "1"
+}
+],
+"assets": [],
+},
+"price": {
+"value": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 1149,
+"fractionDigits": 2
+},
+"id": "8cd10c5e-6603-46a3-9da8-d93e1a598ccf"
+},
+"quantity": 4,
+"discountedPricePerQuantity": [],
+"taxRate": {
+"name": "19% MwSt",
+"amount": 0.19,
+"includedInPrice": true,
+"country": "GB",
+"id": "eLl2UI-Y",
+"subRates": [],
+},
+"state": [
+  {
+"quantity": 4,
+"state": {
+"typeId": "state",
+"id": "525827c7-6cf7-4f33-9ad1-8cae241f8391"
+}
+}
+],
+"priceMode": "Platform",
+"totalPrice": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 4596,
+"fractionDigits": 2
+},
+"taxedPrice": {
+"totalNet": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 3862,
+"fractionDigits": 2
+},
+"totalGross": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 4596,
+"fractionDigits": 2
+}
+},
+"lineItemMode": "Standard"
+},
+  {
+"id": "407c5c92-982f-4144-adee-0d9234465672",
+"productId": "0f8c3e39-1a19-4206-9ade-db15d40bcd07",
+"name": {
+"sv": "Holland & Barrett Naturlig Vitamin E Med Selen 400iu 100 Kapslar",
+"en": "Holland & Barrett Natural Vitamin E with Selenium 400iu 100 Capsules"
+},
+"productType": {
+"typeId": "product-type",
+"id": "bb58a095-103d-4b06-b296-cf946ab16e9a",
+"version": 8
+},
+"productSlug": {
+"en": "holland-barrett-natural-vitamin-e",
+"sv": "holland-barrett-natural-vitamin-e"
+},
+"variant": {
+"id": 1,
+"sku": "sku_Holland_Barrett_Natural_Vitamin_E",
+"key": "PS127",
+"prices": [
+  {
+"value": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 2099,
+"fractionDigits": 2
+},
+"id": "4e56f4f1-6424-48c4-935d-56c51127961c"
+}
+],
+"images": [
+  {
+"url": "https://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.png",
+"dimensions": {
+"w": 724,
+"h": 724
+}
+}
+],
+"attributes": [
+  {
+"name": "Brand",
+"value": "Holland & Barrett"
+},
+  {
+"name": "Format",
+"value": "Tablets"
+},
+  {
+"name": "commingsoon",
+"value": "2018-08-07T06:30:00.000Z"
+},
+  {
+"name": "Count",
+"value": "1"
+}
+],
+"assets": [],
+},
+"price": {
+"value": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 2099,
+"fractionDigits": 2
+},
+"id": "4e56f4f1-6424-48c4-935d-56c51127961c"
+},
+"quantity": 5,
+"discountedPricePerQuantity": [],
+"taxRate": {
+"name": "19% MwSt",
+"amount": 0.19,
+"includedInPrice": true,
+"country": "GB",
+"id": "eLl2UI-Y",
+"subRates": [],
+},
+"state": [
+  {
+"quantity": 5,
+"state": {
+"typeId": "state",
+"id": "525827c7-6cf7-4f33-9ad1-8cae241f8391"
+}
+}
+],
+"priceMode": "Platform",
+"totalPrice": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 10495,
+"fractionDigits": 2
+},
+"taxedPrice": {
+"totalNet": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 8819,
+"fractionDigits": 2
+},
+"totalGross": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 10495,
+"fractionDigits": 2
+}
+},
+"lineItemMode": "Standard"
+}
+],
+"cartState": "Ordered",
+"totalPrice": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 15091,
+"fractionDigits": 2
+},
+"taxedPrice": {
+"totalNet": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 12681,
+"fractionDigits": 2
+},
+"totalGross": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 15091,
+"fractionDigits": 2
+},
+"taxPortions": [
+  {
+"rate": 0.19,
+"amount": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 2410,
+"fractionDigits": 2
+},
+"name": "19% MwSt"
+}
+],
+},
+"country": "GB",
+"shippingInfo": {
+"shippingMethodName": "DHL",
+"price": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 0,
+"fractionDigits": 2
+},
+"shippingRate": {
+"price": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 500,
+"fractionDigits": 2
+},
+"freeAbove": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 5000,
+"fractionDigits": 2
+},
+"tiers": [],
+},
+"taxRate": {
+"name": "19% MwSt",
+"amount": 0.19,
+"includedInPrice": true,
+"country": "GB",
+"id": "eLl2UI-Y",
+"subRates": [],
+},
+"taxCategory": {
+"typeId": "tax-category",
+"id": "bfeb358f-a715-444c-87d7-135683e76aa8"
+},
+"deliveries": [],
+"shippingMethod": {
+"typeId": "shipping-method",
+"id": "bca1b075-1207-4e67-ba95-4b66810b7c7a"
+},
+"taxedPrice": {
+"totalNet": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 0,
+"fractionDigits": 2
+},
+"totalGross": {
+"type": "centPrecision",
+"currencyCode": "GBP",
+"centAmount": 0,
+"fractionDigits": 2
+}
+},
+"shippingMethodState": "MatchesCart"
+},
+"customLineItems": [],
+"discountCodes": [],
+"paymentInfo": {
+"payments": [
+  {
+"typeId": "payment",
+"id": "271dbc89-dde1-4be4-a281-6b19400ba0c7"
+}
+],
+},
+"inventoryMode": "None",
+"taxMode": "Platform",
+"taxRoundingMode": "HalfEven",
+"taxCalculationMode": "LineItemLevel",
+"refusedGifts": [],
+"origin": "Customer",
+"shippingAddress": {
+"title": "",
+"firstName": "VIVEK",
+"lastName": "R",
+"streetName": "Kairali, Oockkodu P O",
+"additionalStreetInfo": "Nemom",
+"postalCode": "695020",
+"city": "Trivandrum",
+"region": "Kerala",
+"country": "GB",
+"phone": "9995888152",
+"email": "risky.is.here@gmail.com"
+},
+"itemShippingAddresses": [],
+}

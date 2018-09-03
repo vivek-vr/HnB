@@ -28,8 +28,12 @@ hbiApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/checkout.html'       
         })
 		.state('basket', {
-            url: '/basket',			
-            templateUrl: 'views/basket.html'       
+            url: '/basket',	
+			views: {
+				'' : { templateUrl: 'views/basket.html' },
+				'basketitems@basket' : { templateUrl: 'views/childviews/basketitems.html' }
+			}
+                 
         })
 		
 
