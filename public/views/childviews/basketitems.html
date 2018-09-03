@@ -30,6 +30,8 @@
                                         <h3>Buy One Get One Half Price</h3>
                                         <p>&nbsp;</p>
                                     </header>
+									<!-- Iterate Cart Item details -->
+									<div ng-repeat="lineitem in lineitems">
                                     <article class="basket-row basket-product clearfix cartItem js-basket-item">
                                         <div class="l-wrap">
                                             <div class="l-col l-one-half product"> <a class="block product" href="/shop/product/vego-organic-hazelnut-chocolate-bar-60005446">  </a>
@@ -43,7 +45,7 @@
                                                                 alt="" srcset="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:200,height:200) 2x, //images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)"
                                                                 src="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)"> </picture>
                                                     </div>
-                                                    <h3 class="prod-title block-hover-text"> Vego Organic Hazelnut Chocolate Bar 65g </h3>
+                                                    <h3 class="prod-title block-hover-text"> {{lineItem.productNameEn}} </h3>
                                                     <p class="block-hover-text"> 65&nbsp;g </p> <small class="mobile-hidden block-hover-text">  <div id="toolTip005446" style="display: none"> £2.29 </div> <abbr title="" onmouseover="javascript : getAbbrTitle('005446','per 100 g')"> £2.29/100 g </abbr>  <span>005446</span> </small>                                                    </a>
                                                 <div class="og-offer" data-og-module="sc" data-og-product="005446">
                                                     <div class="og-widget og-type-CartRadioWidget og-offer-63df47acb68911e68625bc764e106cf4 og-locale-en-us">
@@ -112,15 +114,31 @@
                                             </div>
                                             <dl class="l-col quantity mobile-hidden"> <dt class="visuallyhidden"> Quantity </dt>
                                                 <dd class="quantity">
-                                                    <div class="quantity-wrapper quantity-selectbox-holder clearfix"> <button type="button" class="minus">-</button><input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
-                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" value="2" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]"><button type="button" class="plus">+</button>                                                        <select class="item-quantity-selectbox select-width-55">  <option value="1">1</option>  <option value="2" selected="">2</option>  <option value="3">3</option>  <option value="4">4</option>  <option value="5">5</option>  <option value="6">6</option>  <option value="7">7</option>  <option value="8">8</option>  <option value="9">9</option>  <option value="10">10</option>  <option value="11">11</option>  <option value="12">12</option>  <option value="13">13</option>  <option value="14">14</option>  <option value="15">15</option>  <option value="16">16</option>  <option value="17">17</option>  <option value="18">18</option>  <option value="19">19</option>  <option value="20">20</option>  <option value="21">21</option>  <option value="22">22</option>  <option value="23">23</option>  <option value="24">24</option>  <option value="25">25</option>  <option value="26">26</option>  <option value="27">27</option>  <option value="28">28</option>  <option value="29">29</option>  <option value="30">30</option>  </select>                                                        <a href="javascript:void(0)" class="act-remove removeCartItem" data-removed-sku="005446" removeitem="ci2385088299" data-removeitem="ci2385088299" title="Remove this item from your basket"> Remove </a>
+                                                    <div class="quantity-wrapper quantity-selectbox-holder clearfix"> <button type="button" class="minus">-</button>
+													<input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
+                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" value="2" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
+															<button type="button" class="plus">+</button>                                                       
+															<select class="item-quantity-selectbox select-width-55">  
+															<option value="1">1</option>  
+															<option value="2" selected="">2</option> 
+															<option value="3">3</option>  <option value="4">4</option>  <option value="5">5</option>  
+															<option value="6">6</option>  <option value="7">7</option>  <option value="8">8</option> 
+															<option value="9">9</option>  <option value="10">10</option>  <option value="11">11</option>  
+															<option value="12">12</option>  <option value="13">13</option>  <option value="14">14</option>  
+															<option value="15">15</option>  <option value="16">16</option>  <option value="17">17</option>  
+															<option value="18">18</option>  <option value="19">19</option>  <option value="20">20</option>  
+															<option value="21">21</option>  <option value="22">22</option>  <option value="23">23</option>  
+															<option value="24">24</option>  <option value="25">25</option>  <option value="26">26</option>  
+															<option value="27">27</option>  <option value="28">28</option>  <option value="29">29</option>  
+															<option value="30">30</option>  </select>                                                        
+															<a href="javascript:void(0)" class="act-remove removeCartItem" data-removed-sku="005446" removeitem="ci2385088299" data-removeitem="ci2385088299" title="Remove this item from your basket"> Remove </a>
                                                         <p class="save-later"> <a href="#" class="saveForLaterFromCart" commerceitemid="ci2385088299" giftlistid="" itemqty="2" data-sku-id="005446"> Save for later </a> </p>
                                                     </div> <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em> </dd>
                                             </dl>
                                             <dl class="l-col price"> <dt class="visuallyhidden"> ???basket.header.totalprice??? </dt>
                                                 <dd class="line-total">
                                                     <div class="actual-price">
-                                                        <div class="current-price"> £2.98 </div>
+                                                        <div class="current-price"> {{lineitems[0].priceAmt}} </div>
                                                         <div id="was005446" style="display: none"> £3.98 </div> <strike class="was" title="" onmouseover="javascript : getStrikeTitle('005446')"> was £3.98 </strike> <span class="offer"><em> 1 product for 50 %</em> </span> </div>
                                                 </dd>
                                             </dl>
@@ -133,6 +151,8 @@
                                             </dl>
                                         </div>
                                     </article>
+									
+									<div>
                                 </section>
                             </section>
                         </div>
