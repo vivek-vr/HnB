@@ -2616,59 +2616,59 @@ section.form-errors ul.ois-email-unknown {
 }
 .ico-s.ico-account,
 .ico-s.ico-user {
-	background-image: url("./img/icons/account_icon.svg")
+	background-image: url("../img/icons/account_icon.svg")
 }
 .ico-s.ico-header-rfl {
-	background-image: url("./img/icons/card_icon.svg")
+	background-image: url("../img/icons/card_icon.svg")
 }
 .ico-s.ico-favs-menu {
-	background-image: url("./img/icons/heart_icon.svg")
+	background-image: url("../img/icons/heart_icon.svg")
 }
 .ico-s.ico-basket,
 .ico-s.ico-shopping-basket {
-	background-image: url("./img/icons/hb_basket_icon.svg")
+	background-image: url("../img/icons/hb_basket_icon.svg")
 }
 .ico-s.ico-phone {
-	background-image: url("./img/icons/phone_icon.svg")
+	background-image: url("../img/icons/phone_icon.svg")
 }
 .ico-s.ico-location-pin,
 .ico-s.ico-map-marker {
-	background-image: url("./img/icons/pin_icon.svg")
+	background-image: url("../img/icons/pin_icon.svg")
 }
 .ico-s.ico-info-circle {
-	background-image: url("./img/icons/info_icon.svg")
+	background-image: url("../img/icons/info_icon.svg")
 }
 .ico-s.ico-info-circle-small {
-	background-image: url("./img/icons/icon_info.svg")
+	background-image: url("../img/icons/icon_info.svg")
 }
 .ico-s.ico-credit-card-alt {
-	background-image: url("./img/icons/card_icon.svg")
+	background-image: url("../img/icons/card_icon.svg")
 }
 .ico-s.ico-comment {
-	background-image: url("./img/icons/speech_icon.svg")
+	background-image: url("../img/icons/speech_icon.svg")
 }
 .ico-s.ico-sliders {
-	background-image: url("./img/icons/icon_filter.svg");
+	background-image: url("../img/icons/icon_filter.svg");
 	margin-bottom: -2px;
 	margin-right: 4px
 }
 .ico-s.ico-check-white {
-	background-image: url("./img/icons/hb_checkbox_tick.svg");
+	background-image: url("../img/icons/hb_checkbox_tick.svg");
 	margin-bottom: -2px
 }
 .ico-s.ico-envelope {
-	background-image: url("./img/icons/mail_icon.svg")
+	background-image: url("../img/icons/mail_icon.svg")
 }
 .ico-s.ico-envelope-green {
-	background-image: url("./img/icons/mail_icon_green.svg");
+	background-image: url("../img/icons/mail_icon_green.svg");
 	margin-bottom: -3px;
 	margin-right: 4px
 }
 .ico-s.hpb-ico-mic {
-	background-image: url("./img/icons/mic_icon_green.svg")
+	background-image: url("../img/icons/mic_icon_green.svg")
 }
 .ico-s.hpb-ico-mic-mute {
-	background-image: url("./img/icons/mute_mic_icon_green.svg")
+	background-image: url("../img/icons/mute_mic_icon_green.svg")
 }
 [role=banner] .utility-nav .nav-item {
 	position: relative;
@@ -2709,7 +2709,7 @@ section.form-errors ul.ois-email-unknown {
 	z-index: 2;
 	font-size: 0;
 	text-indent: -1000px;
-	background: url(../../ui/css/img/icons/modal_cross_icon.svg) 0 0 no-repeat;
+	background: url(..img/icons/modal_cross_icon.svg) 0 0 no-repeat;
 	background-size: cover
 }
 .lightbox-container .content a.lb-close-main {
