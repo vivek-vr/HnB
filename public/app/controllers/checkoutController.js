@@ -1,3 +1,12 @@
-hbiApp.controller('checkoutController', ['$scope', function($scope) {
-    $scope.home = "Home page";
-}]);
+hbiApp.controller('checkoutController', ['$scope','$http','$state', function($scope, $http, $state) {
+	
+	$scope.init = function(){ 
+		console.log("checkout");
+	}
+	
+	
+   
+
+ 
+}])
+

@@ -402,7 +402,7 @@ only all and (max-width: 1051px) {
 	.flyout-container {
 		display: none;
 		z-index: 2;
-		position: absolute !important;
+		position: absolute;
 		top: 34px;
 		left: 0;
 		right: 0;

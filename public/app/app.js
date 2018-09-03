@@ -6,7 +6,11 @@ hbiApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'views/home.html'
+			views: {
+				'' : { templateUrl: 'views/home.html' },
+				'advice@home' : { templateUrl: 'views/childviews/home-advice.html' }
+			}
+            
         })
         .state('productlist', {
             url: '/product-list',

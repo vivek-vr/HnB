@@ -1499,7 +1499,7 @@ p.promo {
 	font-weight: bold
 }
 .flyout-container {
-	position: relative;
+	position: absolute;
 	padding: 0
 }
 .flyout-nav-block {

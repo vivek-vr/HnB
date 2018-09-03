@@ -7,6 +7,10 @@ hbiApp.controller('headerController', ['$scope', 'productlistService','headerSer
 		var parentLevelList = [];
 		var firstLevelList = [];
 		var secondLevelList = [];
+		var sessionCategoryList = headerService.sessionGet("menuCategoryList");
+		if(null != sessionCategoryList) {
+			$scope.menuTree = sessionCategoryList; 
+		} else {
 		var categories = productlistService.getCategories()  // get all categories to list
 		.then(function(response) {
 			angular.forEach(response.data.results, function(item, key1) {
@@ -49,9 +53,10 @@ hbiApp.controller('headerController', ['$scope', 'productlistService','headerSer
 					});
 				}
 			});
-		$scope.menuTree = outputList; 
-		
-	})
+				$scope.menuTree = outputList; 
+				headerService.sessionSet("menuCategoryList",outputList);
+			})
+		}
 	}
 	
 	$scope.isObjectEmpty = function(card){
