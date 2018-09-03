@@ -17,6 +17,9 @@ hbiApp.factory('cartService', function($http, headerService,productlistService, 
 				cart.id = response.data.id;
 				cart.version = response.data.version;
 				headerService.sessionSet('cart', cart);
+				var cust = {};
+				cust.id = response.data.customerId;
+				headerService.sessionSet('customer', cust);
 			});
 		},
 		initCart: function () {
@@ -29,19 +32,25 @@ hbiApp.factory('cartService', function($http, headerService,productlistService, 
 			var data = {};
 			var cart = {};
 			data.currency = 'GBP'; // get from header
-			data.customerId = this.getCustId(); // change this to custId after login implementation
+			var custId = this.getCustId(); 
+			if(custId != null){
+			  data.customerId =custId			
+			}
 			productlistService.createCart(data).then(function(response) {
 				if(response.data){
 					cart.id = response.data.id;
 					cart.version = response.data.version;
 					headerService.sessionSet('cart', cart);
+					var cust = {};
+					cust.id = response.data.customerId;
+					headerService.sessionSet('customer', cust);
 				}
 				
 			});
 		},
 		getCustId: function() {
-			var customerId = "3fd76661-6529-48bf-879e-5f5e126f0d98"; // need to change this.
-			return customerId;
+			var customer = headerService.sessionGet('customer');
+			return customer == null?null:customer.id;
 		}
 		
 }
