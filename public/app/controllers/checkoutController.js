@@ -147,22 +147,6 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				$("#addressSection").removeClass("hidden");
 			}
 		});
-		
-		/*
-		checkoutService.addAddressToCart(cart.id, shipmentData).then(function(response) {
-				
-		});
-		
-			
-		if(data==="continueToPayment"){
-			$("#continueToPayment").removeClass("hidden");
-			$("#addressSection").addClass("hidden");
-		}else{
-			$("#continueToPayment").addClass("hidden");
-			$("#addressSection").removeClass("hidden");
-		}
-		
-		*/
 	}
 	
 	$scope.goToBilling=function(data){
@@ -203,7 +187,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				placeOrderObj.paymentState = "Paid";
 				checkoutService.placeOrder(placeOrderObj).then(function(response){
 					headerService.removeItem('cart');
-					alert('order '+orderId+ ' placed.');
+					headerService.sessionSet('orderId',orderId);					
 				});
 			});
 		});	
@@ -227,7 +211,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 	chckt.hooks.beforeComplete = function(node, paymentData) {
 		console.log('Payment Succesfull', paymentData);
 		if(paymentData.resultCode == "authorised"){
-			$location.path( "/home" );
+			$state.go('thankyou');
 		}
 		return true; // Indicates that you want to replace the default handling.
 	 };

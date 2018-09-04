@@ -39,6 +39,10 @@ hbiApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/search',			
             templateUrl: 'views/product-search-list.html'       
         })
+		.state('thankyou', {
+            url: '/thankyou',			
+            templateUrl: 'views/thank-you.html'       
+        })
 		
 
 });
