@@ -2689,7 +2689,7 @@ input:checked+input+.modal-form__subscribe-label:after {
 	display: flex
 }
 .ico-s.ico-search {
-	background-image: url("./img/icons/search_icon.svg");
+	background-image: url("../img/icons/search_icon.svg");
 	margin-top: 3px
 }
 .ico-s.ico-search-green {
