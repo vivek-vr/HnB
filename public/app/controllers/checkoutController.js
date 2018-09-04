@@ -1,16 +1,11 @@
-hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope','$location','paymentService','headerService','checkoutService','productlistService', function($scope, $http, $state,$rootScope,$location,paymentService,headerService,checkoutService, productlistService) {
-	
-	
-	$scope.init = function(){
-		//getDeliveryOptions();
-	}
+hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope','$location','paymentService', function($scope, $http, $state,$rootScope,$location,paymentService	) {
 	
 	$scope.emailFlag=true;
 	$scope.btn_text="Enter email address";
 
 	$scope.validate=function(){
 		//console.log($scope.emailAddress);
-		if($scope.deliverydetails.email.length>0){
+		if($scope.emailAddress.length>0){
 			$scope.emailFlag=false;
 			$scope.btn_text="Continue";
 		}
@@ -22,6 +17,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 	}
 	
 	$scope.changeSection=function(value){
+		console.log(value)
 		if(value==="Yes"){
 			$("#js-welcome-create-account").removeClass("hidden");
 			$("#IAgree").removeClass("hidden");
@@ -56,21 +52,13 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 		}
 	}
 	
-	$scope.setDelivery=function(shipmentMode){
-		
-		if(shipmentMode == "Delivery"){
+	$scope.toggleDeliveryMethod=function(data){
+		if(data==="Collection"){
+			$("#collectionMethod").removeClass("hidden");
+			$("#deliveryMethod").addClass("hidden");
+		}else if(data==="Delivery"){
 			$("#collectionMethod").addClass("hidden");
 			$("#deliveryMethod").removeClass("hidden");
-			//$scope.showAddressSection = true;
-			/*
-			var cart = headerService.sessionGet('cart');
-			var shipmentData = {};
-			shipmentData.version = cart.version;
-			shipmentData.actions = [{"action":"setShippingMethod","shippingMethod":{"typeId":"shipping-method","id":"bca1b075-1207-4e67-ba95-4b66810b7c7a"}}];
-			checkoutService.setShipment(cart.id, shipmentData).then(function(response) {
-				
-			});
-			*/
 		}
 	}
 	
@@ -82,7 +70,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 			$scope.pincode=true;
 		}
 	}
-	//$scope.deliveryChooseButton=true;
+	$scope.deliveryChooseButton=true;
 	$scope.deliveryMessage="Enter delivery details";
 	$scope.findAddress=function(){
 		$("#addressDetails").removeClass("hidden");
@@ -103,57 +91,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 		}
 	}
 	
-	$scope.saveAddressnProceed=function(data){
-		var cart = headerService.sessionGet('cart');
-		var shipmentData = {};
-		var addressJson = {};
-		var customerJson = {};
-		var billingAddresJson = {};
-		var countryJson = {};
-		var shipmentMethodJson = {};
-		shipmentData.version = cart.version;
-		shipmentData.actions = [];
-		
-		addressJson.action = "setShippingAddress";
-		addressJson.address = $scope.deliverydetails;
-		shipmentData.actions.push(addressJson);
-		
-		customerJson.action = "setCustomerEmail";
-		customerJson.email = $scope.deliverydetails.email;
-		shipmentData.actions.push(customerJson);
-		
-		billingAddresJson.action = "setBillingAddress";
-		shipmentData.actions.push(billingAddresJson);
-		
-		shipmentMethodJson.action = "setShippingMethod";
-		shipmentMethodJson.shippingMethod = {};
-		shipmentMethodJson.shippingMethod.typeId = "shipping-method";
-		shipmentMethodJson.shippingMethod.id = "bca1b075-1207-4e67-ba95-4b66810b7c7a";
-		shipmentData.actions.push(shipmentMethodJson);
-		
-		countryJson.action = "setCountry";
-		countryJson.email = "GB";
-		shipmentData.actions.push(countryJson);	
-		productlistService.cartActions(cart, shipmentData).then(function(response) { 
-			cart.id = response.data.id;
-			cart.version = response.data.version;
-			headerService.sessionSet('cart', cart);
-			$scope.cartSaveData = response;
-			if(data==="continueToPayment"){
-				$("#continueToPayment").removeClass("hidden");
-				$("#addressSection").addClass("hidden");
-			}else{
-				$("#continueToPayment").addClass("hidden");
-				$("#addressSection").removeClass("hidden");
-			}
-		});
-		
-		/*
-		checkoutService.addAddressToCart(cart.id, shipmentData).then(function(response) {
-				
-		});
-		
-			
+	$scope.toggleAddressSection=function(data){
 		if(data==="continueToPayment"){
 			$("#continueToPayment").removeClass("hidden");
 			$("#addressSection").addClass("hidden");
@@ -161,8 +99,6 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 			$("#continueToPayment").addClass("hidden");
 			$("#addressSection").removeClass("hidden");
 		}
-		
-		*/
 	}
 	
 	$scope.goToBilling=function(data){				
@@ -216,13 +152,6 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 		 };
 		 return paymentService.getPaymentSession(payementdata);
 	 
-	 }
-	 
-	 function getDeliveryOptions(){ 
-		var cart = headerService.sessionGet('cart');
-		checkoutService.getDeliveryOptions(cart.id).then(function(response) {
-			console.log(response);
-		});
 	 }
 }]);
 

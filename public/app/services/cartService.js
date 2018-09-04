@@ -13,7 +13,14 @@ hbiApp.factory('cartService', function($http, headerService,productlistService, 
 			lineActions.quantity = quantity;
 			actions.push(lineActions);
 			input.actions = actions;
-			return productlistService.cartActions(cart,input);
+			productlistService.cartActions(cart,input).then(function(response) {
+				cart.id = response.data.id;
+				cart.version = response.data.version;
+				headerService.sessionSet('cart', cart);
+				var cust = {};
+				cust.id = response.data.customerId;
+				headerService.sessionSet('customer', cust);
+			});
 		},
 		initCart: function () {
 			var cart = headerService.sessionGet('cart');
