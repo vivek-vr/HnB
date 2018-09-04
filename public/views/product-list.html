@@ -99,7 +99,44 @@
 
 					<h2 class="prod-filter-title">Filter by:</h2>
 
+<li ng-repeat="x in facetCompleteData" class="filter-list-item expanded"><a
+						href="javascript:void(0)"
+						class="mobile-filter-btn facet-block desktop-hidden">{{x[0]}} <i class="ico-s ico-check"></i>
+					</a>
+						<ul>
+							<fieldset id="dim_AdvisoryMessage" class="filter-set">
+								<a href="#" class="mobile-filter-btn facet-block desktop-hidden">
+									{{x[0]}} <i class="ico-s ico-check"></i>
+								</a>
+								<div class="filter-holder" data-conceal="5"
+									data-reveal="reveal-filter-facet-0"
+									data-child="label:not(.ref-crumb)">
+									<!--Title-->
+									<h3 class="filter-group-title mobile-hidden">
+										{{x[0]}}<span class="tooltip"
+											data-tooltip="Use these filters to find products that are {{x[0]}} and free from traces of the named allergens."><i
+											class="ico-s ico-info-circle-small"></i></span> <span
+											class="ico-c ico-chevron ico-chevron-bottom"></span><span
+											class="ico-c ico-chevron ico-chevron-top"></span>
+									</h3>
+									<div class="filter-group-container">
+										<label ng-repeat="data in x[1].terms|limitTo:x[2].count"> <input type="checkbox" name="xxxxx"
+											data-navigation-state-uri="/food-drink/snacks/chocolate-cakes-biscuits/N=advisorymessage_{{data.term}}/"
+											class="js-facet" data-facet-title="Free From"
+											data-facet-value="{{data.term}}"
+											data-dimension-name="AdvisoryMessage"> <i
+											class="ref-crumb-label"></i> {{data.term}}&nbsp;({{data.count}})
 
+
+										</label>  <a href="javascript:void(0)" class="reveal-link"
+											id="reveal-filter-facet-0" data-reveal-text="Show More..."
+											data-conceal-text="Show Less..." ng-click="productDataToggle(x[0])">{{x[2].buttonText}}</a>
+
+									</div>
+								</div>
+
+							</fieldset>
+						</ul></li>
 
 
 
