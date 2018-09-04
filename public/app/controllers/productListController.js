@@ -98,6 +98,8 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
                                                                 cust.id = response.data.customerId;
                                                                 headerService.sessionSet('customer', cust);
                                                                 product.addedSuccessfully = true;
+                                                                $('.js-header-basket-link').find('.price').html(' £'+(response.data.totalPrice.centAmount)/100+' ');
+								$('.at-basket-menu-qty').html(' '+response.data.lineItems.length+' ');
                                                                 $timeout( function(){
                                                                                 product.addedSuccessfully = false;
                                                                 }, 3000 );
