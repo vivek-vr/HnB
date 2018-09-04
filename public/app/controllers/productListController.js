@@ -1,12 +1,7 @@
 hbiApp.controller('productListController', ['$scope','$http', 'productlistService','$stateParams', 'headerService','cartService','$timeout', function($scope, $http, productlistService,$stateParams, headerService, cartService, $timeout) {
 	
 	$scope.init = function(){
-		$scope.steps = [];
 		var categoryId = headerService.sessionGet('categoryId');
-	var lang=headerService.sessionGet('Language');
-		$scope.lang = lang;
-		var currency=headerService.sessionGet('Currency');
-		$scope.currency = currency;
 		if(categoryId == null) { categoryId = '1a925ebe-77fe-4bf3-abc9-676fe1b64df1';}
 		// productlistService.getProducts($stateParams.categoryId)  // get all products based on category
 		productlistService.getProducts(categoryId)
@@ -97,7 +92,7 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 	$scope.quickAdd = function(action, product,varient,quantity){
                                 var cart = {};
                                 var cust = {}
-                                cartService.cartActions(action, product.id,varient,quantity).then(function(response) {
+                                cartService.cartActions(action, product,varient,quantity).then(function(response) {
                                                                 cart.id = response.data.id;
                                                                 cart.version = response.data.version;
                                                                 headerService.sessionSet('cart', cart);

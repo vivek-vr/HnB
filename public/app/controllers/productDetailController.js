@@ -2,14 +2,9 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 	
 	$scope.init = function(){ 
 		console.log("Product Details");
-		var lang=headerService.sessionGet('Language');
-		$scope.lang = lang;
-		var currency=headerService.sessionGet('Currency');
-		$scope.currency = currency;
-		productDetail();
 	}
 	//console.log($stateParams);
-	function productDetail() {  
+	$scope.productDetail = function() { 
 	    // var productId = $stateParams.productId;
 	    var productId = headerService.sessionGet('productId');
         $state.go("product-detail");	
