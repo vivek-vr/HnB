@@ -198,11 +198,13 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				var placeOrderObj = {};
 				placeOrderObj.id = response.data.id;
 				placeOrderObj.version = response.data.version;
-				placeOrderObj.orderNumber = "234235346";
+				var orderId = new Date().getTime();
+				placeOrderObj.orderNumber = orderId;
 				placeOrderObj.paymentState = "Paid";
 				checkoutService.placeOrder(placeOrderObj).then(function(response){
 					console.log(response);debugger;
 					headerService.sessionSet('cart',response.data);
+					alert('order '+orderId+ ' placed.);
 				});
 			});
 		});	
