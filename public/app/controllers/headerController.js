@@ -74,4 +74,45 @@ hbiApp.controller('headerController', ['$scope', 'productlistService','headerSer
 	$scope.setCategory = function(id) {
 		headerService.sessionSet("categoryId",id);
 	}
+	$scope.searchProductList =  function(searchKeyWord){
+		$state.go("search");		
+		productlistService.getSearchProductsList(searchKeyWord)
+		.then(function(response) {			
+			$rootScope.productSearchListObj = response.data.results;
+			console.log($scope.productSearchListObj);
+			$scope.facets=response.data.facets;
+			$scope.setPageCount(response);
+			$scope.ProductFacets($scope.facets);			
+		});
+	}
+	
+	$rootScope.facetSearchCompleteData = [];
+	
+	$scope.ProductFacets = function(facets){	
+		$rootScope.facetSearchCompleteData=productlistService.renderFacets(facets);	
+			 
+			console.log($rootScope.facetSearchCompleteData);
+		
+	}
+	
+	$scope.productSearchDataToggle = function(term){	
+		$rootScope.facetSearchCompleteData = productlistService.dataToggle(term , $rootScope.facetSearchCompleteData);	
+			 
+			console.log($rootScope.facetSearchCompleteData);
+		
+	}
+	
+	$scope.setPageCount = function(productList){
+		$scope.totalProducts = productList.data.total;
+		$scope.countOfProducts = productList.data.count;
+		$scope.items = parseInt($scope.countOfProducts/20);
+		$scope.steps = [];
+		if($scope.items == 0){
+			$scope.steps.push("All");
+		} else{
+			for(var i=1;i<=$scope.items;i++) {
+				$scope.steps.push(i*20);
+			}
+		}
+	}
 }]);
