@@ -187,9 +187,8 @@
 	<div class="flex">
 	<label class="text" title="Search"> 
 	<span class="visuallyhidden">Search</span>
-	<input type="search" name="query" id="sitesearch" maxlength="128" placeholder="Search"/> 
-	<input type="hidden" name="isSearch" id="isSearch" value="true"/> 
-	<button type="submit" class="orangeSubmit" title="search button">
+	<input type="search" id="sitesearch" ng-model="searchkey" maxlength="128" placeholder="Search" /> 	
+	<button type="submit" class="orangeSubmit" title="search button" ng-click="searchProductList(searchkey)">
 	<span class="ico-s ico-25 ico-search"></span>
 	</button> 
 	</label> 
