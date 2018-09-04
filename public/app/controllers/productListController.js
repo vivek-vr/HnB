@@ -1,4 +1,4 @@
-hbiApp.controller('productListController', ['$scope','$http', 'productlistService','$stateParams', 'headerService','cartService','$timeout', function($scope, $http, productlistService,$stateParams, headerService, cartService, $timeout) {
+hbiApp.controller('productListController', ['$scope','$http', 'productlistService','$stateParams', 'headerService','cartService','$timeout','$rootScope', function($scope, $http, productlistService,$stateParams, headerService, cartService, $timeout,$rootScope) {
 	
 	$scope.init = function(){
 		var categoryId = headerService.sessionGet('categoryId');
@@ -91,20 +91,21 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 	
 
 	$scope.quickAdd = function(action, product,varient,quantity){
-                                var cart = {};
-                                var cust = {}
-                                cartService.cartActions(action, product.id,varient,quantity).then(function(response) {
-                                                                headerService.sessionSet('cart', response.data);
-                                                                cust.id = response.data.customerId;
-                                                                headerService.sessionSet('customer', cust);
-                                                                product.addedSuccessfully = true;
-                                                                $('.js-header-basket-link').find('.price').html(' £'+(response.data.totalPrice.centAmount)/100+' ');
-								$('.at-basket-menu-qty').html(' '+response.data.lineItems.length+' ');
-                                                                $timeout( function(){
-                                                                                product.addedSuccessfully = false;
-                                                                }, 3000 );
-                                                });                           
-                }
+		var cart = {};
+		var cust = {}
+		cartService.cartActions(action, product.id,varient,quantity).then(function(response) {
+			headerService.sessionSet('cart', response.data);
+			cust.id = response.data.customerId;
+			headerService.sessionSet('customer', cust);
+			product.addedSuccessfully = true;
+			//$('.js-header-basket-link').find('.price').html(' £'+(response.data.totalPrice.centAmount)/100+' ');
+			//$('.at-basket-menu-qty').html(' '+response.data.lineItems.length+' ');
+			$rootScope.$broadcast("updateBacket",response.data.lineItems);
+			$timeout( function(){
+				product.addedSuccessfully = false;
+			}, 3000 );
+			});                           
+	}
 		
 		
 }]);

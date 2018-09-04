@@ -186,7 +186,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 			paymentObj.version = cartData.version;
 			paymentObj.actions = [];
 			
-			paymentSubObj = {}
+			paymentSubObj = {};
 			paymentSubObj.action = "addPayment";
 			paymentSubObj.payment = {};
 			paymentSubObj.payment.id = response.data.id;
@@ -201,8 +201,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				placeOrderObj.orderNumber = "234235346";
 				placeOrderObj.paymentState = "Paid";
 				checkoutService.placeOrder(placeOrderObj).then(function(response){
-					console.log(response);debugger;
-					headerService.sessionSet('cart',response.data);
+					headerService.removeItem('cart');
 				});
 			});
 		});	
