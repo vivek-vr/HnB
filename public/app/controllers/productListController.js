@@ -92,7 +92,7 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 	$scope.quickAdd = function(action, product,varient,quantity){
                                 var cart = {};
                                 var cust = {}
-                                cartService.cartActions(action, product,varient,quantity).then(function(response) {
+                                cartService.cartActions(action, product.id,varient,quantity).then(function(response) {
                                                                 cart.id = response.data.id;
                                                                 cart.version = response.data.version;
                                                                 headerService.sessionSet('cart', cart);

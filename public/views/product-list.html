@@ -1514,10 +1514,10 @@
 												<img
 													src="//images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/icons/basket.svg">
 												<span class="quick-order-submit-label"> <span
-													class="quick-order-submit-label-mobile"> Add </span> <span ng-click="quickAdd('addLineItem',product.id,1,1 )"
-													class="quick-order-submit-label-desktop"> Quick add
+													class="quick-order-submit-label-mobile"> Add </span> <span ng-click="quickAdd('addLineItem',product,1,1 )"
+													class="quick-order-submit-label-desktop" ng-show="!product.addedSuccessfully" > Quick add
 												</span>
-												</span> <span class="quick-order-submit-label-added">Added</span>
+												</span> <span class="quick-order-submit-label-desktop" ng-show="product.addedSuccessfully"  >Added</span>
 											</button>
 											<div class="message-success js-toggled">
 												<div class="green-tick-icon"></div>
