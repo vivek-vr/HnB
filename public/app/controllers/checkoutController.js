@@ -198,7 +198,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				var placeOrderObj = {};
 				placeOrderObj.id = response.data.id;
 				placeOrderObj.version = response.data.version;
-				var orderId = new Date().getTime();
+				var orderId = new Date().getTime().toString();
 				placeOrderObj.orderNumber = orderId;
 				placeOrderObj.paymentState = "Paid";
 				checkoutService.placeOrder(placeOrderObj).then(function(response){
