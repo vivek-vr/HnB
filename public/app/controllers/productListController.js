@@ -13,6 +13,22 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 		});
 	}
 	
+	$scope.facetCompleteData = [];
+	
+	$scope.ProductFacets = function(facets){	
+		$scope.facetCompleteData=productlistService.renderFacets(facets);	
+			 
+			console.log($scope.facetCompleteData);
+		
+	}
+	
+	$scope.productDataToggle = function(term){	
+		$scope.facetCompleteData = productlistService.dataToggle(term , $scope.facetCompleteData);	
+			 
+			console.log($scope.facetCompleteData);
+		
+	}
+	
 	$scope.onProductSort = function(sortOption){
 		//console.log('Sorting Item selected : ',sortOption);
 		var sortType = "";
