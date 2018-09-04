@@ -204,7 +204,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				checkoutService.placeOrder(placeOrderObj).then(function(response){
 					console.log(response);debugger;
 					headerService.sessionSet('cart',response.data);
-					alert('order '+orderId+ ' placed.);
+					alert('order '+orderId+ ' placed.');
 				});
 			});
 		});	
