@@ -1,4 +1,6 @@
-<form action="/basket/includes/?_DARGS=/basket/includes/basket.jsp#" class="f-basket" method="post" novalidate="novalidate"><input name="_dyncharset" value="UTF-8" type="hidden"><input name="_dynSessConf" value="8104793169379795529" type="hidden">
+<form class="f-basket" method="post" novalidate="novalidate">
+<input name="_dyncharset" value="UTF-8" type="hidden">
+<input name="_dynSessConf" value="8104793169379795529" type="hidden">
                 <div id="js-basket-errors"> </div>
                 <div class="unavailable-items-removed-msg hidden">
                     <div class="unavailable-items-removed-msg-icon"></div>
@@ -9,14 +11,18 @@
                         <div class="l-col l-three-quarters">
                             <h1 class="page-title">Your basket<span class="desktop-hidden"> (2 items)</span></h1>
                         </div>
-                        <div class="l-col l-one-quarter holder-for-p-fixed"> <input name="/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoSuccessURL" value="/checkout/checkout.jsp" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoSuccessURL"
-                                value=" " type="hidden"><input name="/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoErrorURL" value="/basket/basket.jsp" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoErrorURL"
+                        <div class="l-col l-one-quarter holder-for-p-fixed"> 
+						<!-- <input name="/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoSuccessURL" value="/#!/checkout" type="hidden">
+						<input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoSuccessURL"
                                 value=" " type="hidden">
+								<input name="/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoErrorURL" value="/#!/checkout" type="hidden">
+								<input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoErrorURL"
+                                value=" " type="hidden"> -->
                             <div class="checkout-cta-container">
                                 <div class="loader checkout-cta" style="display: none"></div>
-                                <input name="checkout" value="Checkout" class="orangeSubmit bigSubmit js-checkout-button" type="submit">
+                                <input name="checkout" value="Checkout" ng-click="gotoCheckout()" class="orangeSubmit bigSubmit js-checkout-button" type="submit">
                             </div>
-                            <input name="_D:checkout" value=" " type="hidden"> </div>
+                            
                     </div>
                     <div class="l-wrap mobile-fill-width">
                         <div class="l-col l-full js-basket-items">
@@ -38,15 +44,20 @@
                                                 <a class="block product" href="/shop/product/vego-organic-hazelnut-chocolate-bar-60005446" data-mobile-app-disabled="">
                                                     <div class="img">
                                                         <picture>
-                                                            <source data-srcset="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:200,height:200) 2x, //images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)"
-                                                                srcset="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:200,height:200) 2x, //images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)">
-                                                           															
-																<img class=" lazyloaded" data-src="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)" data-srcset="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:200,height:200) 2x, //images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)"
-                                                                alt="" srcset="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:200,height:200) 2x, //images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)"
-                                                                src="//images.hollandandbarrettimages.co.uk/productimages/HB/724/005446_A.png?i10c=img.resize(width:100,height:100)"> </picture>
+                                                            <!-- <source data-srcset="https://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.pnghttps://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.png?i10c=img.resize(width:100,height:100)"
+                                                                srcset="https://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.pnghttps://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.png?i10c=img.resize(width:100,height:100)">
+                                                           			-->												
+																<img class=" lazyloaded" data-src="{{lineItem.image}}?i10c=img.resize(width:100,height:100)"
+                                                                alt="" srcset="{{lineItem.image}}?i10c=img.resize(width:100,height:100)"
+                                                                src="{{lineItem.image}}?i10c=img.resize(width:100,height:100)"> </picture>
                                                     </div>
-                                                    <h3 class="prod-title block-hover-text"> {{lineItem.productNameEn}} </h3>
-                                                    <p class="block-hover-text"> 65&nbsp;g </p> <small class="mobile-hidden block-hover-text">  <div id="toolTip005446" style="display: none"> £2.29 </div> <abbr title="" onmouseover="javascript : getAbbrTitle('005446','per 100 g')"> £2.29/100 g </abbr>  <span>005446</span> </small>                                                    </a>
+                                                    <h3 class="prod-title block-hover-text"> {{lineitem.productNameEn}} </h3>
+                                                    <!-- <p class="block-hover-text">  </p> 
+													<small class="mobile-hidden block-hover-text">  
+													<div id="toolTip005446" style="display: none">  </div>
+													<abbr title="" onmouseover="javascript : getAbbrTitle('005446','per 100 g')"> 
+													£2.29/100 g </abbr>  <span>005446</span> 
+													</small>             -->                                       </a>
                                                 <div class="og-offer" data-og-module="sc" data-og-product="005446">
                                                     <div class="og-widget og-type-CartRadioWidget og-offer-63df47acb68911e68625bc764e106cf4 og-locale-en-us">
                                                         <div class="og-option-row og-off-row">
@@ -116,7 +127,8 @@
                                                 <dd class="quantity">
                                                     <div class="quantity-wrapper quantity-selectbox-holder clearfix"> <button type="button" class="minus">-</button>
 													<input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
-                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" value="2" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
+                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
+															
 															<button type="button" class="plus">+</button>                                                       
 															<select class="item-quantity-selectbox select-width-55">  
 															<option value="1">1</option>  
@@ -138,14 +150,19 @@
                                             <dl class="l-col price"> <dt class="visuallyhidden"> ???basket.header.totalprice??? </dt>
                                                 <dd class="line-total">
                                                     <div class="actual-price">
-                                                        <div class="current-price"> {{lineitems[0].priceAmt}} </div>
-                                                        <div id="was005446" style="display: none"> £3.98 </div> <strike class="was" title="" onmouseover="javascript : getStrikeTitle('005446')"> was £3.98 </strike> <span class="offer"><em> 1 product for 50 %</em> </span> </div>
+                                                        <div class="current-price"> {{lineitem.currencyCode}} {{lineitem.priceAmt}} </div>
+                                                        <div id="was005446" style="display: none"> {{lineitem.currencyCode}} {{lineitem.priceAmt}} </div> 
+														<!-- <strike class="was" title="" onmouseover="javascript : getStrikeTitle('005446')"> was £3.98 </strike> 
+														<span class="offer"><em> 1 product for 50 %</em> </span> --> </div>
                                                 </dd>
                                             </dl>
                                             <dl class="l-col quantity desktop-hidden"> <dt class="visuallyhidden"> Quantity </dt>
                                                 <dd class="quantity">
-                                                    <div class="quantity-wrapper quantity-selectbox-holder clearfix"> <button type="button" class="minus">-</button><input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
-                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" value="2" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]"><button type="button" class="plus">+</button>                                                        <select class="item-quantity-selectbox select-width-55">  <option value="1">1</option>  <option value="2" selected="">2</option>  <option value="3">3</option>  <option value="4">4</option>  <option value="5">5</option>  <option value="6">6</option>  <option value="7">7</option>  <option value="8">8</option>  <option value="9">9</option>  <option value="10">10</option>  <option value="11">11</option>  <option value="12">12</option>  <option value="13">13</option>  <option value="14">14</option>  <option value="15">15</option>  <option value="16">16</option>  <option value="17">17</option>  <option value="18">18</option>  <option value="19">19</option>  <option value="20">20</option>  <option value="21">21</option>  <option value="22">22</option>  <option value="23">23</option>  <option value="24">24</option>  <option value="25">25</option>  <option value="26">26</option>  <option value="27">27</option>  <option value="28">28</option>  <option value="29">29</option>  <option value="30">30</option>  </select>                                                        <a href="javascript:void(0)" class="act-remove removeCartItem" data-removed-sku="005446" removeitem="ci2385088299" data-removeitem="ci2385088299" title="Remove this item from your basket"> Remove </a>
+                                                    <div class="quantity-wrapper quantity-selectbox-holder clearfix"> 
+													<button type="button" class="minus">-</button><input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
+                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" 
+															 ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
+															<button type="button" class="plus">+</button>                                                        <select class="item-quantity-selectbox select-width-55">  <option value="1">1</option>  <option value="2" selected="">2</option>  <option value="3">3</option>  <option value="4">4</option>  <option value="5">5</option>  <option value="6">6</option>  <option value="7">7</option>  <option value="8">8</option>  <option value="9">9</option>  <option value="10">10</option>  <option value="11">11</option>  <option value="12">12</option>  <option value="13">13</option>  <option value="14">14</option>  <option value="15">15</option>  <option value="16">16</option>  <option value="17">17</option>  <option value="18">18</option>  <option value="19">19</option>  <option value="20">20</option>  <option value="21">21</option>  <option value="22">22</option>  <option value="23">23</option>  <option value="24">24</option>  <option value="25">25</option>  <option value="26">26</option>  <option value="27">27</option>  <option value="28">28</option>  <option value="29">29</option>  <option value="30">30</option>  </select>                                                        <a href="javascript:void(0)" class="act-remove removeCartItem" data-removed-sku="005446" removeitem="ci2385088299" data-removeitem="ci2385088299" title="Remove this item from your basket"> Remove </a>
                                                         <p class="save-later"> <a href="#" class="saveForLaterFromCart" commerceitemid="ci2385088299" giftlistid="" itemqty="2" data-sku-id="005446"> Save for later </a> </p>
                                                     </div> <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em> </dd>
                                             </dl>
@@ -197,9 +214,9 @@
                                         <div class="order-summary-block">
                                             <div class="basket-order-pretotal clearfix"> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-subtotal"> Subtotal </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                £3.98 </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings </dt>
+                                                {{subTotalAmt}}{{totalGrossCurrency}} </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-savings">
-                                                £-1.00 </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-standard-delivery"> Default Delivery </dt>
+                                                {{totalGrossCurrency}}{{savingsAmt}} </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-standard-delivery"> Default Delivery </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-standard-delivery">
                                                 {{totalGrossAmt}}{{totalGrossCurrency}} </dd> <span class="small-text-caption basket-order-small-caption">You can change delivery at checkout.</span> </div> <dt class="l-col l-three-quarters basket-abs-total basket-order-total"> Total </dt>
                                             <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum"> {{totalGrossAmt}}{{totalGrossCurrency}} </dd>
@@ -207,7 +224,7 @@
                                     </dl>
                                     <div class="checkout-cta-container">
                                         <div class="loader checkout-cta" style="display: none"></div>
-                                        <input name="checkout" value="Checkout" class="orangeSubmit bigSubmit js-checkout-button" type="submit">
+                                        <input name="checkout" value="Checkout" ng-click="gotoCheckout()" class="orangeSubmit bigSubmit js-checkout-button" type="submit">
                                     </div>
                                     <img class="card-logos" src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/basket/icons/card-icons.png" alt="Cards">
                                     <div class="express-checkout-block js-express-checkout "> <span class="choice-text">or</span> <a href="javascript:void(0);" class="btn checkout-paypal " id="js-express-paypal-button" data-checkout-id="M27JX5RQ754QY" data-checkout-env="production" data-paypal-click-listener="">  <span class="js-paypal-express-btn paypal-express-btn"> <img src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/icons/checkout/paypal.png" class="paypal-logo-img" alt="Check out with PayPal"> <span>Express</span> </span> <span class="js-paypal-pay-now-btn paypal-pay-now-btn hidden"> <span>Pay now with</span> <img class="paypal-logo-img" src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/icons/checkout/paypal.png" alt="Check out with PayPal"> </span> </a>                                        </div>
