@@ -4,7 +4,7 @@ hbiApp.factory('productlistService', function($http, headerService) {
     getProducts: function (categoryId) { 
 				  return $http({
 						method: 'GET',
-						url: "https://api.sphere.io/hnb-59/product-projections/search?filter=categories.id: subtree(\""+categoryId+"\")",
+						url: "https://api.sphere.io/hnb-59/product-projections/search?filter=categories.id: subtree(\""+categoryId+"\")&facet=variants.attributes.flavour&facet=variants.attributes.unitName",
 						headers: {
 							"Authorization": headerService.sessionGet("configData").header
 						},
@@ -64,6 +64,51 @@ hbiApp.factory('productlistService', function($http, headerService) {
 							console.log('done');
 						}
 					})
-    }
+    },
+	    renderFacets: function(facets){
+		console.log(facets);
+		var facetCompleteData=[];	
+		var facetsDataTitle=[];
+		var dataCount=[];
+		var facetsData=$.map(facets,function(value,index){
+			var title=index.split('.');
+			facetsDataTitle.push(title[(title.length)-1]);
+			return value;
+		})
+		
+		console.log("+++++"+facetsData);		
+		var i;
+		for(i=0;i<facetsData.length;i++){
+			var temp=[];
+			var tempObj={};
+			var title=facetsDataTitle[i];
+			temp.push(facetsDataTitle[i]);
+			temp.push(facetsData[i]);
+			temp.push({count:5,buttonText:"Show More..."});
+			facetCompleteData.push(temp);
+			dataCount.push(tempObj);
+		}
+		return facetCompleteData;
+		//console.log(facetCompleteData);	
+		//console.log(dataCount);		
+	},
+	
+	dataToggle:function (term,facetCompleteData){
+		console.log(term);
+		console.log(facetCompleteData);
+		angular.forEach(facetCompleteData,function(facet){
+			if(facet[0]===term){
+				if(facet[2].count==5){
+					facet[2].count=facet[1].length;
+					facet[2].buttonText="Show Less...";					
+				}else {
+					facet[2].count=5;	
+					facet[2].buttonText="Show More...";	
+				}
+			}
+			
+		});
+		return facetCompleteData;
+	}
   };
 });
