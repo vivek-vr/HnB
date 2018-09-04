@@ -182,14 +182,13 @@
 	</p>
 	</div> 
 	<span class=" global-search">
-	<form onsubmit="return searchFieldValidate()" action="/search" method="GET" class="site-search-form">  
+	<form class="site-search-form">    
 	<div class="search-form" role="search" id="site-search" data-json-submit-uri="/common/typeAhead.jsp" data-search-for-label="Search for">  
 	<div class="flex">
 	<label class="text" title="Search"> 
 	<span class="visuallyhidden">Search</span>
-	<input type="search" name="query" id="sitesearch" maxlength="128" placeholder="Search"/> 
-	<input type="hidden" name="isSearch" id="isSearch" value="true"/> 
-	<button type="submit" class="orangeSubmit" title="search button">
+	<input type="search" id="sitesearch" ng-model="searchkey" maxlength="128" placeholder="Search" /> 	
+	<button type="submit" class="orangeSubmit" title="search button" ng-click="searchProductList(searchkey)">
 	<span class="ico-s ico-25 ico-search"></span>
 	</button> 
 	</label> 
