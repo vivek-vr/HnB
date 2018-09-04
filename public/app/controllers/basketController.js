@@ -42,12 +42,12 @@ hbiApp.controller('basketController', ['$scope','$http','basketService','headerS
 				$scope.lineItem.quantity = lineItemData.quantity;
 				$scope.lineItem.image=lineItemData.variant.images[0].url;
 				console.log("$scope.lineItem.image:"+$scope.lineItem.image);
-				$scope.lineItem.priceAmt = lineItemData.price.value.centAmount;
-				if(lineItemData.price.value.fractionDigits != null){
-					$scope.lineItem.priceAmt = $scope.lineItem.priceAmt/ (Math.pow(10,lineItemData.price.value.fractionDigits));
+				$scope.lineItem.priceAmt = lineItemData.totalPrice.centAmount;
+				if(lineItemData.totalPrice.fractionDigits != null){
+					$scope.lineItem.priceAmt = $scope.lineItem.priceAmt/ (Math.pow(10,lineItemData.totalPrice.fractionDigits));
 				}
 				$scope.lineItem.currencyCode = '£';
-				if(lineItemData.price.value.currencyCode == 'GBP')
+				if(lineItemData.totalPrice.currencyCode == 'GBP')
 				{
 					$scope.lineItem.currencyCode = '£';
 				}
