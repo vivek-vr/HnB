@@ -7,9 +7,9 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 		productlistService.getProducts(categoryId)
 		.then(function(response) {
 			$scope.products = response.data.results;
-			console.log("$scope.products");
-			console.log($scope.products);
+			$scope.facets=response.data.facets;
 			$scope.setPageCount(response);
+			$scope.ProductFacets($scope.facets);
 		});
 	}
 	
