@@ -1,6 +1,11 @@
 hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistService','$rootScope','headerService', function($scope, $state, $http, productlistService, $rootScope ,headerService) {
     
 	$scope.init = function(){
+		var cartData = headerService.sessionGet('cart');
+		$scope.itemCount = 0;	
+		if(cartData && cartData.lineItems){
+			$scope.itemCount = Object.keys(cartData.lineItems).length;
+		}
 		setAuthorizationCode();
 		var finalItemsList = [];
 		var outputList = [];
@@ -55,9 +60,13 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
 			});
 				$scope.menuTree = outputList; 
 				headerService.sessionSet("menuCategoryList",outputList);
-			})
+			});
 		}
 	}
+	
+	$rootScope.$on("updateBacket", function(evt,data){ 
+		$scope.itemCount = $scope.itemCount+1;
+	});
 	
 	$scope.isObjectEmpty = function(card){
 	   return Object.keys(card).length === 0;
