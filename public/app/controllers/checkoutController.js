@@ -174,7 +174,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 			  }
 			};
 		checkoutService.createPayment(paymentData).then(function(response){
-			headerService.sessionSet('paymentData',{"id":response.id});
+			headerService.sessionSet('paymentData',{"id":response.data.id});
 			if(data==="billing"){
 			$("#delivery").removeClass("completed");
 			$("#billing").addClass("completed");
@@ -182,9 +182,35 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				$("#delivery").addClass("completed");
 				$("#billing").removeClass("completed");
 			}
+			var paymentObj = {};
+			paymentObj.version = cartData.version;
+			paymentObj.actions = [];
+			
+			paymentSubObj = {}
+			paymentSubObj.action = "addPayment";
+			paymentSubObj.payment = {};
+			paymentSubObj.payment.id = response.data.id;
+			paymentSubObj.payment.typeId = "payment";
+			paymentObj.actions.push(paymentSubObj);
+			/*{
+			  "version": 15,
+			  "actions": [{
+				"action": "addPayment",
+				"payment": {
+				  "id": "7d65e928-3f48-4feb-8f05-5f6671d826bb",
+				  "typeId": "payment"
+				}
+			  }]
+			}*/
+			
+			checkoutService.addPayment(cartData.id,paymentObj).then(function(response){
+				console.log(response);debugger;
+				headerService.sessionSet('cart',response.data);
+			});
 		});	
 		
 	}
+	
 
 	$scope.goToPayment = function(){
 		console.log("Goto payment");

@@ -25,6 +25,19 @@ hbiApp.factory('checkoutService', function($http, headerService,productlistServi
 				  console.log('done');
 			  }
 		  })
+		},
+		addPayment: function (cartId,paymentData) {
+			return $http({
+			  method: 'POST',
+			  url: "https://api.sphere.io/hnb-59/carts/"+cartId,
+			  data:paymentData,
+			  headers: {
+				  "Authorization": headerService.sessionGet("configData").header
+			  },
+			  complete: function() {
+				  console.log('done');
+			  }
+		  })
 		}
 	}
 	
