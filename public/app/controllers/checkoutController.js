@@ -187,8 +187,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				placeOrderObj.paymentState = "Paid";
 				checkoutService.placeOrder(placeOrderObj).then(function(response){
 					headerService.removeItem('cart');
-					headerService.sessionSet('orderId',orderId);
-					$state.go('thankyou');
+					headerService.sessionSet('orderId',orderId);					
 				});
 			});
 		});	
@@ -212,7 +211,7 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 	chckt.hooks.beforeComplete = function(node, paymentData) {
 		console.log('Payment Succesfull', paymentData);
 		if(paymentData.resultCode == "authorised"){
-			$location.path( "/home" );
+			$state.go('thankyou');
 		}
 		return true; // Indicates that you want to replace the default handling.
 	 };
