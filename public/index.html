@@ -28,13 +28,14 @@
 <link href="app/assets/css/responsive.css" rel="stylesheet">
 <link href="app/assets/css/style.css" rel="stylesheet">
 
+
 <link rel="stylesheet" href="app/assets/css/sunrise.css"/>
 
 
 <script>
 if ( navigator.userAgent.match(/iPad/i) ) {
 			var viewportAttr = document.getElementById('viewport').getAttribute("content");
-			
+
 			if (viewportAttr.match(/initial-scale=1/i)) {
 				document.getElementById('viewport').setAttribute("content", "width=1000");
 			}
@@ -106,7 +107,7 @@ position: static !important;
 }
 
 #fly666 .flyout-container {
-  display: none; 
+  display: none;
   padding: 24px;
 }
 
@@ -122,12 +123,12 @@ position: static !important;
 #fly666 .flyout-container .f-row .flyout-nav-column  img {
   margin: 0 auto;
 }
-    
+
 .last-nav-item:hover > #fly666 .flyout-container {
     display: block;
 }
 
-.last-nav-item:hover > a,  
+.last-nav-item:hover > a,
 .ss-new-badge:hover ~ a, #fly666:hover  + .ss-flyout-bg + a   {
 
 background: #fff;
@@ -135,7 +136,7 @@ color: #006341;
 
 }
 
-.last-nav-item:hover .ss-flyout-bg,  
+.last-nav-item:hover .ss-flyout-bg,
 .ss-new-badge:hover + #fly666 + .ss-flyout-bg, #fly666:hover  + .ss-flyout-bg  {
 
 opacity: 0.6;
@@ -224,7 +225,8 @@ display:none;
 <script src="app/services/productdetailService.js"></script>
 <script src="app/services/paymentService.js"></script>
 <script src="app/services/headerService.js"></script>
-<script src="app/services/cartService.js"></script>					 
+<script src="app/services/cartService.js"></script>
+<script src="app/services/checkoutService.js"></script>
 <script src="app/services/basketService.js"></script>
 <script src="app/controllers/homeController.js"></script>
 <script src="app/controllers/headerController.js"></script>
@@ -255,7 +257,7 @@ display:none;
 <!-- <script src="app/assets/js/load.js"></script> -->
 
 
- 
+
   <script>
         window.localization = {
             inlineValidation: {
@@ -359,17 +361,17 @@ display:none;
             isMobileApp: Boolean(false)
         };
     </script>
-  
+
     <script>
         // Fallback to loading jQuery from a local path if the CDN is unavailable
         (window.jQuery || document.write('<script src="/ui/js/libs/jquery-1.8.2.min.js?t=1534762332"><\/script>'));
     </script>
-	 
+
     <script>
         // Fallback to loading jQuery UI from a local path if the CDN is unavailable
         (jQuery.ui || document.write('<script src="/ui/js/libs/jquery-ui-1.11.4.custom.min.js?t=1534762332"><\/script>'));
     </script>
-   
+
     <script>
         var RR_CONFIG = {};
         RR_CONFIG.baseUrl = '//recs.richrelevance.com/rrserver/';
@@ -456,11 +458,11 @@ display:none;
                   <b>
                   {{if sale_price != ""}}
                     {{if sale_price_max != "" && sale_price < sale_price_max}}
-                      <em>From&nbsp;</em> 
+                      <em>From&nbsp;</em>
  {{/if}} £{{: ~priceRound(sale_price, 1)}}
                   {{else}}
                     {{if list_price_max != "" && price < list_price_max}}
-                      <em>From&nbsp;</em> 
+                      <em>From&nbsp;</em>
  {{/if}} £{{: ~priceRound(price, 1)}} {{/if}} </b> </span>
                             </div>
                             {{if promotion != ""}}
@@ -592,7 +594,7 @@ display:none;
             -ms-flex-align: center;
             align-items: center;
         }
-        
+
         .main-nav.replete-nav .main-nav-item>a {
             font-size: 1.3rem;
             text-align: center;
@@ -705,7 +707,7 @@ display:none;
         }
     }
 </script>
-  
-  
+
+
 </body>
 </html>
