@@ -22,6 +22,9 @@ hbiApp.factory('headerService', function($http) {
 			return JSON.parse(temp);
 			}
 			return null;
+		},
+		removeItem: function (value) {
+			sessionStorage.removeItem(value);
 		}
 	  };
 });

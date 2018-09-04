@@ -77,7 +77,9 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
   }
 	
 	$scope.addToBag = function(action,productId) { 
-		cartService.cartActions(action, productId,1,1);
+		cartService.cartActions(action, productId,1,1).then(function(response) {
+			headerService.sessionSet('cart', response.data);
+		});
 	}
 
 	$scope.recommendedProducts = function() {
