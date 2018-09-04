@@ -4,7 +4,7 @@ hbiApp.factory('productlistService', function($http, headerService) {
     getProducts: function (categoryId) { 
 				  return $http({
 						method: 'GET',
-						url: "https://api.sphere.io/hnb-59/product-projections/search?filter=categories.id: subtree(\""+categoryId+"\")&facet=variants.attributes.flavour&facet=variants.attributes.unitName",
+						url: "https://api.sphere.io/hnb-59/product-projections/search?filter=categories.id: subtree(\""+categoryId+"\")&filter.facets=categories.id: subtree(\""+categoryId+"\")&facet=variants.attributes.flavour&facet=variants.attributes.unitName",
 						headers: {
 							"Authorization": headerService.sessionGet("configData").header
 						},
@@ -28,7 +28,7 @@ hbiApp.factory('productlistService', function($http, headerService) {
 	    getSearchProductsList: function (searchkey) { 
 		return $http({
 			  method: 'GET',
-			  url: "https://api.sphere.io/hnb-59/product-projections/search?"+searchkey+".en=Holland&facet=variants.attributes.flavour&facet=variants.attributes.unitName",
+			  url: "https://api.sphere.io/hnb-59/product-projections/search?text.en="+searchkey+"&facet=variants.attributes.flavour&facet=variants.attributes.unitName",
 			  headers: {
 				  "Authorization": headerService.sessionGet("configData").header
 			  },
