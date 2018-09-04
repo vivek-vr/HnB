@@ -191,27 +191,24 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 			paymentSubObj.payment = {};
 			paymentSubObj.payment.id = response.data.id;
 			paymentSubObj.payment.typeId = "payment";
-			paymentObj.actions.push(paymentSubObj);
-			/*{
-			  "version": 15,
-			  "actions": [{
-				"action": "addPayment",
-				"payment": {
-				  "id": "7d65e928-3f48-4feb-8f05-5f6671d826bb",
-				  "typeId": "payment"
-				}
-			  }]
-			}*/
+			paymentObj.actions.push(paymentSubObj); 
 			
 			checkoutService.addPayment(cartData.id,paymentObj).then(function(response){
-				console.log(response);debugger;
 				headerService.sessionSet('cart',response.data);
+				var placeOrderObj = {};
+				placeOrderObj.id = response.data.id;
+				placeOrderObj.version = response.data.version;
+				placeOrderObj.orderNumber = "234235346";
+				placeOrderObj.paymentState = "Paid";
+				checkoutService.placeOrder(placeOrderObj).then(function(response){
+					console.log(response);debugger;
+					headerService.sessionSet('cart',response.data);
+				});
 			});
 		});	
 		
 	}
 	
-
 	$scope.goToPayment = function(){
 		console.log("Goto payment");
 		//var paymentSession = $scope.createPaymentSession();
