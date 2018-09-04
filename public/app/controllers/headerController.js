@@ -1,4 +1,4 @@
-hbiApp.controller('headerController', ['$scope', 'productlistService','headerService', function($scope, productlistService,headerService) {
+hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistService','$rootScope','headerService', function($scope, $state, $http, productlistService, $rootScope ,headerService) {
     
 	$scope.init = function(){
 		setAuthorizationCode();
