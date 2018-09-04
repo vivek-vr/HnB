@@ -5048,6 +5048,11 @@ screen and (max-width: 767px) {
 	}
 }
 @media screen and (max-width: 767px) {
+	
+	#sortProducts {
+	padding: 5px !important;
+	width: 100% !important
+}
 	.prod-form .prod-content.f-row,
 	.prod-form .prod-content.f-row>.f-row {
 		display: block

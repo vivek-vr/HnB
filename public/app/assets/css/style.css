@@ -13240,8 +13240,7 @@ _:-ms-fullscreen,
 	margin-bottom: 10px
 }
 .promo-strip {
-	position: absolute;
-	bottom: -7px;
+	position: relative;
 	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
@@ -14278,8 +14277,22 @@ _:-ms-fullscreen,
 }
 
 .addpadding{
-	padding: 55px 0 0 55px;
+	padding: 2% 1% 1% 2%;
 }
 .width50per{
 	width:50%;
+}
+
+@media screen and (max-width: 767px) {
+	#sortProducts {
+	padding: 5px !important;
+	width: 50% !important
+}
+.footer-links .l-col.l-one-quarter, .footer-links .l-col.l-one-fifth, .footer-links .l-col.l-one-half, .footer-links .link-list li {
+    border-bottom: 1px solid #939798;
+    margin-top: 10px;
+}
+[role=contentinfo] a {
+    margin-left: 40px;
+}
 }
