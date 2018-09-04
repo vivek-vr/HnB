@@ -1,4 +1,4 @@
-hbiApp.controller('basketController', ['$scope','$http','basketService','headerService','$state',  function($scope, $http,basketService,headerService,$state) {
+hbiApp.controller('basketController', ['$scope','$http','basketService','headerService','productlistService','$state',  function($scope, $http,basketService,headerService,productlistService,$state) {
 	
 	$scope.init = function(){ 
 		console.log("basket");
@@ -11,13 +11,17 @@ hbiApp.controller('basketController', ['$scope','$http','basketService','headerS
 		var cart = headerService.sessionGet('cart');
 		console.log("calling get cart service:"+cart);
 		var cartId = cart.id;
+		$scope.cartVersion = cart.version;
         console.log("calling get cartid service:"+cartId);
 		
 		basketService.getBasketDetails(cartId).then(function(response, status, headers, config) {  
 		   console.log("response:"+response.data);
-		   console.log("response:"+response.data);
+		   
            $scope.masterDataObj = response.data;
            console.log($scope.masterDataObj);
+		   $scope.cartVersion = $scope.masterDataObj.version;
+		   cart.version = $scope.masterDataObj.version;;
+		   headerService.sessionSet('cart',cart);
            $scope.setBasketData(response.data);
            $scope.recommendedProducts();
 		}).catch(function(response, status, headers, config) {
@@ -68,6 +72,31 @@ hbiApp.controller('basketController', ['$scope','$http','basketService','headerS
 			
 		}
 		
+	}
+	
+	$scope.addDiscount = function(cartDiscountCode) {
+		var cart = headerService.sessionGet('cart');
+		console.log("calling get cart service:"+cart);
+		var cartId = cart.id;
+		$scope.cartVersion = cart.version;
+		var data={};
+		data.version = cart.version;
+		data.actions=[];
+		var actionDetails={};
+		actionDetails.action="addDiscountCode";
+		actionDetails.code=cartDiscountCode;
+		data.actions[0]=actionDetails;
+		basketService.addDiscount(cartId, data)  // add discount
+		.then(function(response) {
+			$scope.masterDataObj = response.data;
+           console.log($scope.masterDataObj);
+		   $scope.cartVersion = $scope.masterDataObj.version;
+		   cart.version = $scope.masterDataObj.version;
+		   headerService.sessionSet('cart',cart);
+           $scope.setBasketData(response.data);
+           $scope.recommendedProducts();
+			
+		});
 	}
 	
 	$scope.recommendedProducts = function() {

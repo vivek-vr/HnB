@@ -1,4 +1,4 @@
-<form class="f-basket" method="post" novalidate="novalidate">
+<form class="f-basket" ng-model="basketForm" method="post" novalidate="novalidate" >
 <input name="_dyncharset" value="UTF-8" type="hidden">
 <input name="_dynSessConf" value="8104793169379795529" type="hidden">
                 <div id="js-basket-errors"> </div>
@@ -125,8 +125,7 @@
                                                     </div>
                                                 </div> -->
 												
-												<span class="offer-notice-note"> <span class="offer-notice-note-short">Sale</span> 
-												<span class="offer-notice-note-long">Buy One Get One Half Price</span> </span>
+												
                                             </div>
                                             <dl class="l-col quantity mobile-hidden"> <dt class="visuallyhidden"> Quantity </dt>
                                                 <dd class="quantity">
@@ -181,13 +180,75 @@
                     </div>
                     <div class="l-wrap mobile-fill-width clearfix">
                         
+						<!-- Add discount code-->
+						<div class="l-col l-three-quarters simple-accordion-container" data-init-module="simpleAccordionModule" data-init-params="{&quot;breakpoint220&quot;:{&quot;initAccordion&quot;:true},&quot;breakpoint768&quot;:{&quot;initAccordion&quot;:false}}">
+                            <div class="l-wrap clearfix">
+                                <!-- <div class="l-col l-one-half">
+                                    <section class="s-basket basket-discount-wrapper simple-accordion-item">
+                                        <div class="discount-form-wrapper discount-form-wrapper-rfl">
+                                            <div class="discount-header-wrapper rfl-promo clearfix simple-accordion-title simple-accordion-closed">
+                                                <h2> <span class="ico ico-rfl-card"><img src="/ui/css/img/icons/rfl-card-icn.png"></span>rewards for life <span class="desktop-hidden ico-c ico-chevron ico-chevron-top"></span> <span class="desktop-hidden ico-c ico-chevron ico-chevron-bottom"></span>                                                    </h2>
+                                            </div>
+                                            <div class="discount-body-wrapper rfl-card-form simple-accordion-container">
+                                                <div class="pseudo-label">
+                                                    <div class="tooltip"> <span class="description reward-points-holder js-reward-points-holder" data-init-module="rewardPoints" data-init-params="{&quot;ajax&quot;:{&quot;timeout&quot;: &quot;5000&quot;, &quot;errorText&quot;: &quot;Estimated points for this order: <a class=\&quot;rfl-points\&quot; aria-haspopup=\&quot;true\&quot;><em>20</em></a><div class=\&quot;simple-tooltip\&quot;><h4>rewards for life card - Start collecting points today</h4><ul class=\&quot;bullet-list\&quot;><li>For every 50 points receive a 50p voucher to spend online or in-store</li><li>Enjoy extra discounts on our product promotions</li></ul></div>&quot;}, &quot;pointPromoAajax&quot;: {&quot;errorText&quot;: &quot;<div class=\&quot;discount-upsell point-promotions-error\&quot;><span>Rewards points will be added to your loyalty card later</span></div>&quot;}}">You
+                                                        could earn <a class="rfl-points" aria-haspopup="true"><em>20</em><div class="simple-tooltip"><h4>rewards for life card - Start collecting points today</h4><ul class="bullet-list"><li>For every 50 points receive a 50p voucher to spend online or in-store</li><li>Enjoy extra discounts on our product promotions</li></ul></div></a>                                                        points on this order</span>
+                                                    </div>
+                                                </div>
+                                                <label class="discount-body-wrapper-field-label discount-rfl-card camera-hide-fullwidth-input">
+ <input id="rflCardNumber" maxlength="13" pattern="/.+/" placeholder="Your RFL card&nbsp;number" name="rfl_card_code" value="" class="medium noKeyUpValidation" onkeypress="return isNumberKey(event)" type="number" data-invalid-message="Please enter a valid rfl card number" disabled=""><input name="_D:rfl_card_code" value=" " type="hidden"> </label>
+                                                <label id="scan-label" class="scan-label desktop-hidden camera-hide-fix">  <img alt="" src="/ui/css/img/icons/camera.svg"> <input id="js-barcode-capture" accept="image/*" name="/atg/commerce/order/purchase/PurchaseProcessFormHandler.rflBarcodePicture" value="Take a picture" capture="camera" class="hidden" type="file"><input name="_D:/atg/commerce/order/purchase/PurchaseProcessFormHandler.rflBarcodePicture" value=" " type="hidden"> </label>                                                <span class="incentive desktop-hidden">13-digit number below the barcode</span> <label class="discount-body-wrapper-submit-label"> <input name="/atg/commerce/order/purchase/PurchaseProcessFormHandler.emailAddress" value="" type="hidden"><input name="_D:/atg/commerce/order/purchase/PurchaseProcessFormHandler.emailAddress" value=" " type="hidden"><input name="/atg/commerce/order/purchase/PurchaseProcessFormHandler.successURL" value="/basket/includes/ajax/errorJson.jsp" type="hidden"><input name="_D:/atg/commerce/order/purchase/PurchaseProcessFormHandler.successURL" value=" " type="hidden"><input name="/atg/commerce/order/purchase/PurchaseProcessFormHandler.errorURL" value="/basket/includes/ajax/errorJson.jsp" type="hidden"><input name="_D:/atg/commerce/order/purchase/PurchaseProcessFormHandler.errorURL" value=" " type="hidden"><input id="addRflCard" name="add-rfl-card" value="Apply" type="submit" disabled=""><input name="_D:add-rfl-card" value=" " type="hidden"> </label>                                                <span class="incentive mobile-hidden">13-digit number below the barcode</span>
+                                                <div class="new-card">
+                                                    <p>Don't have a rewards for life card?</p> <label> <input id="newRflCard" name="rfl_new_card" value="true" class="newRflCard" type="checkbox" checked=""><input name="_D:rfl_new_card" value=" " type="hidden"> <span> Include a new card in my order with an additional <em class="rflPointsNumber">150</em> <span class="rflPointsMessage">points</span> for joining (by selecting the checkbox you agree to our<a href="/my-account/includes/termsAndConditions.jsp" data-targeter="TermsAndConditionsTargeter" data-title="Website Terms &amp; Conditions" class="js-terms-conditions-show-modal"> terms and conditions </a>). </span> </label>                                                    </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div> -->
+                                <div class="l-col l-one-half">
+                                    <section class="s-basket basket-discount-wrapper simple-accordion-item">
+                                        <div class="discount-form-wrapper">
+                                            <div class="discount-header-wrapper simple-accordion-title desktop-hidden simple-accordion-closed">
+                                                <h2 class="desktop-hidden"> <span class="mobile-hidden">Add discount &amp; voucher codes</span> <span class="desktop-hidden">Discount &amp; Voucher codes</span> <span class="desktop-hidden ico-c ico-chevron ico-chevron-top"></span>                                                    <span class="desktop-hidden ico-c ico-chevron ico-chevron-bottom"></span> </h2>
+                                            </div>
+                                            <div class="discount-body-wrapper simple-accordion-container">
+                                               <!-- <div class="discount-form-block">
+                                                    <h2> <span>Student Discounts</span> </h2>
+                                                    <div class="js-discount-inputs clearfix"> <label class="discount-body-wrapper-field-label">  <input type="text" minlength="18" maxlength="18" class="noKeyUpValidation" value="" data-invalid-message="Please enter a valid NUS card number" name="studentCardNumber" id="studentCardNumber" onkeypress="return isNumberKey(event)" placeholder="Enter NUS number"> </label>                                                        <label class="discount-body-wrapper-submit-label">  <input class="js-addStudentDiscount" name="add-student-discount" type="submit" value="Get code"> </label> </div>
+                                                    <div class="js-discount-msg" style="display:none;">
+                                                    <span>Your student discount code:</span> <span class="js-discount-code">21500</span> <span class="incentive">Click redeem below to receive your 10% student discount.</span> </div>
+                                                </div> -->
+                                                <div class="discount-form-block">
+                                                    <h2> <span>Add discount &amp; voucher codes</span> </h2> 
+													<label class="discount-body-wrapper-field-label">  
+													<input type="text" name="discount_code" id="discountCode" ng-model="cartDiscountCode" class="noKeyUpValidation" placeholder="Your discount/voucher code" value="" minlength="1" maxlength="150" data-invalid-message="Please enter a valid code"> 
+													</label>                                                    
+													<span class="incentive desktop-hidden">If you have more than one code enter one at a time</span> 
+													<label class="discount-body-wrapper-submit-label">  
+													<input type="submit" name="add-discount" id="addDiscount" ng-model="redeemButton" ng-click="addDiscount(cartDiscountCode)" value="Redeem"> </label>                                                    <span class="incentive mobile-hidden">If you have more than one code enter one at a time</span>
+                                                    <!-- <div class="discount-upsell">
+                                                        <div class="l-col l-two-thirds upsell-details"> 
+														<span class="discount-code-account-num"></span> 
+														<span class="discount-code-num">Buy One Get One Half Price</span> </div>
+                                                        <div class="l-col l-one-third upsell-price-details"> 
+														<span class="basket-sub-total"> £-1.00 </span> </div>
+                                                    </div> -->
+                                                    <div class="js-point-promotions-holder"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+						
+						
                         <div class="l-col l-one-quarter">
                             <div class="order-summary">
                                 <div class="order-header desktop-hidden">Order Summary</div>
                                 <section class="s-basket basket-totals clearfix">
                                     <h2 class="visuallyhidden"> Totals </h2>
                                     <dl class="clearfix l-wrap">
-                                        <div class="order-summary-block">
+                                        <!-- <div class="order-summary-block">
                                             <div id="metapack-basket">
                                                 <div class="basket-total meta-pack-delivery">
                                                     <div class="delivery-method-block">
@@ -215,15 +276,15 @@
                                                     $('#saveCountryForm').submit();
                                                 }
                                             </script>
-                                        </div>
+                                        </div> -->
                                         <div class="order-summary-block">
                                             <div class="basket-order-pretotal clearfix"> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-subtotal"> Subtotal </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                {{subTotalAmt}}{{totalGrossCurrency}} </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings </dt>
+                                                {{totalGrossCurrency}}{{subTotalAmt}} </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-savings">
                                                 {{totalGrossCurrency}}{{savingsAmt}} </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-standard-delivery"> Default Delivery </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-standard-delivery">
-                                                {{totalGrossAmt}}{{totalGrossCurrency}} </dd> <span class="small-text-caption basket-order-small-caption">You can change delivery at checkout.</span> </div> <dt class="l-col l-three-quarters basket-abs-total basket-order-total"> Total </dt>
+                                                {{totalGrossCurrency}}{{totalGrossAmt}} </dd> <span class="small-text-caption basket-order-small-caption">You can change delivery at checkout.</span> </div> <dt class="l-col l-three-quarters basket-abs-total basket-order-total"> Total </dt>
                                             <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum"> {{totalGrossAmt}}{{totalGrossCurrency}} </dd>
                                         </div>
                                     </dl>
