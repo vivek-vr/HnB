@@ -118,17 +118,6 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
 <div ng-controller="productDetailController" ng-init="init();">
 <div role="main" id="content" class="clearfix">
 <div class="page">
-<div class="global-banners">
-   <div class="">
-      <a href="" data-responsive-href="">
-      <picture>
-         <source media="(min-width: 768px)" data-srcset="app/assets/img/pdp/p13_globals_big_deals_desktop_update.png" srcset="app/assets/img/pdp/p13_globals_big_deals_desktop_update.png">
-         <source media="(max-width: 767px)" data-srcset="app/assets/img/pdp/p13_globals_big_deals_mob_update.png" srcset="app/assets/img/pdp/p13_globals_big_deals_mob_update.png">
-         <img data-src="app/assets/img/pdp/p13_globals_big_deals_desktop_update.png" class=" lazyloaded" style="" alt="" data-height-fallback="{&quot;desktop&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;&quot;}" data-width-fallback="{&quot;desktop&quot;:&quot;100%&quot;,&quot;mobile&quot;:&quot;100%&quot;}" src="app/assets/img/pdp/p13_globals_big_deals_desktop_update.png"> 
-      </picture>
-      </a> 
-   </div>
-</div>
 <script src="//display.ugc.bazaarvoice.com/static/HollandBarrett/en_GB/bvapi.js"></script>
 <div class="crumb">
    <ul class="mobile-hidden" itemscope="" itemtype="http://schema.org/BreadcrumbList">
@@ -235,7 +224,7 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
                </div>
             </div>
             <div class="f-col f-col-3">
-				<div class="form-group">
+				<div class="form-group" ng-if="flavours">
 				  <label for="sel1">Flavour:</label>
 				  <select class="form-control width50per" id="sel1" >
 					<option ng-repeat="item in flavours" value="{{item.value}}" >{{item.name}}</option>

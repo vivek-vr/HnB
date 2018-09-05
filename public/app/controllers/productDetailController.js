@@ -1,4 +1,5 @@
-hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state', 'productlistService', '$stateParams' , 'productdetailService', 'headerService' ,'cartService','_','$rootScope','$timeout', function($scope, $http, $q, $state, productlistService, $stateParams, productdetailService, headerService, cartService, _,$rootScope,$timeout) {
+hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state', 'productlistService', '$stateParams' , 'productdetailService', 'headerService' ,'cartService','_','$rootScope','$timeout', 
+function($scope, $http, $q, $state, productlistService, $stateParams, productdetailService, headerService, cartService, _,$rootScope,$timeout) {
 	
 	$scope.init = function(){ 
 		console.log("Product Details");
@@ -45,16 +46,15 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 	}
 	
 	function buildFlavour(data){
-		var isValid = checkGraph(data,'masterData.current.masterVariant.attributes');
 		var flavourObj = [];
-		if(isValid){
+		if(data.masterData.current.masterVariant.attributes[0]){
 			if(data.masterData.current.masterVariant.attributes[0].name == "flavour" ){
 				flavourObj[0] = {};
 				flavourObj[0].name = data.masterData.current.masterVariant.attributes[0].value;
 				flavourObj[0].value = data.masterData.current.masterVariant.id;
 			}
 		}
-		if(checkGraph(data,'masterData.current.variants')){
+		if(masterData.current.variants){
 			_.forEach(data.masterData.current.variants, function(element, i) {
 			  var varientObj = {};
 			  if(element.attributes[0] != "undefined"){
@@ -66,21 +66,6 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 		}
 		return flavourObj;
 	}
-	
-	function checkGraph(obj, graphPath) {
-    if (obj) {
-	  var isValid = true;
-      let root = obj;
-      _.each(graphPath.split('.'), part => {
-        if (root[part]) {
-          root = root[part];
-        } else {
-          isValid = false;
-        }
-      });
-      return isValid;
-    }
-  }
 	
 
 	$scope.addToBag = function(action,product) { 
