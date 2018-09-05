@@ -5061,26 +5061,26 @@ screen and (max-width: 767px) {
 		height: auto;
 		display: inline-block
 	}
-	.prod-form .page-title {
+	.page .prod-form .page-title {
 		font-size: 22px;
 		font-size: 2.2rem
 	}
-	.prod-form .page-title .prod-title {
+	.page .prod-form .page-title .prod-title {
 		font-size: 22px;
 		font-size: 2.2rem;
 		line-height: 2.5rem
 	}
-	.prod-form .page-title .prod-title-info {
+	.page .prod-form .page-title .prod-title-info {
 		font-size: 22px;
 		font-size: 2.2rem
 	}
-	.prod-form .page-title .prod-title-info .sku-id {
+	.page .prod-form .page-title .prod-title-info .sku-id {
 		display: none
 	}
-	.prod-form .prod-size-opts .size-selector+.form-item {
+	.page .prod-form .prod-size-opts .size-selector+.form-item {
 		border-top: 3px solid #e3e8e8
 	}
-	.prod-form .prod-cust-opts h3 {
+	.page .prod-form .prod-cust-opts h3 {
 		margin: 0;
 		margin-bottom: 8px
 	}
