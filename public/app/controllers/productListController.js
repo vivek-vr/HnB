@@ -98,19 +98,15 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 	$scope.quickAdd = function(action, product,varient,quantity){
 		var cart = {};
 		var cust = {}
-		cartService.cartActions(action, product.id,varient,quantity).then(function(response) {
-			headerService.sessionSet('cart', response.data);
-			cust.id = response.data.customerId;
-			headerService.sessionSet('customer', cust);
-			product.addedSuccessfully = true;
-			//$('.js-header-basket-link').find('.price').html(' £'+(response.data.totalPrice.centAmount)/100+' ');
-			//$('.at-basket-menu-qty').html(' '+response.data.lineItems.length+' ');
-			$rootScope.$broadcast("updateBacket",response.data);			
-			$timeout( function(){
-				product.addedSuccessfully = false;
-			}, 3000 );
-			});                           
+		cartService.cartActions(action, product,varient,quantity);                          
 	}
+	
+	$rootScope.$on("updateBacket", function(evt,data){ 
+		data.product.addedSuccessfully = true;
+		$timeout( function(){
+			data.product.addedSuccessfully = false;
+		}, 3000 );
+	});
 		
 		
 }]);

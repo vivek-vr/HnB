@@ -1,24 +1,47 @@
-hbiApp.factory('cartService', function($http, headerService,productlistService, $q) {
+hbiApp.factory('cartService', function($http, headerService,productlistService, $q, $rootScope,$timeout) {
 	return {
-		cartActions: function (action, productId,varient,quantity) {
-			this.initCart();
-			var cart = headerService.sessionGet('cart');
+		cartActions: function (action, product,varient,quantity) {
+			this.initCart(action, product,varient,quantity,this);			
+		},
+		triggerCartAction: function (cart, action, product,varient,quantity) {
 			var input = {};
 			input.version = cart.version;
 			var actions = [];
 			var lineActions = {};
 			lineActions.action = action;
-			lineActions.productId = productId;
+			lineActions.productId = product.id;
 			lineActions.variantId = varient;
 			lineActions.quantity = quantity;
 			actions.push(lineActions);
 			input.actions = actions;
 			return productlistService.cartActions(cart,input);
 		},
-		initCart: function () {
+		initCart: function (action, product,varient,quantity,initialThis) {
 			var cart = headerService.sessionGet('cart');
 			if (!cart || Object.keys(cart).length == 0) {
-				this.createCart();
+				var cart ={};
+				this.createCart().then(function(response) {
+				if(response.data){
+					cart.id = response.data.id;
+					cart.version = response.data.version;
+					headerService.sessionSet('cart', cart);
+					initialThis.triggerCartAction(cart,action, product,varient,quantity).then(function(response) {
+						headerService.sessionSet('cart', response.data);
+						var broadcastObj={}
+						broadcastObj.response = response.data;
+						broadcastObj.product = product;
+						$rootScope.$broadcast("updateBacket",broadcastObj);
+					}); 
+				}				
+			});
+			}else{
+				this.triggerCartAction(cart,action, product,varient,quantity).then(function(response) { 
+						headerService.sessionSet('cart', response.data);
+						var broadcastObj={}
+						broadcastObj.response = response.data;
+						broadcastObj.product = product;
+						$rootScope.$broadcast("updateBacket",broadcastObj);		
+					});
 			}
 		},
 		createCart: function() {
@@ -29,17 +52,7 @@ hbiApp.factory('cartService', function($http, headerService,productlistService, 
 			if(custId != null){
 			  data.customerId =custId			
 			}
-			productlistService.createCart(data).then(function(response) {
-				if(response.data){
-					cart.id = response.data.id;
-					cart.version = response.data.version;
-					headerService.sessionSet('cart', cart);
-					var cust = {};
-					cust.id = response.data.customerId;
-					headerService.sessionSet('customer', cust);
-				}
-				
-			});
+			return productlistService.createCart(data);
 		},
 		getCustId: function() {
 			var customer = headerService.sessionGet('customer');

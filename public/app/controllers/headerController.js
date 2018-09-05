@@ -98,7 +98,7 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
  
  $rootScope.$on("updateBacket", function(evt,data){ 
 	$scope.itemCount = $scope.itemCount+1;
-	$scope.itemPrice = (data.totalPrice.centAmount)/100;
+	$scope.itemPrice = (data.response.totalPrice.centAmount)/100;
 });
  
 function setAuthorizationCode(){

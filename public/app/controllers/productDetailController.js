@@ -14,7 +14,7 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 	    var productId = headerService.sessionGet('productId');
         $state.go("product-detail");	
 		productdetailService.getProductsById(productId).then(function(response, status, headers, config) {      
-		   $scope.productId = response.data.id;		
+		   $scope.productDetails = response.data;		
            $scope.masterDataObj = response.data.masterData.current;
            $scope.setProductData($scope.masterDataObj);
            $scope.recommendedProducts();
@@ -81,10 +81,8 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
     }
   }
 	
-	$scope.addToBag = function(action,productId) { 
-		cartService.cartActions(action, productId,1,1).then(function(response) {
-			headerService.sessionSet('cart', response.data);
-		});
+	$scope.addToBag = function(action,product) { 
+		cartService.cartActions(action, product,1,1);
 	}
 
 	$scope.recommendedProducts = function() {
