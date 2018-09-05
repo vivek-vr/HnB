@@ -6,7 +6,7 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 		$scope.lang = lang;
 		var currency=headerService.sessionGet('Currency');
 		$scope.currency = currency;
-		productDetail();
+		$scope.productDetail();
 	}
 	//console.log($stateParams);
 	$scope.productDetail = function() { 
