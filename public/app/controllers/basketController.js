@@ -38,6 +38,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 		if (basketObj != null) {
 			$scope.lineitems = [];
 			var i=0;
+			$scope.totalDiscountAmt = 0;
 			angular.forEach(basketObj.lineItems, function(lineItemData){
 				$scope.lineItem = {};
 				$scope.lineItem.lineItemId = lineItemData.id;
@@ -46,6 +47,18 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 				$scope.lineItem.productNameSv = lineItemData.name.sv;
 				$scope.lineItem.quantity = lineItemData.quantity;
 				$scope.lineItem.image=lineItemData.variant.images[0].url;
+				$scope.lineItem.discountAmt = 0;
+				$scope.lineItem.discountCurrency = '£';
+				var discountedPrice = lineItemData.discountedPrice;
+				if(discountedPrice != null){
+					if(discountedPrice.includedDiscounts !=null){
+						angular.forEach(discountedPrice.includedDiscounts, function(discounts){
+							discountedPrice = discounts.discountedAmount.centAmount/100;
+							$scope.lineItem.discountAmt = $scope.lineItem.discountAmt + discountedPrice;
+						});
+					}
+				}
+				$scope.totalDiscountAmt = $scope.totalDiscountAmt + $scope.lineItem.discountAmt;
 				console.log("$scope.lineItem.image:"+$scope.lineItem.image);
 				$scope.lineItem.priceAmt = lineItemData.totalPrice.centAmount;
 				if(lineItemData.totalPrice.fractionDigits != null){
@@ -69,7 +82,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 				$scope.totalGrossAmt = $scope.totalGrossAmt/ (Math.pow(10,basketObj.totalPrice.fractionDigits));
 			}
 			$scope.subTotalAmt=$scope.totalGrossAmt;
-			$scope.savingsAmt=0;
+			$scope.deliveryAmt=0;
 			
 		}
 		
@@ -95,6 +108,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 		   cart.version = $scope.masterDataObj.version;
 		   headerService.sessionSet('cart',cart);
            $scope.setBasketData(response.data);
+		   alert("Promotional code Autumn Sale Coupon applied successfully");
           // $scope.recommendedProducts();
 			
 		});
