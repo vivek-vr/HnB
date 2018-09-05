@@ -146,7 +146,7 @@
  <a href="/" class="logotype mobile-hidden">  <img src="app/assets/img/main-logo-hb.png" title="Holland & Barrett :: the good life"> </a>
  </li>
  <li>
- <a href="/stores/storeLocator.jsp" title="Store Locator">
+ <a href="#" title="Store Locator">
  <span class="ico-s ico-25" style="background-image: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/icons/map-pin.svg);"></span>
  <span class="icon-text">Store</span>
  </a>
@@ -224,7 +224,7 @@
 	</span>
  <span class="nav-item locator-nav-item">
  <span class="ico-s ico-location-pin"></span>
- <a href="/stores/storeLocator.jsp" title="Store Locator" data-string-largevp="Store locator">
+ <a href="#" title="Store Locator" data-string-largevp="Store locator">
  <span class="icon-text">Store locator</span>
  </a>
  </span>
@@ -264,6 +264,16 @@
 			</div>
 		</li>
 	</ul>
+	<!-- mobile hamburger menu--start -->
+	<div class="desktop-hidden" id="mobile-navigation-header-items-list" style="overflow-y: auto;">
+		<ul class="mobile-navigation-list">
+			<li ng-repeat="(key, value) in menuTree">
+				<a ui-sref="productlist({categoryId:'{{value.id}}'})" ng-click="setCategory(value.id)"> {{value.name[lang]}} </a>
+			<li>
+		</ul>
+	</div>
+	<div id="mobile-hamburger-navigation-overlay" style="display: none;"></div>
+	<!-- mobile hamburger menu--end -->
 </div>
 <style>
 @media screen and (min-width: 767px) {
