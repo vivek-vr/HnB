@@ -1,4 +1,4 @@
-hbiApp.factory('basketService', function($http, headerService) { 
+hbiApp.factory('basketService', function($http, headerService,productlistService) { 
     return {
 
     getBasketDetails: function (cartId) { 
@@ -29,7 +29,25 @@ hbiApp.factory('basketService', function($http, headerService) {
 							console.log('done');
 						}
 					})
-    }
+    },
+	
+	updateItemQty: function (action, lineItemId,quantity) {
+			
+			var cart = headerService.sessionGet('cart');
+			var input = {};
+			input.version = cart.version;
+			var actions = [];
+			var lineActions = {};
+			lineActions.action = action;
+			lineActions.lineItemId = lineItemId;
+			if(action != 'removeLineItem'){
+				console.log("Quantity is optional for removing line items");
+				lineActions.quantity = quantity;
+			}
+			actions.push(lineActions);
+			input.actions = actions;
+			return productlistService.cartActions(cart,input);
+		},
 	
   };
 });
