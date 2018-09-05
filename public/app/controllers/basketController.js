@@ -125,7 +125,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','$rootScope',
 			$scope.cartVersion = response.data.version;
 		    cart.version = response.data.version;
 			$rootScope.$broadcast("updateBacket",response.data);
-		    headerService.sessionSet('cart',cart);
+		    headerService.sessionSet('cart',response.data);
             $scope.setBasketData(response.data);
 			$timeout( function(){
 				console.log("Timeout Error");
