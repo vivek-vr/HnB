@@ -161,56 +161,7 @@
                     </a>
                 </div>
             </div>
-            <div class="category-cartridge-mobile">
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/shop/vitamins-supplements/#icmp=CAT_1__vitssupps_Mob">
-                            <h2>Vitamins & Supplements</h2> </a>
-                    </div>
-                </div>
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/shop/food-drink/#icmp=CAT_2__fooddrink_Mob">
-                            <h2>Food & Drink</h2> </a>
-                    </div>
-                </div>
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/shop/sports-nutrition/#icmp=CAT_3__sports_Mob">
-                            <h2>Sports Nutrition</h2> </a>
-                    </div>
-                </div>
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/shop/natural-beauty/#icmp=CAT_4__beauty_Mob">
-                            <h2>Natural Beauty</h2> </a>
-                    </div>
-                </div>
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/info/free-from/#icmp=CAT_5__freefrom_Mob">
-                            <h2>Free From</h2> </a>
-                    </div>
-                </div>
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/shop/weight-management/#icmp=CAT_6__weight_Mob">
-                            <h2>Weight Management</h2> </a>
-                    </div>
-                </div>
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/shop/offers/new-in/#icmp=CAT_7_P2_5_new_in_Mob">
-                            <h2>New In</h2> </a>
-                    </div>
-                </div>
-                <div class="category-cartridge-item desktop-hidden">
-                    <div class="category-cartridge-wrap">
-                        <a href="/shop/product-group/reduced-to-clear/?icmp=Homepage_CAT_8_P3_3_reduced_Mob">
-                            <h2>Reduced to Clear</h2> </a>
-                    </div>
-                </div>
-            </div> -->
+           
             <div class="l-wrap clearfix image-cartridge">
                 <div class="l-col l-one-half">
                     <div class="l-wrap clearfix image-cartridge desktop-hidden">
@@ -348,7 +299,7 @@ https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/p_1718/
  </div>  
  <div class="page-title-block "> <span class="page-title-line "> <h1 class="page-title "> 
  <span>Health & Lifestyle</span> </h1> </span> </div>  <div class="advice-and-articles ">
- <div data-init-module='mainCarouselModule' data-init-main-carousel-params='{"breakpoint220 ":{"initCarousel ":true},"breakpoint768 ":{"initCarousel ":true,"quantity ":"6 "}}'> <ul class="l-wrap clearfix "> 
+ <div data-init-module='mainCarouselModule' data-init-main-carousel-params='{"breakpoint220 ":{"initCarousel ":true},"breakpoint768 ":{"initCarousel ":true,"quantity ":"6 "}}'> <ul class="l-wrap clearfix" id="product_courosel"> 
  <li class="l-col l-one-fourth advice-and-articles-item ">  <a href="/the-health-hub/beauty/clean-beauty/?icmp=HUB_HSL_1_cleanbeauty "> 
  <div class="advice-item-image-container ">
  <picture>
@@ -409,3 +360,13 @@ https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/p_1718/
   <!-- start common/wishlist.hbs -->
 
 <!-- end common/wishlist.hbs -->
+ <script>
+ $(document).ready(function() {
+ if ($(window).width() < 768) {
+    $("#product_courosel").slick({
+        arrows:false,
+        autoplay:true
+      });
+}
+});
+ </script> 
