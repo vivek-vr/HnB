@@ -2,7 +2,11 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 	
 	
 	$scope.init = function(){
-		//getDeliveryOptions();
+		$scope.lang = headerService.sessionGet('Language');
+		var cartData = headerService.sessionGet('cart');
+		var currencySumbol = headerService.sessionGet('Currency');
+		$scope.subTotal = cartData.totalPrice.centAmount/100;
+		$scope.currency = cartData.totalPrice.currencyCode;
 	}
 	
 	$scope.emailFlag=true;
@@ -187,7 +191,10 @@ hbiApp.controller('checkoutController', ['$scope','$http','$state','$rootScope',
 				placeOrderObj.paymentState = "Paid";
 				checkoutService.placeOrder(placeOrderObj).then(function(response){
 					headerService.removeItem('cart');
-					headerService.sessionSet('orderId',orderId);					
+					headerService.sessionSet('orderId',orderId);
+					var broadcastObj={}
+					broadcastObj.action = "clear";
+					$rootScope.$broadcast("updateBacket",broadcastObj);					
 				});
 			});
 		});	

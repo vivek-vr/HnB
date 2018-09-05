@@ -30,65 +30,14 @@
    <input type="checkbox" id="toggler" class="hidden accordion-checkbox">
    <label for="toggler" class="accordion-title accordion-paddings clearfix">
       <h2 class="bold pull-left display-block checkout-order-summary-heading accordion-title-heading"> <span class="label bold">Order Summary (1&nbsp; item) </span> <span class="heading-1">Order Summary</span> </h2>
-      <div class="pull-right accordion-title-icon"> <i class="ico-chevron"></i> <a href="/basket/basket.jsp" class="text-link checkout-order-summary-title-link display-block"> Edit </a> </div>
+      <div class="pull-right accordion-title-icon"> <i class="ico-chevron"></i> </div>
    </label>
    <div class="accordion-body accordion-paddings">
       <div class="checkout-order-summary-content order-summary-body">
          <div class="checkout-order-summary-table order-info">
-            <input type="checkbox" id="show-more" class="read-more-state hidden">
-            <table class="table-1 product-order-table ">
-               <thead>
-                  <tr class="tr">
-                     <th class="th product">
-                        <div>
-                           <div class="table-1-content">
-                              <p class="label bold">Product</p>
-                           </div>
-                        </div>
-                     </th>
-                     <th class="th quantity">
-                        <div>
-                           <div class="table-1-content">
-                              <p class="label bold">Qty</p>
-                           </div>
-                        </div>
-                     </th>
-                     <th class="th price">
-                        <div>
-                           <div class="table-1-content ">
-                              <p class="label bold">Price</p>
-                           </div>
-                        </div>
-                     </th>
-                  </tr>
-               </thead>
-            </table>
             <div class="">
                <table class="table-1 product-order-table product-order-table-content healthbox-fixed-table-layout">
-                  <tbody>
-                     <tr class="tr ">
-                        <td class="td product">
-                           <div class="">
-                              <div class="table-1-content">
-                                 <p class="label "> Vego Organic Hazelnut Chocolate Bar 65g</p>
-                              </div>
-                           </div>
-                        </td>
-                        <td class="td quantity">
-                           <div class="">
-                              <div class="table-1-content">
-                                 <p class="label">1</p>
-                              </div>
-                           </div>
-                        </td>
-                        <td class="td price">
-                           <div class="">
-                              <div class="table-1-content ">
-                                 <p class="label">£ 1.99</p>
-                              </div>
-                           </div>
-                        </td>
-                     </tr>
+                  <tbody>										 
                      <tr class="tr ">
                         <td colspan="3">
                            <div class="og-offer " data-og-module="or" data-og-product="005446">
@@ -112,7 +61,8 @@
                         <p class="label">Subtotal</p>
                      </span>
                      <span class="pull-right">
-                        <p class="label"> £ 1.99 </p>
+                        <p class="label" ng-if="currency=='GBP'"> £ {{subTotal}} </p>
+                        <p class="label" ng-if="currency=='SEK'">  {{subTotal}} kr</p>
                      </span>
                   </div>
                   <div class="clearfix">
@@ -120,7 +70,8 @@
                         <p class="label">Delivery</p>
                      </span>
                      <span class="pull-right">
-                        <p class="label"> £ 2.99 </p>
+						<p class="label" ng-if="currency=='GBP'"> £ 0 </p>
+						<p class="label" ng-if="currency=='SEK'"> 0 kr </p>
                      </span>
                   </div>
                   <div class="clearfix checkout-order-summary-total-pricing">
@@ -128,23 +79,24 @@
                         <p class="label"> <span>Total</span>  </p>
                      </span>
                      <span class="pull-right">
-                        <p class="label"> £ 4.98 </p>
+                        <p class="label" ng-if="currency=='GBP'"> £ {{subTotal}} </p>
+                        <p class="label" ng-if="currency=='SEK'"> {{subTotal}} kr</p>
                      </span>
                   </div>
                </div>
                <div class="checkout-order-summary-delivery">
-                  <p class="label bold">Delivery to:</p>
-                  <p class="label">Mr mani kandan</p>
-                  <p class="label"> Malaysia Tourism Promotion Board,  Malaysia House, 57, Trafalgar Square </p>
-                  <p class="label"> London </p>
-                  <p class="label"> WC2N 5DU, United Kingdom </p>
-                  <p class="label">9840288182</p>
+                  <p class="label bold">Delivery to:</p></br>
+                  <p class="label heading-3">{{deliverydetails.firstName}}&nbsp;{{deliverydetails.lastName}}</p>
+				  <p class="label heading-3"> {{deliverydetails.address}}</p></br>
+				  <p class="label heading-3"> {{deliverydetails.region}} </p></br>
+				  <p class="label heading-3"> {{deliverydetails.country}} </p></br>
                </div>
                <div class="checkout-order-summary-billing js-order-summary-billing">
-                  <p class="label bold">Billing to:</p>
-                  <p class="label"> Malaysia Tourism Promotion Board,  Malaysia House, 57, Trafalgar Square </p>
-                  <p class="label"> London </p>
-                  <p class="label"> WC2N 5DU, United Kingdom </p>
+                  <p class="label bold">Billing to:</p></br>
+                  <p class="label heading-3">{{deliverydetails.firstName}}&nbsp;{{deliverydetails.lastName}}</p>
+				  <p class="label heading-3"> {{deliverydetails.address}}</p></br>
+				  <p class="label heading-3"> {{deliverydetails.region}} </p></br>
+				  <p class="label heading-3"> {{deliverydetails.country}} </p></br>
                </div>
             </div>
             <div class="checkout-order-summary-rfl">
@@ -953,7 +905,7 @@
                             <div class="section-one-line-cell section-one-line-cell-icon"> <i class="ico-s ico-rand-size ico-standard-delivery" style="background-image: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/checkout/icons/delivery-van.svg)"></i> </div>
                             <div class="section-one-line-cell at-delivery-option">
                                 <p class="heading-3 at-delivery-option-title">Standard</p>
-                                <p class="label at-delivery-option-description">Usually delivered within 3 working days - Order before 9pm</p>
+                                <p class="label at-delivery-option-description">Usually delivered within 3 working days</p>
                                 <p class="label at-delivery-option-date"> Delivery on or before Thu 06 Sep </p>
                                 <p class="label at-delivery-option-price"> <span class="strike"> £ 2.99 </span> <span class="text-error"> FREE - Free Standard Delivery </span> </p>
                             </div>

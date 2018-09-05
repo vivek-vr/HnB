@@ -5,9 +5,9 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
 	var cartData = headerService.sessionGet('cart');
 	$scope.itemCount = 0;	
 	$scope.itemPrice = 0;
-	if(cartData && cartData){
+	if(cartData){
 		$scope.itemCount = Object.keys(cartData.lineItems).length;
-		$scope.itemPrice = Object.keys(cartData.totalPrice.centAmount)/100;
+		$scope.itemPrice = cartData.totalPrice.centAmount/100;
 	}
 	  setAuthorizationCode().then(function mySuccess(response) {
 	   var configData = {};
@@ -97,8 +97,14 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
  }
  
  $rootScope.$on("updateBacket", function(evt,data){ 
-	$scope.itemCount = $scope.itemCount+1;
-	$scope.itemPrice = (data.response.totalPrice.centAmount)/100;
+	if(data.action && data.action == "clear"){
+		$scope.itemCount = 0;
+		$scope.itemPrice = 0; 
+	}else{
+		$scope.itemCount = $scope.itemCount+1;
+		$scope.itemPrice = (data.response.totalPrice.centAmount)/100; 
+	}
+	
 });
  
 function setAuthorizationCode(){
