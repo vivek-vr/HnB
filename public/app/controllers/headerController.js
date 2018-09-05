@@ -97,11 +97,12 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
  }
  
  $rootScope.$on("updateBacket", function(evt,data){ 
+	var cartData = headerService.sessionGet('cart');
 	if(data.action && data.action == "clear"){
 		$scope.itemCount = 0;
 		$scope.itemPrice = 0; 
 	}else{
-		$scope.itemCount = $scope.itemCount+1;
+		$scope.itemCount = Object.keys(cartData.lineItems).length;
 		$scope.itemPrice = (data.response.totalPrice.centAmount)/100; 
 	}
 	
