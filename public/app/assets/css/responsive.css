@@ -3429,6 +3429,10 @@ screen and (max-width: 767px) {
 		max-height: var(--mobile-max-height);
 		width: var(--mobile-width)
 	}
+	#content .custom_box,
+	#content .custom_box img{
+		min-height: 100px;
+	}
 	.responsive-link {
 		cursor: var(--cursor-mobile)
 	}
@@ -4338,6 +4342,9 @@ screen and (max-width: 767px) {
 	}
 }
 @media screen and (max-width: 767px) {
+	#product_courosel li{
+		width:100%;
+	}
 	.quick-order-submit-label-desktop {
 		display: none
 	}

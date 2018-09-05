@@ -40,119 +40,36 @@
 									<div ng-repeat="lineitem in lineitems">
                                     <article class="basket-row basket-product clearfix cartItem js-basket-item">
                                         <div class="l-wrap">
-                                            <div class="l-col l-one-half product"> <a class="block product" href="#">  </a>
-                                                <a class="block product" href="#" data-mobile-app-disabled="">
-                                                    <div class="img">
-                                                        <picture>
-                                                            <!-- <source data-srcset="https://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.pnghttps://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.png?i10c=img.resize(width:100,height:100)"
-                                                                srcset="https://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.pnghttps://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.png?i10c=img.resize(width:100,height:100)">
-                                                           			-->
-																<img class=" lazyloaded" data-src="{{lineitem.image}}?i10c=img.resize(width:100,height:100)"
-                                                                alt="" srcset="{{lineitem.image}}?i10c=img.resize(width:100,height:100)"
-                                                                src="{{lineitem.image}}?i10c=img.resize(width:100,height:100)"> </picture>
-                                                    </div>
-                                                    <h3 class="prod-title block-hover-text"> {{lineitem.productNameEn}} </h3>
-                                                    <!-- <p class="block-hover-text">  </p>
-													<small class="mobile-hidden block-hover-text">
-													<div id="toolTip005446" style="display: none">  </div>
-													<abbr title="" onmouseover="javascript : getAbbrTitle('005446','per 100 g')">
-													£2.29/100 g </abbr>  <span>005446</span>
-													</small>             -->                                       </a>
-                                               <!--
-											   Delivery mode commented
-											   <div class="og-offer" data-og-module="sc" data-og-product="005446">
-                                                    <div class="og-widget og-type-CartRadioWidget og-offer-63df47acb68911e68625bc764e106cf4 og-locale-en-us">
-                                                        <div class="og-option-row og-off-row">
-                                                            <div class="og-radio-cont">
-                                                                <input type="radio" class="og-off-radio og-off-sc-005446" id="og-off-sc-005446" name="og-subscribe-sc-005446" value="0" checked="checked">
-                                                            </div>
-                                                            <div class="og-off-group og-radio-group">
-                                                                <label class="og-label" for="og-off-sc-005446">Deliver one time only</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="og-option-row og-on-row">
-                                                            <div class="og-radio-cont">
-                                                                <input type="radio" class="og-on-radio og-on-sc-005446" name="og-subscribe-sc-005446" value="1" id="og-on-sc-005446">
-                                                            </div>
-                                                            <div class="og-on-group og-radio-group">
-                                                                <label class="og-label og-on-label" for="og-on-sc-005446">
-			<span style="color:#006341 !important"><strong>Subscribe to <span class="repeat-order-span-fix">Repeat Order</span></strong></span><div class="incentivecopy">On <em>future orders</em> get the best price* plus 5% off &amp; free delivery. Pause or cancel online at any time.</div>
-		</label>
-
-                                                                <span class="og-see-details og-tooltip-el" data-og-event="showSeeDetails">
-                ?
-            <div class="og-tooltip og-tooltip-part">
-<div class="og-popup-main">
-<div class="details-header"><img src="https://4584051c57da007007c6-68efb418da7bd7ec341101e06a5cd8ed.ssl.cf1.rackcdn.com/images/repeat-order-icon.png"><div class="detailstop">Repeat Order</div></div><div class="detailsmiddle">Subscribe to Repeat Order and have your favourite items automatically delivered to you at the frequency you choose! Receive the best price available today. Plus, get the best price* plus 5% off and free delivery on all future orders! You can change your frequency, pause or cancel online at any time. <a href="https://www.hollandandbarrett.com/info/frequently-asked-questions"><u>Read FAQs here</u></a>.</div>&nbsp;<div class="detailsbottom">*The best price is calculated based on the lowest price available on Holland &amp; Barrett in the 28 days prior to the date your order places. Some exclusions may apply. See <a href="https://www.hollandandbarrett.com/info/frequently-asked-questions"><u>FAQs</u></a> for all terms and conditions.</div>
-</div></div><div class="og-tooltip-pointer og-tooltip-part"></div></span>
-
-
-                                                                <div class="og-deliver-text">
-                                                                    <span class="og-deliver-text-inner">Deliver every:</span>
-                                                                    <span class="og-picker">
-                <select name="frequency" class="og-every-sc-005446 og-select ss"><option selected="selected">Please select</option>
-
-					<option value="2_2">2 weeks</option>
-
-					<option value="3_2">3 weeks</option>
-
-					<option value="4_2" selected="selected">4 weeks (recommended)</option>
-
-					<option value="5_2">5 weeks</option>
-
-					<option value="6_2">6 weeks</option>
-
-					<option value="2_3">2 months</option>
-
-					<option value="3_3">3 months</option>
-
-					<option value="4_3">4 months</option>
-
-					<option value="5_3">5 months</option>
-
-					<option value="6_3">6 months</option>
-
-				</select>
-            </span>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="og-details-expander og-details-expander-sc-005446" style="display: none !important;"></div>
-
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-
-
+                                        <div class="l-col l-one-half product">
+                                            <div class="img l-col">
+                                                <img class=" lazyloaded" data-src="{{lineitem.image}}?i10c=img.resize(width:100,height:100)" alt="" srcset="{{lineitem.image}}?i10c=img.resize(width:100,height:100)"
+                                                src="{{lineitem.image}}?i10c=img.resize(width:100,height:100)">
                                             </div>
-                                            <dl class="l-col quantity mobile-hidden"> <dt class="visuallyhidden"> Quantity </dt>
-                                                <dd class="quantity">
-                                                    <div class="quantity-wrapper quantity-selectbox-holder clearfix">
-													<!-- <button type="button" class="minus">-</button> -->
-													<input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
-                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
-															<!--
-															<button type="button" class="plus">+</button>
-															<select class="item-quantity-selectbox select-width-55">
-															<option value="1">1</option>
-															<option value="2" selected="">2</option>
-															<option value="3">3</option>  <option value="4">4</option>  <option value="5">5</option>
-															<option value="6">6</option>  <option value="7">7</option>  <option value="8">8</option>
-															<option value="9">9</option>  <option value="10">10</option>  <option value="11">11</option>
-															<option value="12">12</option>  <option value="13">13</option>  <option value="14">14</option>
-															<option value="15">15</option>  <option value="16">16</option>  <option value="17">17</option>
-															<option value="18">18</option>  <option value="19">19</option>  <option value="20">20</option>
-															<option value="21">21</option>  <option value="22">22</option>  <option value="23">23</option>
-															<option value="24">24</option>  <option value="25">25</option>  <option value="26">26</option>
-															<option value="27">27</option>  <option value="28">28</option>  <option value="29">29</option>
-															<option value="30">30</option>  </select>               -->
-															<a href="" ng-click="updateCart('removeLineItem',lineitem.lineItemId,0)" class="act-remove removeCartItem" title="Remove this item from your basket" > Remove </a>
-                                                        <p class="save-later">
-														<a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,lineitem.quantity)" class="saveForLaterFromCart" > Update Quantity </a> </p>
-                                                    </div> <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em> </dd>
-                                            </dl>
+                                            <div class="l-col l-four-fifths">
+                                                <a class="block product" href="#" data-mobile-app-disabled="">
+                                                    <h3 class="prod-title block-hover-text"> {{lineitem.productNameEn}} </h3>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <dl class="l-col quantity mobile-hidden">
+                                            <dt class="visuallyhidden"> Quantity </dt>
+                                            <dd class="quantity">
+                                                <div class="quantity-wrapper quantity-selectbox-holder clearfix">
+                                                    <input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline"
+                                                        maxlength="2" type="number" min="1" max="30" maxquantitymessage="Please add between 1 and 30"
+                                                        step="1" name="005446" ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)"
+                                                        data-safe-chars="[0-9]">
+                                                    <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em>                                    
+                                                </div>
+                                            </dd>
+                                            <div class="item-qty-btns mobile-hidden">
+                                                <a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,lineitem.quantity)" class="saveForLaterFromCart">
+                                                    Update </a>
+                                                <a href="" ng-click="updateCart('removeLineItem',lineitem.lineItemId,0)" class="act-remove removeCartItem" title="Remove this item from your basket">
+                                                Remove </a>
+                                            </div>
+                                        </dl>
                                             <dl class="l-col price"> <dt class="visuallyhidden"> ???basket.header.totalprice??? </dt>
                                                 <dd class="line-total">
                                                     <div class="actual-price">
@@ -166,16 +83,21 @@
                                             <dl class="l-col l-one-half quantity desktop-hidden"> <dt class="visuallyhidden"> Quantity </dt>
                                                 <dd class="quantity">
                                                     <div class="quantity-wrapper quantity-selectbox-holder clearfix">
-													<input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
-                                                            max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446"
-															 ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
+                                                    <input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline"
+                                                        maxlength="2" type="number" min="1" max="30" maxquantitymessage="Please add between 1 and 30"
+                                                        step="1" name="005446" ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)"
+                                                        data-safe-chars="[0-9]">
+                                                    <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em>
+                                                </div>
 
-
-															<a href="" ng-click="updateCart('removeLineItem',lineitem.lineItemId,0)"  class="act-remove removeCartItem" title="Remove this item from your basket"> Remove </a>
-                                                        <p class="save-later">
-														<a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,1,lineitem.quantity)" class="saveForLaterFromCart" > Update Quantity </a> </p>
-                                                    </div> <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em> </dd>
+                                            </dd>
                                             </dl>
+                                        <div class="item-qty-btns desktop-hidden">
+                                            <a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,1,lineitem.quantity)" class="saveForLaterFromCart">
+                                                Update </a>
+                                            <a href="" ng-click="updateCart('removeLineItem',lineitem.lineItemId,0)" class="act-remove removeCartItem" title="Remove this item from your basket">
+                                                Remove </a>
+                                        </div>
                                         </div>
                                     </article>
 
