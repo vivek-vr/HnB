@@ -1,4 +1,4 @@
-hbiApp.controller('basketController', ['$scope','$http','$timeout','basketService','headerService','productlistService','cartService','$state',  function($scope, $http,$timeout,basketService,headerService,productlistService,cartService,$state) {
+hbiApp.controller('basketController', ['$scope','$http','$timeout','$rootScope','basketService','headerService','productlistService','cartService','$state',  function($scope, $http,$timeout,$rootScope,basketService,headerService,productlistService,cartService,$state) {
 	
 	$scope.init = function(){ 
 		console.log("basket");
