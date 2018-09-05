@@ -47,7 +47,9 @@ hbiApp.factory('cartService', function($http, headerService,productlistService, 
 		createCart: function() {
 			var data = {};
 			var cart = {};
-			data.currency = 'GBP'; // get from header
+			var currency = headerService.sessionGet('Currency');
+			currency = currency== 'kr' ? 'SEK': 'GBP'
+			data.currency = currency; 
 			var custId = this.getCustId(); 
 			if(custId != null){
 			  data.customerId =custId			
