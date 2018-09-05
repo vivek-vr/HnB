@@ -3981,14 +3981,14 @@ HAB.mobileHamburgerNavigationClass = {
         $.each($(".main-nav.replete-nav [role=menubar] .main-nav-item"), function() {
             d = $(this).find(">a");  
 			d.removeClass().addClass("mobile-nav-item simple-nav-item");
-            c.config.mobileMenu += "<li>"+ $(d) +"</li>";
+            c.config.mobileMenu += "<li>"+ d[0] +"</li>";
         });
         if ($(".js-mobile-navigation-menu-item").find(".account-nav-item").prop("outerHTML") !== undefined) {
             c.config.mobileMenu += $(".js-mobile-navigation-menu-item").find(".account-nav-item").prop("outerHTML")
         }
         c.config.mobileMenu = "<div class='desktop-hidden' id='" + c.config.mobileNavigationHeaderItemsList.substr(1) + "'><ul class='mobile-navigation-list' data-level='1' data-level-current='1'>" + c.config.mobileMenu + "</ul></div><div id='" + c.config.mobileHamburgerNavigationOverlay.substr(1) + "'></div>";
         $("body").prepend(c.config.mobileMenu);
-      //  this.preBindEvents()
+		this.preBindEvents()
     },
     preBindEvents: function() {
         var a = this;
@@ -4061,6 +4061,10 @@ HAB.mobileHamburgerNavigationClass = {
         })
     }
 };
+
+HAB.mobileHamburgerNavigationClass.init();
+
+
 HAB.mobileHamburgerNavigationModule = Object.create(HAB.mobileHamburgerNavigationClass);
 HAB.winMobilePopup = {
     init: function() {
