@@ -130,10 +130,10 @@
                                             <dl class="l-col quantity mobile-hidden"> <dt class="visuallyhidden"> Quantity </dt>
                                                 <dd class="quantity">
                                                     <div class="quantity-wrapper quantity-selectbox-holder clearfix"> 
-													<button type="button" class="minus">-</button>
+													<!-- <button type="button" class="minus">-</button> -->
 													<input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
                                                             max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
-															
+															<!--
 															<button type="button" class="plus">+</button>                                                       
 															<select class="item-quantity-selectbox select-width-55">  
 															<option value="1">1</option>  
@@ -147,10 +147,10 @@
 															<option value="21">21</option>  <option value="22">22</option>  <option value="23">23</option>  
 															<option value="24">24</option>  <option value="25">25</option>  <option value="26">26</option>  
 															<option value="27">27</option>  <option value="28">28</option>  <option value="29">29</option>  
-															<option value="30">30</option>  </select>                                                        
+															<option value="30">30</option>  </select>               -->                                         
 															<a href="" ng-click="updateCart('removeLineItem',lineitem.lineItemId,0)" class="act-remove removeCartItem" title="Remove this item from your basket" > Remove </a>
                                                         <p class="save-later"> 
-														<a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,lineitem.quantity)" class="saveForLaterFromCart" > Save for later </a> </p>
+														<a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,lineitem.quantity)" class="saveForLaterFromCart" > Update Quantity </a> </p>
                                                     </div> <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em> </dd>
                                             </dl>
                                             <dl class="l-col price"> <dt class="visuallyhidden"> ???basket.header.totalprice??? </dt>
@@ -165,13 +165,14 @@
                                             <dl class="l-col l-one-half quantity desktop-hidden"> <dt class="visuallyhidden"> Quantity </dt>
                                                 <dd class="quantity">
                                                     <div class="quantity-wrapper quantity-selectbox-holder clearfix"> 
-													<button type="button" class="minus">-</button><input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
+													<input class="in-qty-control itemQty noKeyUpValidation input-quantity-selectbox js-saved-last-valid-value validated-inline" maxlength="2" type="number" min="1"
                                                             max="30" maxquantitymessage="Please add between 1 and 30" step="1" name="005446" 
 															 ng-model="lineitem.quantity" onkeypress="return isNumberKey(event)" data-safe-chars="[0-9]">
-															<button type="button" class="plus">+</button>                                                       
-															<select class="item-quantity-selectbox select-width-55">  <option value="1">1</option>  <option value="2" selected="">2</option>  <option value="3">3</option>  <option value="4">4</option>  <option value="5">5</option>  <option value="6">6</option>  <option value="7">7</option>  <option value="8">8</option>  <option value="9">9</option>  <option value="10">10</option>  <option value="11">11</option>  <option value="12">12</option>  <option value="13">13</option>  <option value="14">14</option>  <option value="15">15</option>  <option value="16">16</option>  <option value="17">17</option>  <option value="18">18</option>  <option value="19">19</option>  <option value="20">20</option>  <option value="21">21</option>  <option value="22">22</option>  <option value="23">23</option>  <option value="24">24</option>  <option value="25">25</option>  <option value="26">26</option>  <option value="27">27</option>  <option value="28">28</option>  <option value="29">29</option>  <option value="30">30</option>  </select>                                                       
+															
+															                                                      
 															<a href="" ng-click="updateCart('removeLineItem',lineitem.lineItemId,0)"  class="act-remove removeCartItem" title="Remove this item from your basket"> Remove </a>
-                                                        <p class="save-later"> <a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,1,lineitem.quantity)" class="saveForLaterFromCart" > Save for later </a> </p>
+                                                        <p class="save-later"> 
+														<a href="" ng-click="updateCart('changeLineItemQuantity',lineitem.lineItemId,1,lineitem.quantity)" class="saveForLaterFromCart" > Update Quantity </a> </p>
                                                     </div> <em style="display: none;" class="error quantity_msg">Must be between 1 and30</em> </dd>
                                             </dl>
                                         </div>
@@ -282,13 +283,17 @@
                                             </script>
                                         </div> -->
                                         <div class="order-summary-block">
-                                            <div class="basket-order-pretotal clearfix"> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-subtotal"> Subtotal </dt>
+                                            <div class="basket-order-pretotal clearfix"> 
+											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-subtotal"> Subtotal </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                {{totalGrossCurrency}} {{subTotalAmt}} </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings </dt>
+                                                {{totalGrossCurrency}} {{subTotalAmt}} </dd> 
+											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings included </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-savings">
-                                                {{totalGrossCurrency}} {{savingsAmt}} </dd> <dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-standard-delivery"> Default Delivery </dt>
+                                                {{totalGrossCurrency}} {{totalDiscountAmt}} </dd> 
+											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-standard-delivery"> Default Delivery </dt>
                                                 <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-standard-delivery">
-                                                {{totalGrossCurrency}} {{totalGrossAmt}} </dd> <span class="small-text-caption basket-order-small-caption">You can change delivery at checkout.</span> </div> <dt class="l-col l-three-quarters basket-abs-total basket-order-total"> Total </dt>
+                                                {{totalGrossCurrency}} {{deliveryAmt}} </dd> 
+											<span class="small-text-caption basket-order-small-caption">Delivery amount will be calculated during checkout.</span> </div> <dt class="l-col l-three-quarters basket-abs-total basket-order-total"> Total </dt>
                                             <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum">{{totalGrossCurrency}} {{totalGrossAmt}} </dd>
                                         </div>
                                     </dl>
@@ -296,27 +301,12 @@
                                         <div class="loader checkout-cta" style="display: none"></div>
                                         <input name="checkout" value="Checkout" ng-click="gotoCheckout()" class="orangeSubmit bigSubmit js-checkout-button" type="submit">
                                     </div>
-                                    <img class="card-logos" src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/basket/icons/card-icons.png" alt="Cards">
-                                    <div class="express-checkout-block js-express-checkout "> <span class="choice-text">or</span> <a href="javascript:void(0);" class="btn checkout-paypal " id="js-express-paypal-button" data-checkout-id="M27JX5RQ754QY" data-checkout-env="production" data-paypal-click-listener="">  <span class="js-paypal-express-btn paypal-express-btn"> <img src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/icons/checkout/paypal.png" class="paypal-logo-img" alt="Check out with PayPal"> <span>Express</span> </span> <span class="js-paypal-pay-now-btn paypal-pay-now-btn hidden"> <span>Pay now with</span> <img class="paypal-logo-img" src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/icons/checkout/paypal.png" alt="Check out with PayPal"> </span> </a>                                        </div>
-                                    <div class="ss-paypal-terms">
-                                        <p>Paypal Express is available for UK standard delivery only.</p>
-                                    </div>
-                                    <script src="https://www.paypalobjects.com/api/checkout.js" async=""></script>
-                                    <table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose GeoTrust SSL for secure e-commerce and confidential communications." style="margin: 0 auto;">
-                                        <tbody>
-                                            <tr>
-                                                <td width="135" align="center" valign="top">
-                                                    <script type="text/javascript" src="https://seal.geotrust.com/getgeotrustsslseal?host_name=www.hollandandbarrett.com&amp;size=M&amp;lang=en"></script><a href="https://sealsplash.geotrust.com/splash?&amp;dn=www.hollandandbarrett.com" tabindex="-1" onmousedown="return gts_mDown(event);" target="GEOTRUST_SSL_Splash"><img name="gts_seal" border="true" src="https://seal.geotrust.com/getgeotrustsslseal?at=0&amp;sealid=1&amp;dn=www.hollandandbarrett.com&amp;lang=en&amp;gmtoff=0" oncontextmenu="return false;" alt="Click to Verify - This site has chosen a GeoTrust SSL Certificate to improve Web site security"></a><br>
-                                                    <a href="http://www.geotrust.com/ssl/" target="_blank" style="color: #000000; text-decoration: none; font: bold 7px verdana, sans-serif; letter-spacing: .5px; text-align: center; margin: 0px; padding: 0px;"></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                   
                                 </section>
                             </div>
                         </div>
                     </div>
-                    <div class="l-wrap">
+                    <!-- <div class="l-wrap">
                         <div class="l-col">
                             <div class="checkout-order-confirmation-recently-vieved print-hidden" data-rr-placement="cart_page.recs_1" data-mobile-app-hidden="">
 
@@ -389,7 +379,7 @@
                             <div id="adobe-recommendation-horizontal" class="adobe-recommendation"></div>
                             <div id="adobe-recommendation-vertical" class="l-col clearfix cell-type adobe-recommendation"></div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="basket-buttons l-wrap clearfix">
                         <div class="l-col l-three-quarters">&nbsp;</div>
                     </div>

@@ -3673,15 +3673,15 @@ screen and (max-width: 767px) {
 	.address-container[country="NLD"] .postcode-lookup {
 		min-width: 107px !important
 	}
-	.page-title-block {
+	.page .page-title-block {
 		padding: 0
 	}
-	.page-title-block .page-title-line .page-title {
+	.page .page-title-block .page-title-line .page-title {
 		border: 0;
 		height: auto;
 		margin-bottom: 8px
 	}
-	.page-title-block .page-title-line .page-title span {
+	.page .page-title-block .page-title-line .page-title span {
 		top: 0;
 		padding: 0
 	}
