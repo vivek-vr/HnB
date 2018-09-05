@@ -2,6 +2,11 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 	
 	$scope.init = function(){
 		var categoryId = headerService.sessionGet('categoryId');
+	    var lang=headerService.sessionGet('Language');
+		$scope.lang = lang;
+		var currency=headerService.sessionGet('Currency');
+		$scope.currency = currency; 
+		console.log(lang);console.log(currency);
 		if(categoryId == null) { categoryId = '1a925ebe-77fe-4bf3-abc9-676fe1b64df1';}
 		// productlistService.getProducts($stateParams.categoryId)  // get all products based on category
 		productlistService.getProducts(categoryId)
