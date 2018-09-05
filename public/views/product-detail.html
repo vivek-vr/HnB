@@ -155,7 +155,7 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
       <header class="prod-header">
          <h1 class="page-title"> <span class="prod-title"> {{masterDataObj.name[lang]}} {{size}} </span> <span class="prod-title-info">
 
-		 <span ng-if="currency=='€'" class="sku-price"> {{ masterDataObj.masterVariant.prices[1].value.centAmount/100 }}{{currency}} </span>  
+		 <span ng-if="currency=='kr'" class="sku-price"> {{ masterDataObj.masterVariant.prices[1].value.centAmount/100 }}{{currency}} </span>  
 		  <span ng-if="currency=='£'" class="sku-price"> {{currency}}{{ masterDataObj.masterVariant.prices[0].value.centAmount/100 }} </span>  
 		
 		 </span> </h1>
@@ -271,7 +271,7 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
                                        </div>
                                        <div class="label-txt-cell f-col f-col-2">
                                           <div class="label-txt-cell-row">
-                                             <div ng-if="currency=='€'" class="prod-size-price">
+                                             <div ng-if="currency=='kr'" class="prod-size-price">
                                                 {{ masterDataObj.masterVariant.prices[1].value.centAmount/100 }} {{currency}}</div>
 												<div ng-if="currency=='£'" class="prod-size-price">
                                                  {{currency}}{{ masterDataObj.masterVariant.prices[0].value.centAmount/100 }}</div>
@@ -488,7 +488,7 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
                                           <div class="l-prod-col">
                                              <div class="prod-info">
                                                 <h3 class="prod-title">{{product.name[lang]}}</h3>
-                                                <div ng-if="currency=='€'" class="prod-price">
+                                                <div ng-if="currency=='kr'" class="prod-price">
                                                    <em>From&nbsp;</em>
                                                    {{product.masterVariant.prices[1].value.centAmount/100}}{{currency}}
                                                 </div>
@@ -732,7 +732,7 @@ li.main-nav-item > a[href="/shop/offers/"]:hover {
                                  <div class="l-prod-col">
                                     <div class="prod-info">
                                        <h3 class="prod-title">{{product.name[lang]}}</h3>
-                                       <div ng-if="currency=='€'"  class="prod-price">
+                                       <div ng-if="currency=='kr'"  class="prod-price">
                                          {{product.masterVariant.prices[1].value.centAmount/100}}{{currency}}
                                        </div>
 									    <div ng-if="currency=='£'"  class="prod-price">
