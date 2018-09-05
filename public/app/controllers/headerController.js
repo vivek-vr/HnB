@@ -173,4 +173,10 @@ $scope.changeLanguage = function(lang) {
   location.reload();
   
  }
+
+ $scope.toggleMobileMenu = false;
+ $scope.fnToggleMobileMenu = function() {
+   $scope.toggleMobileMenu =  $scope.toggleMobileMenu ? false : true;
+ }
+
 }]);
