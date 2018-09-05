@@ -3,8 +3,10 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
 	$scope.init = function(){
 		var cartData = headerService.sessionGet('cart');
 		$scope.itemCount = 0;	
-		if(cartData && cartData.lineItems){
+		$scope.itemPrice = 0;
+		if(cartData && cartData){
 			$scope.itemCount = Object.keys(cartData.lineItems).length;
+			$scope.itemPrice = Object.keys(cartData.totalPrice.centAmount)/100;
 		}
 		setAuthorizationCode();
 		var finalItemsList = [];
@@ -66,6 +68,7 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
 	
 	$rootScope.$on("updateBacket", function(evt,data){ 
 		$scope.itemCount = $scope.itemCount+1;
+		$scope.itemPrice = (data.totalPrice.centAmount)/100;
 	});
 	
 	$scope.isObjectEmpty = function(card){
