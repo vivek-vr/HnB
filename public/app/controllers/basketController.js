@@ -65,17 +65,17 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 					$scope.lineItem.priceAmt = $scope.lineItem.priceAmt/ (Math.pow(10,lineItemData.totalPrice.fractionDigits));
 				}
 				$scope.lineItem.currencyCode = '£';
-				if(lineItemData.totalPrice.currencyCode == 'GBP')
+				if(lineItemData.totalPrice.currencyCode == 'SEK')
 				{
-					$scope.lineItem.currencyCode = '£';
+					$scope.lineItem.currencyCode = 'kr';
 				}
 				$scope.lineitems[i]=$scope.lineItem;
 				i++;
 			});
 		
 			$scope.totalGrossCurrency = '£';
-			if(basketObj.totalPrice.currencyCode == 'GBP'){
-				$scope.totalGrossCurrency = '£';
+			if(basketObj.totalPrice.currencyCode == 'SEK'){
+				$scope.totalGrossCurrency = 'kr';
 			}
 			$scope.totalGrossAmt = basketObj.totalPrice.centAmount;
 			if(basketObj.totalPrice.fractionDigits != null){
