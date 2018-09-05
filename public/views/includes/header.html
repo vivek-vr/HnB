@@ -25,8 +25,8 @@
   <li class="nav-item rfl-nav-item large-vp">
   <div class="hoverzone1">
    <a href="" title="Country">
-  <span ng-if="lang=='en'" > Country </span> 
-  <span ng-if="lang=='sv'" >Land</span> 
+  <span ng-if="lang=='en'" > Country </span>
+  <span ng-if="lang=='sv'" >Land</span>
   </a>
    <div class="subMenu1">
         <div class="subMenuItem1">
@@ -41,8 +41,8 @@
  <li class="nav-item rfl-nav-item large-vp ">
   <div class="hoverzone1">
  <a href="" title="Language">
-  <span ng-if="lang=='en'" > Language </span> 
-  <span ng-if="lang=='sv'" >Språk</span> 
+  <span ng-if="lang=='en'" > Language </span>
+  <span ng-if="lang=='sv'" >Språk</span>
   </a>
     <div class="subMenu1">
         <div class="subMenuItem1">
@@ -62,7 +62,7 @@
  <span class="ico-s ico-basket"></span>
  <h2 ng-if="lang=='en'"> Basket </h2>
   <h2 ng-if="lang=='sv'"> Korg </h2>
- 
+
  <span class="at-basket-menu-qty qty"> {{itemCount}} </span>
 <span ng-if="lang=='en'"> Items </span><span ng-if="lang=='sv'"> artiklar </span><span ng-if="currency=='£'" class="price">{{currency}}{{itemPrice}} </span><span ng-if="currency=='kr'" class="price">{{itemPrice}}{{currency}} </span>
  <span class="ico ico-basket-down"></span>
@@ -100,7 +100,7 @@
   <a href="/" title="Holland & Barrett :: the good life" class="tablet" style="background: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg) center center no-repeat;background-image: linear-gradient(transparent,transparent),url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg);background-size: contain;"></a>
   </div>
   </div>
-  <a href="/#!/home" class="logotype mobile-hidden"> <img src="app/assets/img/main-logo-hb.png" title="Holland & Barrett :: the good life"> </a>
+  <a ui-sref="home({})" href="#" class="logotype mobile-hidden"> <img src="app/assets/img/main-logo-hb.png" title="Holland & Barrett :: the good life"> </a>
 
 
     <script type="application/ld+json">
@@ -143,7 +143,7 @@
  <a href="/" title="Holland & Barrett :: the good life" class="tablet" style="background: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg) center center no-repeat;background-image: linear-gradient(transparent,transparent),url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg);background-size: contain;"></a>
  </div>
  </div>
- <a href="/" class="logotype mobile-hidden">  <img src="app/assets/img/main-logo-hb.png" title="Holland & Barrett :: the good life"> </a>
+ <a ui-sref="home({})" href="#" class="logotype mobile-hidden">  <img src="app/assets/img/main-logo-hb.png" title="Holland & Barrett :: the good life"> </a>
  </li>
  <li>
  <a href="#" title="Store Locator">
