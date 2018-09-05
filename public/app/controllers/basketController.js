@@ -95,7 +95,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 		   cart.version = $scope.masterDataObj.version;
 		   headerService.sessionSet('cart',cart);
            $scope.setBasketData(response.data);
-           $scope.recommendedProducts();
+          // $scope.recommendedProducts();
 			
 		});
 	}
