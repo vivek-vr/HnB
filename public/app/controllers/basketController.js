@@ -60,7 +60,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','$rootScope',
 					}
 				}
 				$scope.totalDiscountAmt = $scope.totalDiscountAmt + $scope.lineItem.discountAmt;
-				console.log("$scope.lineItem.image:"+$scope.lineItem.image);
+				console.log("$scope.lineItem.image::"+$scope.lineItem.image);
 				$scope.lineItem.priceAmt = lineItemData.totalPrice.centAmount;
 				if(lineItemData.totalPrice.fractionDigits != null){
 					$scope.lineItem.priceAmt = $scope.lineItem.priceAmt/ (Math.pow(10,lineItemData.totalPrice.fractionDigits));
