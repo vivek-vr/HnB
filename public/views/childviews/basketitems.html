@@ -156,8 +156,7 @@
                                             <dl class="l-col price"> <dt class="visuallyhidden"> ???basket.header.totalprice??? </dt>
                                                 <dd class="line-total">
                                                     <div class="actual-price">
-                                                        <div ng-if="lineitem.currencyCode == 'kr'" class="current-price"> {{lineitem.currencyCode}} {{lineitem.priceAmt | number : 2}} </div>
-                                                        <div ng-if="lineitem.currencyCode != 'kr'" class="current-price"> {{lineitem.priceAmt | number : 2}}&nbsp;{{lineitem.currencyCode}}</div>
+                                                        <div class="current-price"> {{lineitem.currencyCode}} {{lineitem.priceAmt | number : 2}} </div>
                                                         <div id="was005446" style="display: none"> {{lineitem.currencyCode}} {{lineitem.priceAmt | number : 2}} </div>
 														<!-- <strike class="was" title="" onmouseover="javascript : getStrikeTitle('005446')"> was £3.98 </strike>
 														<span class="offer"><em> 1 product for 50 %</em> </span> --> </div>
@@ -286,21 +285,14 @@
                                         <div class="order-summary-block">
                                             <div class="basket-order-pretotal clearfix">
 											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-subtotal"> Subtotal </dt>
-                                                <dd ng-if="lineitem.currencyCode != 'kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
+                                                <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
                                                 {{totalGrossCurrency}} {{subTotalAmt | number : 2}} </dd>
-                                                <dd ng-if="lineitem.currencyCode == 'kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                {{subTotalAmt | number : 2}}&nbsp;{{totalGrossCurrency}} </dd>
-
-                                                <dd ng-if="lineitem.currencyCode != 'kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-												{{totalGrossCurrency}} {{totalDiscountAmt | number : 2}} </dd>
-												<dd ng-if="lineitem.currencyCode == 'kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                {{totalDiscountAmt | number : 2}}&nbsp;{{totalGrossCurrency}} </dd>
-
-                                                 <dd ng-if="lineitem.currencyCode != 'kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-												{{totalGrossCurrency}} {{deliveryAmt | number : 2}}</dd>
-												<dd ng-if="lineitem.currencyCode == 'kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                {{deliveryAmt | number : 2}}&nbsp;{{totalGrossCurrency}} </dd>
-
+											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings included </dt>
+                                                <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-savings" >
+                                                {{totalGrossCurrency}} {{totalDiscountAmt | number : 2}} </dd>
+											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-standard-delivery"> Default Delivery </dt>
+                                                <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-standard-delivery">
+                                                {{totalGrossCurrency}} {{deliveryAmt | number : 2}} </dd>
 											<span class="small-text-caption basket-order-small-caption">Delivery amount will be calculated during checkout.</span> </div> <dt class="l-col l-three-quarters basket-abs-total basket-order-total"> Total </dt>
                                             <dd class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum">{{totalGrossCurrency}} {{totalGrossAmt}} </dd>
                                         </div>

@@ -84,7 +84,10 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 	
 
 	$scope.addToBag = function(action,product) { 
-		cartService.cartActions(action, product,1,1);
+		var variantid = $('.form-control.width50per').find('option:selected').val();
+		var qty = $('.in-qty-control.noKeyUpValidation.input-quantity-selectbox.validated-inline').val();
+		cartService.cartActions(action, product,typeof variantid != 'undefined'?variantid:1,
+		typeof qty != 'undefined'?qty:1);
 	}
 	
 	$rootScope.$on("updateBacket", function(evt,data){ 
