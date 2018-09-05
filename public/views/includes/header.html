@@ -22,12 +22,23 @@
  <span>Skip to main content</span>
  </a>
  <ul class="utility-nav-list">
+  <li class="nav-item favs-nav-item large-vp">
+  <div class="hoverzone1">
+ <a href="" title="Country">Country</a>
+   <div class="subMenu1">
+        <div class="subMenuItem1">
+        <a href="" title="Country" ng-click="changeCountry('£')">UK</a>
+        </div>
+        <div class="subMenuItem1">
+		 <a href="" title="Country" ng-click="changeCountry('kr')">Sweden</a>
+        </div>
+    </div>
+  </div>
+ </li>
  <li class="nav-item rfl-nav-item large-vp ">
   <div class="hoverzone1">
  <a href="" title="Language">
-
- <span class="ico-s "></span> <span class="rfl-nav-item-label"> Language </span>  </a>
-
+  <span class="rfl-nav-item-label"> Language </span>  </a>
     <div class="subMenu1">
         <div class="subMenuItem1">
              <a href="" title="Country" ng-click="changeLanguage('en')">English</a>
@@ -40,28 +51,13 @@
 </div>
 
  </li>
- <li class="nav-item favs-nav-item large-vp">
-  <div class="hoverzone1">
- <a href="" title="Country">
- <span class="ico-s"></span> Country </span></a>
-   <div class="subMenu1">
-        <div class="subMenuItem1">
-        <a href="" title="Country" ng-click="changeCountry('£')">UK</a>
-        </div>
-        <div class="subMenuItem1">
-		 <a href="" title="Country" ng-click="changeCountry('kr')">Sweden</a>
 
-        </div>
-
-    </div>
-  </div>
- </li>
  <li class="nav-item basket-nav-item">
  <a ui-sref="basket({})" class="js-header-basket-link" href="/#!/basket" >
  <span class="ico-s ico-basket"></span>
  <h2> Basket </h2>
  <span class="at-basket-menu-qty qty"> {{itemCount}} </span>
- items <span class="price">£ {{itemPrice}} </span>
+ items <span class="price">{{currency}}{{itemPrice}} </span>
  <span class="ico ico-basket-down"></span>
  </a>
  </li>

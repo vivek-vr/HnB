@@ -44,8 +44,10 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','$rootScope',
 				$scope.lineItem = {};
 				$scope.lineItem.lineItemId = lineItemData.id;
 				$scope.lineItem.productId = lineItemData.productId;
-				$scope.lineItem.productNameEn = lineItemData.name.en;
-				$scope.lineItem.productNameSv = lineItemData.name.sv;
+				var lang=headerService.sessionGet('Language');
+				$scope.lang = lang;
+				$scope.lineItem.productNameEn = lineItemData.name[lang];
+				//$scope.lineItem.productNameSv = lineItemData.name.sv;
 				$scope.lineItem.quantity = lineItemData.quantity;
 				$scope.lineItem.image=lineItemData.variant.images[0].url;
 				$scope.lineItem.discountAmt = 0;
