@@ -106,6 +106,7 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 			//$('.js-header-basket-link').find('.price').html(' £'+(response.data.totalPrice.centAmount)/100+' ');
 			//$('.at-basket-menu-qty').html(' '+response.data.lineItems.length+' ');
 			$rootScope.$broadcast("updateBacket",response.data.lineItems);
+			$('.js-header-basket-link').find('.price').html(' £ '+(response.data.totalPrice.centAmount)/100);
 			$timeout( function(){
 				product.addedSuccessfully = false;
 			}, 3000 );
