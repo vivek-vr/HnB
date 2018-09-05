@@ -14296,3 +14296,51 @@ _:-ms-fullscreen,
     margin-left: 40px;
 }
 }
+
+.basket-header{
+	background-color: transparent;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.basket-product{
+	border-top:0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.basket-product .item-qty-btns{
+	float: left;
+	width: 100%;
+}
+
+.basket-product .quantity{
+	padding-bottom: 0;
+}
+
+@media (min-width:768px){
+	.basket-product .product .prod-title{
+		padding-top: 20px;
+		margin:0;
+	}
+}
+
+@media (max-width:767px){
+	#product_courosel .advice-and-articles-item .advice-item-image-container {
+		min-height: 180px;
+	}
+	#product_courosel .advice-and-articles-item img {
+		max-width: 150px;
+		min-height:auto;
+		}
+	.basket-product .product h3{
+		margin-left: 108px;
+	}
+
+	.basket-product .line-total{
+		margin : 9px 0 10px 0;
+	}
+
+	.basket-product .item-qty-btns{
+		margin-left: 108px;
+	}
+}
+
