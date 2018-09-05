@@ -22,17 +22,11 @@
  <span>Skip to main content</span>
  </a>
  <ul class="utility-nav-list">
- <li class="nav-item login-nav-item large-vp">
- <div class="split">
- <a href="/my-account/login.jsp?myaccount=true" title="My Account" class="lnk-my-account modal-registration-btn" data-islogged="0"> <span class="ico-s ico-14 ico-account"></span>My account </a>
- <a href="/my-account/registration.jsp" title="Register" class="lnk-register"> Register </a>
- </div>
- </li>
-<li class="nav-item rfl-nav-item large-vp ">
+ <li class="nav-item rfl-nav-item large-vp ">
   <div class="hoverzone1">
  <a href="" title="Language">
 
- <span class="ico-s ico-20 ico-header-rfl"></span> <span class="rfl-nav-item-label"> Language </span>  </a>
+ <span class="ico-s "></span> <span class="rfl-nav-item-label"> Language </span>  </a>
 
     <div class="subMenu1">
         <div class="subMenuItem1">
@@ -49,13 +43,13 @@
  <li class="nav-item favs-nav-item large-vp">
   <div class="hoverzone1">
  <a href="" title="Country">
- <span class="ico-s ico-favs-menu"></span> Country <span class="qty"> 0 </span></a>
+ <span class="ico-s"></span> Country <span class="qty"> 0 </span></a>
    <div class="subMenu1">
         <div class="subMenuItem1">
         <a href="" title="Country" ng-click="changeCountry('£')">UK</a>
         </div>
         <div class="subMenuItem1">
-		 <a href="" title="Country" ng-click="changeCountry('€')">Sweden</a>
+		 <a href="" title="Country" ng-click="changeCountry('kr')">Sweden</a>
 
         </div>
 
@@ -67,7 +61,7 @@
  <span class="ico-s ico-basket"></span>
  <h2> Basket </h2>
  <span class="at-basket-menu-qty qty"> {{itemCount}} </span>
- items <span class="price"> £ {{itemPrice}} </span>
+ items <span class="price">£ {{itemPrice}} </span>
  <span class="ico ico-basket-down"></span>
  </a>
  </li>
@@ -78,10 +72,7 @@
 <form id="changeCurrencyForm" name="changeCurrencyForm" action="/browse/gadgets/currencyExchangeContent.jsp?_DARGS=/browse/gadgets/currencyExchangeContent.jsp" method="post">
 <input name="_dyncharset" value="UTF-8" type="hidden"></input>
 <input name="_dynSessConf" value="5911380154507072079" type="hidden"></input>
-<div class="split">
-  <a href="javascript:void(0);" class="show-gbp current" value="pounds" title="Pound">£</a>
-  <a href="javascript:changeCurrency('EUR');" class="show-eur" value="euros" title="Euro">€</a>
-  </div>
+
   <input id="existingCurrencyType" name="existingCurrencyType" value="" type="hidden">
   <input name="_D:existingCurrencyType" value=" " type="hidden">
   <input id="selectedCurrencyType" name="selectedCurrencyType" value="" type="hidden">

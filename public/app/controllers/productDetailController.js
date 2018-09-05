@@ -1,4 +1,4 @@
-hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state', 'productlistService', '$stateParams' , 'productdetailService', 'headerService' ,'cartService','_', function($scope, $http, $q, $state, productlistService, $stateParams, productdetailService, headerService, cartService, _) {
+hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state', 'productlistService', '$stateParams' , 'productdetailService', 'headerService' ,'cartService','_','$rootScope','$timeout', function($scope, $http, $q, $state, productlistService, $stateParams, productdetailService, headerService, cartService, _,$rootScope,$timeout) {
 	
 	$scope.init = function(){ 
 		console.log("Product Details");
@@ -19,6 +19,7 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
            $scope.setProductData($scope.masterDataObj);
            $scope.recommendedProducts();
 		   $scope.flavours = buildFlavour(response.data);
+		   $scope.added = true;
 		}).catch(function(response, status, headers, config) {
 		   console.log(response);	  
 		})
@@ -81,9 +82,17 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
     }
   }
 	
+
 	$scope.addToBag = function(action,product) { 
 		cartService.cartActions(action, product,1,1);
 	}
+	
+	$rootScope.$on("updateBacket", function(evt,data){ 
+		$scope.added = false;
+		$timeout( function(){
+			$scope.added = true;
+		}, 3000 );
+	});
 
 	$scope.recommendedProducts = function() {
 		var categoryId = headerService.sessionGet('categoryId');
