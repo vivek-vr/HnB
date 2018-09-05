@@ -28,22 +28,46 @@
  <a href="/my-account/registration.jsp" title="Register" class="lnk-register"> Register </a>  
  </div>
  </li>
- <li class="nav-item rfl-nav-item large-vp "> 
- <a href="/my-account/rflLanding.jsp" title="rewards"> 
- <span class="ico-s ico-20 ico-header-rfl"></span> <span class="rfl-nav-item-label"> rewards for life </span> 
- </a> 
+<li class="nav-item rfl-nav-item large-vp "> 
+  <div class="hoverzone1"> 
+ <a href="" title="Language"> 
+
+ <span class="ico-s ico-20 ico-header-rfl"></span> <span class="rfl-nav-item-label"> Language </span>  </a> 
+
+    <div class="subMenu1">
+        <div class="subMenuItem1">
+             <a href="" title="Country" ng-click="changeLanguage('en')">English</a>
+        </div>
+        <div class="subMenuItem1">
+             <a href="" title="Country" ng-click="changeLanguage('sv')">Swedish</a>
+        </div>
+        
+    </div>
+</div>
+
  </li>
- <li class="nav-item favs-nav-item large-vp">  
- <a href="/myFavourites.jsp" title="favourites"> 
- <span class="ico-s ico-favs-menu"></span> Favourites <span class="qty"> 0 </span>
- </a>  
+ <li class="nav-item favs-nav-item large-vp"> 
+  <div class="hoverzone1">  
+ <a href="" title="Country"> 
+ <span class="ico-s ico-favs-menu"></span> Country <span class="qty"> 0 </span></a> 
+   <div class="subMenu1">
+        <div class="subMenuItem1">
+        <a href="" title="Country" ng-click="changeCountry('£')">UK</a>
+        </div>
+        <div class="subMenuItem1">
+		 <a href="" title="Country" ng-click="changeCountry('€')">Sweden</a>
+         
+        </div>
+        
+    </div>
+  </div>
  </li>  
  <li class="nav-item basket-nav-item"> 
  <a ui-sref="basket({})" class="js-header-basket-link" href="/#!/basket" >
  <span class="ico-s ico-basket"></span>
  <h2> Basket </h2>
  <span class="at-basket-menu-qty qty"> {{itemCount}} </span> 
- items <span class="price"> £0.00 </span> 
+ items <span class="price"> £ 0.00 </span> 
  <span class="ico ico-basket-down"></span> 
  </a> 
  </li> 
@@ -147,7 +171,7 @@
  <span class="ico-s ico-basket"></span>
  <h2> Basket </h2> 
  <span class="at-basket-menu-qty qty"> 0 </span>
- items <span class="price"> £0.00 </span> 
+ items <span class="price"> £ 0.00 </span> 
  <span class="ico ico-basket-down"></span>
  </a> 
  </li>  
@@ -218,7 +242,7 @@
  <div ng-controller="headerController" ng-init="init()">
 	<ul role="menubar"> 
 		<li class="main-nav-item" ng-class="{'hover':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false"role="menuitem" aria-haspopup="true" data-all-text="All" ng-repeat="(key, value) in menuTree"> 
-			<a ui-sref="productlist({categoryId:'{{value.id}}'})" ng-click="setCategory(value.id)"> {{value.name.en}} </a> 
+			<a ui-sref="productlist({categoryId:'{{value.id}}'})" ng-click="setCategory(value.id)"> {{value.name[lang]}} </a> 
 			<input type="hidden" id="{{value.externalId}}" class="urlRef" value="/food-drink/"/> 
 			<input type="hidden" class="dataId" value="fly{{value.externalId}}"/>
 			<div id="fly{{value.externalId}}">
@@ -226,17 +250,17 @@
 					<div class="f-col f-col-1 flyout-nav-column" ng-repeat="(firstChildKey, firstChildValue) in value.children">  
 						<div class="flyout-nav-block" >  
 							<h2 class="mobile-nav-item loaded"> 
-								<a ui-sref="productlist({categoryId:'{{firstChildValue.id}}'})" title="{{firstChildValue.name.en}}" ng-click="setCategory(firstChildValue.id)"> {{firstChildValue.name.en}} <span class="desktop-hidden ico-c ico-chevron ico-chevron-right"></span> </a> 
+								<a ui-sref="productlist({categoryId:'{{firstChildValue.id}}'})" title="{{firstChildValue.name[lang]}}" ng-click="setCategory(firstChildValue.id)"> {{firstChildValue.name[lang]}} <span class="desktop-hidden ico-c ico-chevron ico-chevron-right"></span> </a> 
 							</h2>  
 							<ul class="link-list" role="menu" data-level="3"> 
 								<li>
-									<a class="mobile-nav-item-back" href="#"><span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>{{firstChildValue.name.en}}</a>
+									<a class="mobile-nav-item-back" href="#"><span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>{{firstChildValue.name[lang]}}</a>
 								</li> 
 								<li role="menuitem" class="desktop-hidden"> 
-									<a href="/shop/vitamins-supplements/vitamins/" title="Vitamins"> {{firstChildValue.name.en}} </a> 
+									<a href="/shop/vitamins-supplements/vitamins/" title="Vitamins"> {{firstChildValue.name[lang]}} </a> 
 								</li>  
 								<li role="menuitem" ng-repeat="(secondChildKey, secondChildValue) in firstChildValue.children">  
-									<a ui-sref="productlist({categoryId:'{{secondChildValue.id}}'})" title="{{secondChildValue.name.en}}" ng-click="setCategory(secondChildValue.id)"> {{secondChildValue.name.en}} </a> 
+									<a ui-sref="productlist({categoryId:'{{secondChildValue.id}}'})" title="{{secondChildValue.name[lang]}}" ng-click="setCategory(secondChildValue.id)"> {{secondChildValue.name[lang]}} </a> 
 								</li>
 							</ul>
 						</div>    
@@ -328,6 +352,27 @@ justify-content: center;
 .main-nav.replete-nav .main-nav-item>a {
 font-size: 1.2rem;
 }
+}
+.hoverzone1:hover .subMenu1
+{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.subMenu1
+{
+   position: absolute;
+   visibility: hidden;
+   font-size:11px;
+   text-align:right;
+   width: 60%;
+   z-index: 3; 
+
+}
+
+.subMenuItem1:hover 
+{
+    background: white;
 }
 </style>
   </div>

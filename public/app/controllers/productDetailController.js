@@ -2,6 +2,11 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 	
 	$scope.init = function(){ 
 		console.log("Product Details");
+		var lang=headerService.sessionGet('Language');
+		$scope.lang = lang;
+		var currency=headerService.sessionGet('Currency');
+		$scope.currency = currency;
+		productDetail();
 	}
 	//console.log($stateParams);
 	$scope.productDetail = function() { 

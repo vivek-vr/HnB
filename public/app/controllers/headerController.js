@@ -77,6 +77,11 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
 			var configData = {};
 			configData.header = "Bearer "+response.data.access_token;
 			headerService.sessionSet("configData",configData);
+			if(headerService.sessionGet('Language')){
+				$scope.lang = headerService.sessionGet('Language');				
+			}else{
+				$scope.lang = "en";
+			}
 		});;
 	}
 	
@@ -123,5 +128,16 @@ hbiApp.controller('headerController', ['$scope', '$state','$http', 'productlistS
 				$scope.steps.push(i*20);
 			}
 		}
+	}
+	
+	$scope.changeLanguage = function(lang) { 
+				headerService.sessionSet("Language",lang);
+				location.reload();
+				}
+				$scope.changeCountry = function(country) {
+			headerService.sessionSet("Currency",country);
+			//$scope.country = country;
+			location.reload();
+			
 	}
 }]);
