@@ -257,6 +257,16 @@
 			</div>
 		</li>
 	</ul>
+	<!-- mobile hamburger menu--start -->
+	<div class="desktop-hidden" id="mobile-navigation-header-items-list" style="overflow-y: auto;">
+		<ul class="mobile-navigation-list">
+			<li ng-repeat="(key, value) in menuTree">
+				<a ui-sref="productlist({categoryId:'{{value.id}}'})" ng-click="setCategory(value.id)"> {{value.name[lang]}} </a>
+			<li>
+		</ul>
+	</div>
+	<div id="mobile-hamburger-navigation-overlay" style="display: none;"></div>
+	<!-- mobile hamburger menu--end -->
 </div>
 <style>
 @media screen and (min-width: 767px) {

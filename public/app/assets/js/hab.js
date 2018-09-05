@@ -3988,7 +3988,7 @@ HAB.mobileHamburgerNavigationClass = {
         }
         c.config.mobileMenu = "<div class='desktop-hidden' id='" + c.config.mobileNavigationHeaderItemsList.substr(1) + "'><ul class='mobile-navigation-list' data-level='1' data-level-current='1'>" + c.config.mobileMenu + "</ul></div><div id='" + c.config.mobileHamburgerNavigationOverlay.substr(1) + "'></div>";
         $("body").prepend(c.config.mobileMenu);
-		this.preBindEvents()
+		//this.preBindEvents()
     },
     preBindEvents: function() {
         var a = this;
@@ -4061,9 +4061,6 @@ HAB.mobileHamburgerNavigationClass = {
         })
     }
 };
-
-HAB.mobileHamburgerNavigationClass.init();
-
 
 HAB.mobileHamburgerNavigationModule = Object.create(HAB.mobileHamburgerNavigationClass);
 HAB.winMobilePopup = {
