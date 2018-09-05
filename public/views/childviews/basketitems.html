@@ -40,8 +40,8 @@
 									<div ng-repeat="lineitem in lineitems">
                                     <article class="basket-row basket-product clearfix cartItem js-basket-item">
                                         <div class="l-wrap">
-                                            <div class="l-col l-one-half product"> <a class="block product" href="/shop/product/vego-organic-hazelnut-chocolate-bar-60005446">  </a>
-                                                <a class="block product" href="/shop/product/vego-organic-hazelnut-chocolate-bar-60005446" data-mobile-app-disabled="">
+                                            <div class="l-col l-one-half product"> <a class="block product" href="#">  </a>
+                                                <a class="block product" href="#" data-mobile-app-disabled="">
                                                     <div class="img">
                                                         <picture>
                                                             <!-- <source data-srcset="https://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.pnghttps://c83eec0f5ec782ac8568-de80eb212cf83852340f9441d7ad8fa6.ssl.cf3.rackcdn.com/003840_A-wev6uz8Q.png?i10c=img.resize(width:100,height:100)"
@@ -285,27 +285,27 @@
                                         </div> -->
                                         <div class="order-summary-block">
                                             <div class="basket-order-pretotal clearfix">
-											
-											
-										
-										
+
+
+
+
 										  <div class="order-summary-block">
-                                            <div class="basket-order-pretotal clearfix"> 
+                                            <div class="basket-order-pretotal clearfix">
 											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-subtotal"> Subtotal </dt>
                                                 <dd ng-if="totalGrossCurrency=='£'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                {{totalGrossCurrency}} &nbsp;{{subTotalAmt | number : 2}} </dd> 
+                                                {{totalGrossCurrency}} &nbsp;{{subTotalAmt | number : 2}} </dd>
 												<dd ng-if="totalGrossCurrency=='kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-subtotal">
-                                                {{subTotalAmt | number : 2}} &nbsp; {{totalGrossCurrency}}</dd> 
+                                                {{subTotalAmt | number : 2}} &nbsp; {{totalGrossCurrency}}</dd>
 											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-savings"> Savings included </dt>
                                                 <dd ng-if="totalGrossCurrency=='£'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-savings" >
-                                                {{totalGrossCurrency}}&nbsp; {{totalDiscountAmt | number : 2}} </dd> 
+                                                {{totalGrossCurrency}}&nbsp; {{totalDiscountAmt | number : 2}} </dd>
 												<dd ng-if="totalGrossCurrency=='kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-savings" >
-                                                {{totalDiscountAmt | number : 2}}  &nbsp;{{totalGrossCurrency}}</dd> 
+                                                {{totalDiscountAmt | number : 2}}  &nbsp;{{totalGrossCurrency}}</dd>
 											<dt class="l-col l-three-quarters basket-abs-total basket-order-total basket-order-standard-delivery"> Default Delivery </dt>
                                                 <dd ng-if="totalGrossCurrency=='£'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-standard-delivery">
-                                                {{totalGrossCurrency}}&nbsp; {{deliveryAmt | number : 2}} </dd> 
+                                                {{totalGrossCurrency}}&nbsp; {{deliveryAmt | number : 2}} </dd>
 												<dd ng-if="totalGrossCurrency=='kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum basket-order-standard-delivery">
-                                                 {{deliveryAmt | number : 2}} &nbsp;{{totalGrossCurrency}}</dd> 
+                                                 {{deliveryAmt | number : 2}} &nbsp;{{totalGrossCurrency}}</dd>
 											<span class="small-text-caption basket-order-small-caption">Delivery amount will be calculated during checkout.</span> </div> <dt class="l-col l-three-quarters basket-abs-total basket-order-total"> Total </dt>
                                             <dd ng-if="totalGrossCurrency=='£'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum">{{totalGrossCurrency}} &nbsp;{{totalGrossAmt}} </dd>
 											<dd ng-if="totalGrossCurrency=='kr'" class="l-col l-one-quarter clear-on-submit basket-abs-total basket-order-sum"> {{totalGrossAmt}}&nbsp;{{totalGrossCurrency}} </dd>
