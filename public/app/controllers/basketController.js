@@ -111,8 +111,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','$rootScope',
 		   cart.version = $scope.masterDataObj.version;
 		   headerService.sessionSet('cart',cart);
            $scope.setBasketData(response.data);
-		   $rootScope.$broadcast("updateBacket",response.data);
-		   alert("Promotional code Autumn Sale Coupon applied successfully");
+		   $rootScope.$broadcast("updateBacket",response.data);		   
           // $scope.recommendedProducts();
 			
 		});
