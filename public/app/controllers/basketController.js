@@ -23,6 +23,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 		   cart.version = $scope.masterDataObj.version;;
 		   headerService.sessionSet('cart',cart);
            $scope.setBasketData(response.data);
+		   $rootScope.$broadcast("updateBacket",response.data);
            $scope.recommendedProducts();
 		}).catch(function(response, status, headers, config) {
 		   console.log(response);	  
@@ -108,6 +109,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 		   cart.version = $scope.masterDataObj.version;
 		   headerService.sessionSet('cart',cart);
            $scope.setBasketData(response.data);
+		   $rootScope.$broadcast("updateBacket",response.data);
 		   alert("Promotional code Autumn Sale Coupon applied successfully");
           // $scope.recommendedProducts();
 			
@@ -122,7 +124,7 @@ hbiApp.controller('basketController', ['$scope','$http','$timeout','basketServic
 		basketService.updateItemQty(action, lineItemId,quantity).then(function(response) {
 			$scope.cartVersion = response.data.version;
 		    cart.version = response.data.version;
-			
+			$rootScope.$broadcast("updateBacket",response.data);
 		    headerService.sessionSet('cart',cart);
             $scope.setBasketData(response.data);
 			$timeout( function(){
