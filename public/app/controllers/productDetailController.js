@@ -54,7 +54,7 @@ function($scope, $http, $q, $state, productlistService, $stateParams, productdet
 				flavourObj[0].value = data.masterData.current.masterVariant.id;
 			}
 		}
-		if(masterData.current.variants){
+		if(data.masterData.current.variants){
 			_.forEach(data.masterData.current.variants, function(element, i) {
 			  var varientObj = {};
 			  if(element.attributes[0] != "undefined"){
