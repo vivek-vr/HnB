@@ -1,4 +1,4 @@
-hbiApp.controller('basketController', ['$scope','$http','basketService','headerService','productlistService','$state',  function($scope, $http,basketService,headerService,productlistService,$state) {
+hbiApp.controller('basketController', ['$scope','$http','$timeout','basketService','headerService','productlistService','cartService','$state',  function($scope, $http,$timeout,basketService,headerService,productlistService,cartService,$state) {
 	
 	$scope.init = function(){ 
 		console.log("basket");
@@ -40,6 +40,7 @@ hbiApp.controller('basketController', ['$scope','$http','basketService','headerS
 			var i=0;
 			angular.forEach(basketObj.lineItems, function(lineItemData){
 				$scope.lineItem = {};
+				$scope.lineItem.lineItemId = lineItemData.id;
 				$scope.lineItem.productId = lineItemData.productId;
 				$scope.lineItem.productNameEn = lineItemData.name.en;
 				$scope.lineItem.productNameSv = lineItemData.name.sv;
@@ -94,9 +95,27 @@ hbiApp.controller('basketController', ['$scope','$http','basketService','headerS
 		   cart.version = $scope.masterDataObj.version;
 		   headerService.sessionSet('cart',cart);
            $scope.setBasketData(response.data);
-           $scope.recommendedProducts();
+          // $scope.recommendedProducts();
 			
 		});
+	}
+	
+	$scope.updateCart = function(action, lineItemId,quantity){
+		
+		var cart = headerService.sessionGet('cart');
+		console.log("calling get cart service:"+cart);
+		
+		basketService.updateItemQty(action, lineItemId,quantity).then(function(response) {
+			$scope.cartVersion = response.data.version;
+		    cart.version = response.data.version;
+			
+		    headerService.sessionSet('cart',cart);
+            $scope.setBasketData(response.data);
+			$timeout( function(){
+				console.log("Timeout Error");
+				//alert("Oops.Unable to process your request. Please try again.");
+			}, 3000 );
+			});                           
 	}
 	
 	$scope.recommendedProducts = function() {
